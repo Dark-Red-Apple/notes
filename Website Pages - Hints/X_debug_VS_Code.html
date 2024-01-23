@@ -1,0 +1,3267 @@
+<!DOCTYPE html>
+<!-- saved from url=(0084)https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag -->
+<html lang="en" class="js-focus-visible" data-js-focus-visible=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+.anticon {
+  display: inline-block;
+  color: inherit;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.anticon > * {
+  line-height: 1;
+}
+
+.anticon svg {
+  display: inline-block;
+}
+
+.anticon::before {
+  display: none;
+}
+
+.anticon .anticon-icon {
+  display: block;
+}
+
+.anticon[tabindex] {
+  cursor: pointer;
+}
+
+.anticon-spin::before,
+.anticon-spin {
+  display: inline-block;
+  -webkit-animation: loadingCircle 1s infinite linear;
+  animation: loadingCircle 1s infinite linear;
+}
+
+@-webkit-keyframes loadingCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loadingCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+</style>
+    
+    <title>How to set up PHP executable path in VSCode (XAMPP user's) - DEV Community 👩‍💻👨‍💻</title>
+      <meta name="last-updated" content="2023-02-19 11:47:12 UTC">
+      <meta name="user-signed-in" content="false">
+      <meta name="head-cached-at" content="1676807232">
+        <!-- Experimental web monetization payment pointer for micropayments -->
+        <!-- It lets readers make micropayments to websites they visit. -->
+        <!-- This is step 1: Get live in production to test for platform-wide payment pointer. -->
+        <!-- Step 2: Allow authors to set their payment pointer so they can directly monetize their content based on visitors. -->
+        <!-- Step 3: Enable further functionality based on what we learn from this experimentation and how the ecosystem evolves. -->
+        <meta name="monetization" content="$ilp.uphold.com/24HhrUGG7ekn">
+      <meta name="environment" content="production">
+      <link rel="stylesheet" href="./X_debug_VS_Code_files/minimal-43220ad06e4acf236aefc343d420b020360c3c285e90e21e40c73bd8d26cc2c2.css" media="all" id="main-minimal-stylesheet">
+<link rel="stylesheet" href="./X_debug_VS_Code_files/views-ca4b5c513dd4f8582cbf3e4f4dbf1f557d14d6b0776f8176e4b6777ad11a256e.css" media="all" id="main-views-stylesheet">
+<link rel="stylesheet" href="./X_debug_VS_Code_files/crayons-4e399fcc236414ddc8a02f43b503cabe4e178af08dd9508b2402064c22357dfe.css" media="all" id="main-crayons-stylesheet">
+
+      <script async="" src="./X_debug_VS_Code_files/analytics.js.download"></script><script src="./X_debug_VS_Code_files/base-20b0a59a989c1b192a9d857aba61f491ce32c9ff4deda57aebed4e6ebefa3e8f.js.download" defer="defer"></script>
+        <script src="./X_debug_VS_Code_files/runtime_base-e9cd0cfcc126bc1e1d84.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/base-94624154979c08bb6bdb.chunk.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/runtime_baseInitializers-08dd6ba5ff75a8bea931.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/baseInitializers-3c0110af063b08187acd.chunk.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/runtime_Search-3c98aa919ddb2a01ac91.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/0-6bf46cb11ef27e3ebc1f.chunk.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/1-df2c9e8c0752a481eee0.chunk.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/Search-b1f91555b405d46c332c.chunk.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/runtime_runtimeBanner-3a23a84f5899af0b0d8a.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/runtimeBanner-b59876aba5884919567f.chunk.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/runtime_baseTracking-e39d2ab6efa8fc2985a7.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/baseTracking-cc1b71685f0d9370e8ff.chunk.js.download" defer="defer"></script>
+      
+    <link rel="canonical" href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag">
+    <meta name="description" content="Did you find this message when creating a PHP file in VSCode?  Cannot validate since no PHP executabl... Tagged with vscode, php, inclusion.">
+    <meta name="keywords" content="vscode, php, inclusion, software, coding, development, engineering, inclusive, community">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag">
+    <meta property="og:title" content="How to set up PHP executable path in VSCode (XAMPP user&#39;s)">
+    <meta property="og:description" content="Did you find this message when creating a PHP file in VSCode?  Cannot validate since no PHP executabl...">
+    <meta property="og:site_name" content="DEV Community 👩‍💻👨‍💻">
+    <meta name="twitter:site" content="@thepracticaldev">
+    <meta name="twitter:creator" content="@3rChuss">
+    <meta name="twitter:title" content="How to set up PHP executable path in VSCode (XAMPP user&#39;s)">
+    <meta name="twitter:description" content="Did you find this message when creating a PHP file in VSCode?  Cannot validate since no PHP executabl...">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:widgets:new-embed-design" content="on">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+      <meta property="og:image" content="https://dev.to/social_previews/article/235848.png">
+      <meta name="twitter:image:src" content="https://dev.to/social_previews/article/235848.png">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+      <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico">
+      <link rel="apple-touch-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="https://res.cloudinary.com/practicaldev/image/fetch/s--l0c3Kmql--/c_limit,f_png,fl_progressive,q_80,w_152/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/practicaldev/image/fetch/s--gDM0_LTS--/c_limit,f_png,fl_progressive,q_80,w_180/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="https://res.cloudinary.com/practicaldev/image/fetch/s--2ecYCSjC--/c_limit,f_png,fl_progressive,q_80,w_167/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--t7tVouP9--/c_limit,f_png,fl_progressive,q_80,w_192/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="192x192">
+      <link href="https://res.cloudinary.com/practicaldev/image/fetch/s--lrmEcD2H--/c_limit,f_png,fl_progressive,q_80,w_128/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png" rel="icon" sizes="128x128">
+      <meta name="apple-mobile-web-app-title" content="dev.to">
+      <meta name="application-name" content="dev.to">
+      <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+      <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+      <link rel="search" href="https://dev.to/open-search.xml" type="application/opensearchdescription+xml" title="DEV Community 👩‍💻👨‍💻">
+
+      <meta property="forem:name" content="DEV Community 👩‍💻👨‍💻">
+      <meta property="forem:logo" content="https://res.cloudinary.com/practicaldev/image/fetch/s--PFPhV65b--/c_limit,f_png,fl_progressive,q_80,w_512/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+      <meta property="forem:domain" content="dev.to">
+  <meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="CjTns1Zwi36Q5GGQ1V2yWpMMK2IUGIgSmmSStYat1NzrDp6aGp2qdMnyEjtE100SkdsMZ65qoFV9KcqEW_chrg"><script src="./X_debug_VS_Code_files/js" async=""></script><script charset="utf-8" src="./X_debug_VS_Code_files/156-6793e392876ab14b6dc7.chunk.js.download"></script><script charset="utf-8" src="./X_debug_VS_Code_files/150-761ae02fe8cdc2663351.chunk.js.download"></script><style type="text/css">iframe#teal-job-tracker-iframe-stable {
+        min-width: 380px !important;
+        width: 380px !important;
+        min-height: 100vh !important;
+        height: 100vh !important;
+    }</style></head>
+      <body class="sans-serif-article-body default-header" data-user-status="logged-out" data-community-name="DEV Community 👩‍💻👨‍💻" data-locale="en" data-honeybadger-key="a45862f6" data-deployed-at="2023-02-18T00:04:41Z" data-latest-commit-id="0baedd887f0a602efa43b5012f5725e7a2dde9a8" data-ga-tracking="UA-71991109-1" data-ga4-tracking-id="G-TYEM8Y3JN3" data-runtime="Browser-Windows" data-loaded="true" data-new-gr-c-s-check-loaded="14.1097.0" data-gr-ext-installed="">
+        <link rel="stylesheet" href="./X_debug_VS_Code_files/minimal-43220ad06e4acf236aefc343d420b020360c3c285e90e21e40c73bd8d26cc2c2.css" media="all" id="secondary-minimal-stylesheet">
+<link rel="stylesheet" href="./X_debug_VS_Code_files/views-ca4b5c513dd4f8582cbf3e4f4dbf1f557d14d6b0776f8176e4b6777ad11a256e.css" media="all" id="secondary-views-stylesheet">
+<link rel="stylesheet" href="./X_debug_VS_Code_files/crayons-4e399fcc236414ddc8a02f43b503cabe4e178af08dd9508b2402064c22357dfe.css" media="all" id="secondary-crayons-stylesheet">
+
+        <div id="body-styles">
+          <style>
+            :root {
+              --accent-brand-lighter-rgb: 80, 99, 301;
+              --accent-brand-rgb: 59, 73, 223;
+              --accent-brand-darker-rgb: 47, 58, 178;
+            }
+          </style>
+        </div>
+        <div id="audiocontent" data-podcast="">
+          
+        </div>
+        <div class="navigation-progress" id="navigation-progress"></div>
+<header class="crayons-header print-hidden">
+  <span id="route-change-target" tabindex="-1"></span>
+  <a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#main-content" class="skip-content-link">Skip to content</a>
+  <div class="crayons-header__container">
+    <span class="inline-block m:hidden ">
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger mx-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="akadvgpx9uihxnslxvud4jvdvmonzgb6" class="crayons-icon"><title id="akadvgpx9uihxnslxvud4jvdvmonzgb6">Navigation menu</title>
+    <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+</svg>
+
+      </button>
+    </span>
+    <a href="https://dev.to/" class="site-logo" aria-label="DEV Community 👩‍💻👨‍💻 Home">
+    <img class="site-logo__img" src="./X_debug_VS_Code_files/resized_logo_UQww2soKuUsjaOGNB38o.png" alt="DEV Community 👩‍💻👨‍💻">
+</a>
+
+
+    <div class="crayons-header--search js-search-form" id="header-search"><form method="get" action="https://dev.to/search" role="search" accept-charset="UTF-8"><input name="utf8" type="hidden" value="✓"><div class="crayons-fields crayons-fields--horizontal"><div class="crayons-field flex-1 relative"><input class="crayons-header--search-input crayons-textfield" type="text" id="" name="q" placeholder="Search..." autocomplete="off" aria-label="Search term"><button type="submit" aria-label="Search" class="c-btn c-btn--icon-alone absolute inset-px left-auto mt-0 py-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" class="crayons-icon c-btn__icon" focusable="false"><path d="m18.031 16.617 4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"></path></svg></button></div></div></form>
+      
+    </div>
+
+    <div class="flex items-center h-100 ml-auto">
+      <a class="c-link c-link--icon-alone c-link--block m:hidden mx-1" id="search-link" aria-label="Search" href="https://dev.to/search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aq5ddwuwixhx4l5bmlpb6fdnzcb3zqaw" class="crayons-icon"><title id="aq5ddwuwixhx4l5bmlpb6fdnzcb3zqaw">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+      </a>
+        <div class="flex" id="authentication-top-nav-actions">
+          <span class="hidden m:block">
+            <a href="https://dev.to/enter" class="c-link c-link--block mr-2 whitespace-nowrap ml-auto" data-no-instant="">
+              Log in
+            </a>
+          </span>
+
+          <a href="https://dev.to/enter?state=new-user" data-tracking-id="ca_top_nav" data-tracking-source="top_navbar" class="c-cta c-cta--branded whitespace-nowrap mr-2" data-no-instant="">
+            Create account
+          </a>
+        </div>
+    </div>
+  </div>
+</header>
+
+<div class="hamburger">
+  <div class="hamburger__content">
+    <header class="hamburger__content__header">
+      <h2 class="fs-l fw-bold flex-1 break-word lh-tight">DEV Community 👩‍💻👨‍💻</h2>
+
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger shrink-0" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a9nzmemm5q2jhhvx2kxqcdb0rr0nbelb" aria-hidden="true" class="crayons-icon c-btn__icon"><title id="a9nzmemm5q2jhhvx2kxqcdb0rr0nbelb">Close</title><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"></path></svg>
+
+      </button>
+    </header>
+
+    <div class="p-2 js-navigation-links-container" id="authentication-hamburger-actions">
+    </div>
+  </div>
+  <div class="hamburger__overlay js-hamburger-trigger"></div>
+</div>
+
+
+        <div id="active-broadcast" class="broadcast-wrapper"></div>
+  <div id="base-payment-pointer" data-payment-pointer="$ilp.uphold.com/24HhrUGG7ekn"></div>
+<div id="page-content" class="wrapper stories stories-show" data-current-page="stories-show">
+  <div id="page-content-inner" data-follow-clicks-initialized="true">
+    <div id="page-route-change" class="screen-reader-only" aria-live="polite" aria-atomic="true"></div>
+    
+
+
+<style>
+  .html-variant-wrapper { display: none}
+</style>
+
+<script src="./X_debug_VS_Code_files/webcomponents-loader.js.download" integrity="sha384-3HK5hxQbkFqOIxMbpROlRmRtYl2LBZ52t+tqcjzsmr9NJuOWQxl8RgQSyFvq2lhy" crossorigin="anonymous" defer=""></script>
+
+  <script src="./X_debug_VS_Code_files/runtime_webShare-3ab934a19b9c8ba0ee68.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/webShare-21216fc3e913dbe36ff0.chunk.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/runtime_articlePage-a5506f79803b59bcd0dd.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/0-6bf46cb11ef27e3ebc1f.chunk.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/1-df2c9e8c0752a481eee0.chunk.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/articlePage-53cc70fdbce847d7cd7b.chunk.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/runtime_commentDropdowns-7a38b172739b7a0a786e.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/commentDropdowns-f11166a1c65dbc0062b3.chunk.js.download" defer="defer"></script>
+
+    <script type="application/ld+json">
+      {"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag"},"url":"https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag","image":["https://dev.to/social_previews/article/235848.png","https://dev.to/social_previews/article/235848.png","https://dev.to/social_previews/article/235848.png"],"publisher":{"@context":"http://schema.org","@type":"Organization","name":"DEV Community 👩‍💻👨‍💻","logo":{"@context":"http://schema.org","@type":"ImageObject","url":"https://res.cloudinary.com/practicaldev/image/fetch/s--t7tVouP9--/c_limit,f_png,fl_progressive,q_80,w_192/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png","width":"192","height":"192"}},"headline":"How to set up PHP executable path in VSCode (XAMPP user's)","author":{"@context":"http://schema.org","@type":"Person","url":"https://dev.to/3rchuss","name":"Jesus Abril"},"datePublished":"2020-01-11T15:56:35Z","dateModified":"2020-01-11T15:59:07Z"}
+    </script>
+
+  
+<div class="crayons-layout crayons-layout--3-cols crayons-layout--article">
+  <aside class="crayons-layout__sidebar-left" aria-label="Article actions">
+    <div class="crayons-article-actions print-hidden">
+  <div class="crayons-article-actions__inner">
+        <button id="reaction-butt-like" aria-label="Like" aria-pressed="false" class="crayons-reaction crayons-reaction--like crayons-tooltip__activator relative activated" data-category="like">
+    <span class="crayons-reaction__icon  crayons-reaction__icon--inactive">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
+    <path d="M21.179 12.794l.013.014L12 22l-9.192-9.192.013-.014A6.5 6.5 0 0112 3.64a6.5 6.5 0 019.179 9.154zM4.575 5.383a4.5 4.5 0 000 6.364L12 19.172l7.425-7.425a4.5 4.5 0 10-6.364-6.364L8.818 9.626 7.404 8.21l3.162-3.162a4.5 4.5 0 00-5.99.334l-.001.001z"></path>
+</svg>
+
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-like">8</span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Like
+    </span>
+</button>
+
+
+  <button id="reaction-butt-comment" aria-label="Jump to Comments" aria-pressed="false" class="crayons-reaction crayons-reaction--comment crayons-tooltip__activator relative" data-category="comment">
+      <span class="crayons-reaction__icon  crayons-reaction__icon--inactive">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
+    <path d="M10 3h4a8 8 0 010 16v3.5c-5-2-12-5-12-11.5a8 8 0 018-8zm2 14h2a6 6 0 000-12h-4a6 6 0 00-6 6c0 3.61 2.462 5.966 8 8.48V17z"></path>
+</svg>
+
+      </span>
+      <span class="crayons-reaction__count" id="reaction-number-comment">12</span>
+
+      <span data-testid="tooltip" class="crayons-tooltip__content">
+        Jump to Comments
+      </span>
+  </button>
+
+<button id="reaction-butt-readinglist" aria-label="Add to reading list" aria-pressed="false" class="crayons-reaction crayons-reaction--readinglist crayons-tooltip__activator relative activated" data-category="readinglist">
+    <span class="crayons-reaction__icon  crayons-reaction__icon--inactive">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
+    <path d="M5 2h14a1 1 0 011 1v19.143a.5.5 0 01-.766.424L12 18.03l-7.234 4.536A.5.5 0 014 22.143V3a1 1 0 011-1zm13 2H6v15.432l6-3.761 6 3.761V4z"></path>
+</svg>
+
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-readinglist">5</span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Save
+    </span>
+</button>
+
+
+    <div id="mod-actions-menu-btn-area" class="print-hidden hidden align-center"></div>
+    <div class="align-center m:relative">
+      <button id="article-show-more-button" aria-controls="article-show-more-dropdown" aria-expanded="false" aria-haspopup="true" class="dropbtn crayons-btn crayons-btn--ghost-dimmed crayons-btn--icon-rounded" aria-label="Share post options" data-initialized="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="az1rix6pw7iz6gn3aq5kbvjv3uuz3x3" aria-hidden="true" class="crayons-icon dropdown-icon"><title id="az1rix6pw7iz6gn3aq5kbvjv3uuz3x3">More...</title><path fill-rule="evenodd" clip-rule="evenodd" d="M7 12a2 2 0 11-4 0 2 2 0 014 0zm7 0a2 2 0 11-4 0 2 2 0 014 0zm5 2a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+
+      </button>
+
+      <div id="article-show-more-dropdown" class="crayons-dropdown side-bar left-2 right-2 m:right-auto m:left-100 s:left-auto mb-1 m:mb-0 top-unset bottom-100 m:top-0 m:bottom-unset">
+        <div>
+          <button id="copy-post-url-button" class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0" data-posturl="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag">
+            <span class="fw-bold">Copy link</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="article-copy-icon" role="img" aria-labelledby="adh8s5lqxfh5v0iit2lb9la5pj7p7e3l" aria-hidden="true" class="crayons-icon mx-2 shrink-0"><title id="adh8s5lqxfh5v0iit2lb9la5pj7p7e3l">Copy link</title>
+    <path d="M7 6V3a1 1 0 011-1h12a1 1 0 011 1v14a1 1 0 01-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1 1 0 013 21l.003-14c0-.552.45-1 1.007-1H7zm2 0h8v10h2V4H9v2zm-2 5v2h6v-2H7zm0 4v2h6v-2H7z"></path>
+</svg>
+
+          </button>
+          <div id="article-copy-link-announcer" aria-live="polite" class="crayons-notice crayons-notice--success my-2 p-1" hidden="">Copied to Clipboard</div>
+        </div>
+
+        <div class="Desktop-only">
+          <a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://twitter.com/intent/tweet?text=%22How%20to%20set%20up%20PHP%20executable%20path%20in%20VSCode%20%28XAMPP%20user%27s%29%22%20by%20%403rChuss%20%23DEVCommunity%20https%3A%2F%2Fdev.to%2F3rchuss%2Fhow-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag">
+            Share to Twitter
+          </a>
+          <a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fdev.to%2F3rchuss%2Fhow-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag&amp;title=How%20to%20set%20up%20PHP%20executable%20path%20in%20VSCode%20%28XAMPP%20user%27s%29&amp;summary=Did%20you%20find%20this%20message%20when%20creating%20a%20PHP%20file%20in%20VSCode%3F%20%20Cannot%20validate%20since%20no%20PHP%20executabl...&amp;source=DEV%20Community%20%F0%9F%91%A9%E2%80%8D%F0%9F%92%BB%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB">
+            Share to LinkedIn
+          </a>
+          <a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://www.reddit.com/submit?url=https%3A%2F%2Fdev.to%2F3rchuss%2Fhow-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag&amp;title=How%20to%20set%20up%20PHP%20executable%20path%20in%20VSCode%20%28XAMPP%20user%27s%29">
+            Share to Reddit
+          </a>
+          <a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fdev.to%2F3rchuss%2Fhow-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag&amp;t=How%20to%20set%20up%20PHP%20executable%20path%20in%20VSCode%20%28XAMPP%20user%27s%29">
+            Share to Hacker News
+          </a>
+          <a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdev.to%2F3rchuss%2Fhow-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag">
+            Share to Facebook
+          </a>
+          <a target="_blank" class="crayons-link crayons-link--block" rel="noopener" href="https://toot.kytta.dev/?text=https%3A%2F%2Fdev.to%2F3rchuss%2Fhow-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag">
+            Share to Mastodon
+          </a>
+        </div>
+
+        <web-share-wrapper shareurl="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag" sharetitle="How to set up PHP executable path in VSCode (XAMPP user&#39;s)" sharetext="Did you find this message when creating a PHP file in VSCode?  Cannot validate since no PHP executabl..." template="web-share-button">
+          <a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#" class="dropdown-link-row crayons-link crayons-link--block">Share Post via...</a>
+        </web-share-wrapper>
+        <template id="web-share-button"></template>
+
+        <a href="https://dev.to/report-abuse" class="crayons-link crayons-link--block">Report Abuse</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </aside>
+
+  <main id="main-content" class="crayons-layout__content grid gap-4">
+    <div class="article-wrapper">
+
+
+      <article class="crayons-card crayons-article mb-4" id="article-show-container" data-article-id="235848" data-article-slug="how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag" data-author-id="197049" data-author-name="Jesus Abril" data-author-username="3rchuss" data-co-author-ids="" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag" data-pin-path="/stories/feed/pinned_article" data-pinned-article-id="" data-published="true" data-scheduled="false">
+        <header class="crayons-article__header" id="main-title">
+
+          <div class="crayons-article__header__meta">
+            <div class="flex s:items-start flex-col s:flex-row">
+              <div id="action-space" class="crayons-article__actions mb-4 s:mb-0 s:order-last"></div>
+              <div class="flex flex-1 mb-5 items-start">
+                <div class="relative">
+                    <a href="https://dev.to/3rchuss"><img class="radius-full align-middle" src="./X_debug_VS_Code_files/361a2d71-631a-4d16-8997-3da0880a22b5.jpg" width="40" height="40" alt="Jesus Abril"></a>
+                </div>
+                <div class="pl-3 flex-1">
+                  <a href="https://dev.to/3rchuss" class="crayons-link fw-bold">Jesus Abril</a>
+                  <p class="fs-xs color-base-60">
+                      Posted on <time datetime="2020-01-11T15:56:35Z" class="date" title="Saturday, January 11, 2020 at 11:56:35 AM">Jan 11, 2020</time>
+
+
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            
+
+            <h1 class="fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 medium">
+              How to set up PHP executable path in VSCode (XAMPP user's)
+            </h1>
+
+              <div class="spec__tags flex flex-wrap">
+                  <a class="crayons-tag   " style="
+        --tag-bg: rgba(60, 165, 234, 0.10);
+        --tag-prefix: #3ca5ea;
+        --tag-bg-hover: rgba(60, 165, 234, 0.10);
+        --tag-prefix-hover: #3ca5ea;
+      " href="https://dev.to/t/vscode"><span class="crayons-tag__prefix">#</span>vscode</a>
+                  <a class="crayons-tag   " style="
+        --tag-bg: rgba(35, 161, 170, 0.10);
+        --tag-prefix: #23A1AA;
+        --tag-bg-hover: rgba(35, 161, 170, 0.10);
+        --tag-prefix-hover: #23A1AA;
+      " href="https://dev.to/t/php"><span class="crayons-tag__prefix">#</span>php</a>
+                  <a class="crayons-tag   " style="
+        --tag-bg: rgba(255, 17, 112, 0.10);
+        --tag-prefix: #FF1170;
+        --tag-bg-hover: rgba(255, 17, 112, 0.10);
+        --tag-prefix-hover: #FF1170;
+      " href="https://dev.to/t/inclusion"><span class="crayons-tag__prefix">#</span>inclusion</a>
+              </div>
+          </div>
+        </header>
+
+        <div class="crayons-article__main">
+
+          <div class="crayons-article__body text-styles spec__body" data-article-id="235848" id="article-body">
+            <h2>Did you find this message when creating a PHP file in VSCode?</h2>
+
+<blockquote>Cannot validate since no PHP executable is set. Use the setting 'php.validate.executablePath' to configure the PHP executable.</blockquote> 
+
+<h3>1. First of all</h3>
+
+<p>Open settings.json and paste this line <code>"php.validate.executablePath": "your_unit:/xampp/php/php.exe"</code>, paste this in the last line of your settings.json.<br>
+Ok, the annoying message does not pop up anymore, <strong>and now?</strong>.</p>
+
+<h4>That's all</h4>
+
+<p><em>not kidding really</em>😄 but... we want to debug PHP also in VSCode right?.</p>
+
+<h3>2. CRTL+SHIFT+P</h3>
+
+<p>type <code>ext install PHP Debug</code> and install the first match.</p>
+
+<p>Run XAMPP server, create a php file like test.php with <strong>phpinfo();</strong> open it in your browser <code>localhost/test.php</code> copy the HTML source (what you see) and paste it into here: <a href="https://xdebug.org/wizard">xdebug.org/wizard</a> now hit analise my phpinfo() output. <br>
+Follow the instruction and download the <strong>.dll file</strong>, install it in the folder <strong>your_unit:\xampp\php\ext </strong>.</p>
+
+<h3>3. Almost done!</h3> 
+
+<p>Now open you php.ini from XAMPP and paste the code in the very last line</p>
+
+
+<pre>[XDebug]
+xdebug.remote_enable = 1
+xdebug.remote_autostart = 1
+zend_extension = "you_unit:\xampp\php\ext\downloadedfile.dss</pre>
+<br>
+Save it!
+
+<p><strong>Now, restart XAMPP and VSCode and you should be done!</strong></p>
+
+<h4>Last thing</h4>
+
+<p><strong>Wondering how it works?</strong><br>
+Open your project on your browser, set a stop point in VSCode and see the magic!</p>
+
+<p>You can follow the documentation at <a href="https://xdebug.org/docs/">xdebug.org</a> and also at VSCode extension page.</p>
+
+<p><em>Thanks for read, it's my really first post</em></p>
+
+
+          </div>
+
+        </div>
+          <section id="comments" data-follow-button-container="true" data-updated-at="2023-02-19 11:47:11 UTC" class="text-padding mb-4 border-t-1 border-0 border-solid border-base-10">
+      <header class="relative flex justify-between items-center mb-6">
+        <div class="flex items-center">
+          <h2 class="crayons-subtitle-1">
+            Top comments <span class="js-comments-count" data-comments-count="12">(12)</span>
+          </h2>
+          <button class="c-btn c-btn--ghost crayons-btn--icon-left" id="toggle-comments-sort-dropdown" aria-controls="comments-sort-dropdown-container" aria-expanded="false" aria-label="Sort comments" aria-haspopup="true" data-initialized="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" class="mt-2"><title>Crown</title>
+    <path d="M12 18l-4-3.771 1-.943 3 2.829 3-2.829 1 .943L12 18zm0-10.115l-3 2.829-1-.943L12 6l4 3.771-1 .942-3-2.828z"></path>
+</svg>
+
+          </button>
+        </div>
+
+        <nav class="crayons-dropdown p-4" id="comments-sort-dropdown-container" aria-labelledby="comments-sort-title">
+            <h3 id="comments-sort-title" class="mb-3">Sort discussion: </h3>
+            <ul class="comments-sort-dropdown__list">
+              <li class="comment-sort-option">
+  <a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag?comments_sort=top#toggle-comments-sort-dropdown" class="comment-sort-option__header pl-7 pb-0 crayons-link--block block" aria-describedby="top-description-text" aria-current="page">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-labelledby="alfm3i63zyhgas9rzfup5gs215q0fcx6" aria-hidden="true" class="crayons-icon"><title id="alfm3i63zyhgas9rzfup5gs215q0fcx6">Selected Sort Option</title>
+    <path d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414 4.95 4.95z"></path>
+</svg>
+
+       Top
+    </div>
+     <div id="top-description-text" class="crayons-field__description">
+      Most upvoted and relevant comments will be first
+    </div>
+  </a>
+</li>
+
+              <li class="comment-sort-option">
+  <a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag?comments_sort=latest#toggle-comments-sort-dropdown" class="comment-sort-option__header pl-7 pb-0 crayons-link--block block" aria-describedby="latest-description-text" aria-current="">
+    <div>
+      
+       Latest
+    </div>
+     <div id="latest-description-text" class="crayons-field__description">
+      Most recent comments will be first
+    </div>
+  </a>
+</li>
+
+              <li class="comment-sort-option">
+  <a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag?comments_sort=oldest#toggle-comments-sort-dropdown" class="comment-sort-option__header pl-7 pb-0 crayons-link--block block" aria-describedby="oldest-description-text" aria-current="">
+    <div>
+      
+       Oldest
+    </div>
+     <div id="oldest-description-text" class="crayons-field__description">
+      The oldest comments will be first
+    </div>
+  </a>
+</li>
+
+            </ul>
+        </nav>
+
+        <div id="comment-subscription" class="print-hidden"><div class="static"><div role="group" aria-label="Comment subscription options" class="crayons-btn-group"><button class="crayons-btn crayons-btn--outlined" type="button" data-tracking-name="comment_subscription_toggle">Subscribe</button></div></div>
+          
+        </div>
+      </header>
+
+      <div id="comments-container" data-testid="comments-container" data-commentable-id="235848" data-commentable-type="Article" data-has-recent-comment-activity="false">
+
+          <div id="response-templates-data" class="hidden"></div>
+<script src="./X_debug_VS_Code_files/runtime_validateFileInputs-ece984ef9613890dc1e6.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/0-6bf46cb11ef27e3ebc1f.chunk.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/1-df2c9e8c0752a481eee0.chunk.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/validateFileInputs-edd73a6e883a18493d90.chunk.js.download" defer="defer"></script>
+
+
+<form class="comment-form print-hidden" id="new_comment" action="https://dev.to/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓" autocomplete="off">
+
+  <input type="hidden" name="authenticity_token" value="NOTHING" id="new_comment_authenticity_token">
+
+    <input value="235848" autocomplete="off" type="hidden" name="comment[commentable_id]" id="comment_commentable_id">
+    <input value="Article" autocomplete="off" type="hidden" name="comment[commentable_type]" id="comment_commentable_type">
+    
+
+  <span class="crayons-avatar m:crayons-avatar--l mr-2 shrink-0">
+    <img src="./X_debug_VS_Code_files/devlogo-pwa-512.png" width="32" height="32" alt="pic" class="crayons-avatar__image overflow-hidden" id="comment-primary-user-profile--avatar" loading="lazy">
+  </span>
+  <div class="comment-form__inner">
+    <div class="comment-form__field" data-tracking-name="comment_form_textfield">
+      <textarea placeholder="Add to the discussion" onfocus="handleFocus(event)" onkeyup="handleKeyUp(event)" onkeydown="handleKeyDown(event)" oninput="handleChange(event)" id="text-area" required="required" class="crayons-textfield comment-textarea crayons-textfield--ghost" aria-label="Add a comment to the discussion" name="comment[body_markdown]"></textarea>
+
+    </div>
+
+    <div class="response-templates-container crayons-card crayons-card--secondary p-4 mb-4 comment-form__templates fs-base hidden">
+      <header class="mb-3">
+        <button type="button" class="crayons-btn personal-template-button active" data-target-type="personal" data-form-id="new_comment">Personal</button>
+        <button type="button" class="crayons-btn moderator-template-button hidden" data-target-type="moderator" data-form-id="new_comment">Trusted User</button>
+      </header>
+
+      <img class="loading-img hidden" src="./X_debug_VS_Code_files/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg" alt="loading" loading="lazy">
+
+      <div class="personal-responses-container">
+      </div>
+      <div class="moderator-responses-container hidden">
+      </div>
+
+      <a target="_blank" rel="noopener nofollow" href="https://dev.to/settings/response-templates">
+        Create template
+      </a>
+      <p>Templates let you quickly answer FAQs or store snippets for re-use.</p>
+    </div>
+
+    <div class="comment-form__preview text-styles text-styles--secondary" id="preview-div"></div>
+
+    <div class="comment-form__buttons mb-4">
+      <button type="submit" class="crayons-btn mr-2 js-btn-enable" onclick="validateField(event)" data-tracking-name="comment_submit_button" disabled="">Submit</button>
+      <button type="button" class="preview-toggle crayons-btn crayons-btn--secondary comment-action-preview js-btn-enable mr-2" data-tracking-name="comment_preview_button" disabled="">Preview</button>
+      <a href="https://dev.to/404.html" class="dismiss-edit-comment crayons-btn crayons-btn--ghost js-btn-dismiss hidden">Dismiss</a>
+    </div>
+  </div>
+
+  <div class="code-of-conduct" id="toggle-code-of-conduct-checkbox"></div>
+</form>
+
+
+        <div class="comments" id="comment-trees-container">
+                <details class="comment-wrapper js-comment-wrapper comment-wrapper--deep-0
+                    root
+                    " open="">
+      <summary aria-label="Toggle this comment (and replies)" data-tracking-name="expand_comment_toggle">
+        <span class="m:mx-1 inline-block align-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aggx6qgsv4vp0jdnvqaairg6imxsue24" class="crayons-icon expanded"><title id="aggx6qgsv4vp0jdnvqaairg6imxsue24">Collapse</title>
+    <path d="M12 10.677L8 6.935 9 6l3 2.807L15 6l1 .935-4 3.742zm0 4.517L9 18l-1-.935 4-3.742 4 3.742-1 .934-3-2.805z"></path>
+</svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aqh6lkfazkxjeq5jqfd9i38ip2ahpqtn" class="crayons-icon collapsed"><title id="aqh6lkfazkxjeq5jqfd9i38ip2ahpqtn">Expand</title>
+    <path d="M12 18l-4-3.771 1-.943 3 2.829 3-2.829 1 .943L12 18zm0-10.115l-3 2.829-1-.943L12 6l4 3.771-1 .942-3-2.828z"></path>
+</svg>
+
+        </span>
+        <span class="js-collapse-comment-content inline-block align-middle"></span>
+      </summary>
+  <div id="comment-node-416520" class="
+      comment single-comment-node
+      
+      root
+      comment--deep-0
+      
+    " data-comment-id="416520" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/ni40" data-comment-author-id="364192" data-content-user-id="364192">
+    <a name="comment-ni40" style="position: absolute; top: -8px;">&nbsp;</a>
+    
+<div class="comment__inner">
+    <a href="https://dev.to/jaimefo1" class="shrink-0 crayons-avatar m:crayons-avatar--l mt-4 m:mt-3">
+    <img class="crayons-avatar__image" width="32" height="32" src="./X_debug_VS_Code_files/b6b2c68a-c11b-425c-8ede-55372d52ff45.png" alt="jaimefo1 profile image" loading="lazy">
+  </a>
+
+
+  <div class="inner-comment comment__details">
+    <div class="comment__content crayons-card">
+        
+
+
+        <div class="comment__header">
+  <a href="https://dev.to/jaimefo1" class="crayons-link crayons-link--secondary flex items-center fw-medium m:hidden">
+    <span class="js-comment-username">JAIME FERNANDEZ ORTEGA</span>
+  </a>
+  <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:block">
+    <button id="comment-profile-preview-trigger-416520" aria-controls="comment-profile-preview-content-416520" class="profile-preview-card__trigger p-1 -my-1 -ml-1 crayons-btn crayons-btn--ghost" aria-label="JAIME FERNANDEZ ORTEGA profile details" aria-expanded="false" aria-haspopup="true" data-initialized="true">
+      JAIME FERNANDEZ ORTEGA
+    </button>
+    <div id="comment-profile-preview-content-416520" class="profile-preview-card__content p-4 pt-0 branded-7 crayons-dropdown reverse" style="--card-color: #010b1b; border-top-color: var(--card-color);" data-testid="profile-preview-card" data-repositioning-dropdown="true">
+    <div class="gap-4 grid">
+        <div class="-mt-4">
+  <a href="https://dev.to/jaimefo1" class="flex">
+    <span class="crayons-avatar crayons-avatar--xl  mr-2 shrink-0">
+      <img src="./X_debug_VS_Code_files/b6b2c68a-c11b-425c-8ede-55372d52ff45(1).png" class="crayons-avatar__image" alt="" loading="lazy">
+    </span>
+    <span class="crayons-link crayons-subtitle-2 mt-5">JAIME FERNANDEZ ORTEGA</span>
+  </a>
+</div>
+
+<div class="print-hidden">
+  <button name="button" type="button" data-info="{&quot;className&quot;:&quot;User&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:364192,&quot;name&quot;:&quot;JAIME FERNANDEZ ORTEGA&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 follow-user" aria-label="Follow user: JAIME FERNANDEZ ORTEGA" aria-pressed="false" data-fetched="fetched">Follow</button>
+</div>
+  <div class="color-base-70">
+    I'm teaching in a VET school
+  </div>
+
+  <div class="user-metadata-details">
+    <ul class="user-metadata-details-inner">
+        <li>
+          <div class="key">
+            Location
+          </div>
+          <div class="value">
+            Spain
+          </div>
+        </li>
+          <li>
+            <div class="key">
+              Work
+            </div>
+            <div class="value">
+              Computer Science Professor at Hihg School "IES Zaidin-Vergeles"
+            </div>
+          </li>
+      <li>
+        <div class="key">
+          Joined
+        </div>
+        <div class="value">
+          <time datetime="2020-04-10T12:05:09Z" class="date" title="Friday, April 10, 2020 at 9:05:09 AM">Apr 10, 2020</time>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+    </div>
+</div>
+
+  </div>
+
+  <span class="color-base-30 px-2 m:pl-0" role="presentation">•</span>
+
+<a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-ni40" class="comment-date crayons-link crayons-link--secondary fs-s">
+  <time datetime="2020-04-10T12:11:08Z" class="date-short-year" title="Friday, April 10, 2020 at 9:11:08 AM">Apr 10 '20</time>
+
+</a>
+
+
+  <div class="comment__dropdown" data-tracking-name="comment_dropdown">
+    <button id="comment-dropdown-trigger-416520" aria-controls="comment-dropdown-416520" aria-expanded="false" class="dropbtn comment__dropdown-trigger crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon " aria-label="Toggle dropdown menu" aria-haspopup="true" data-initialized="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a1vd76lppsvgl887huw9rw57vz1xpp54" class="crayons-icon pointer-events-none"><title id="a1vd76lppsvgl887huw9rw57vz1xpp54">Dropdown menu</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+    </button>
+    <div id="comment-dropdown-416520" class="crayons-dropdown right-1 s:right-0 s:left-auto fs-base dropdown">
+      <ul class="m-0">
+        <li><a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-ni40" class="crayons-link crayons-link--block permalink-copybtn" aria-label="Copy link to JAIME FERNANDEZ ORTEGA&#39;s comment" data-no-instant="">Copy link</a></li>
+        <li class="comment-actions hidden" data-user-id="364192" data-action="settings-button" data-path="https://dev.to/jaimefo1/comment/ni40/settings" aria-label="Go to JAIME FERNANDEZ ORTEGA&#39;s comment settings"></li>
+        <li class="comment-actions hidden" data-action="hide-button" data-commentable-user-id="197049" data-user-id="364192">
+            <button class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0 hide-comment" data-hide-type="hide" data-comment-id="416520" data-comment-url="https://dev.to/jaimefo1/comment/ni40" aria-label="Hide JAIME FERNANDEZ ORTEGA&#39;s comment">
+              Hide
+            </button>
+        </li>
+        <li class="mod-actions hidden mod-actions-comment-button" data-path="https://dev.to/jaimefo1/comment/ni40/mod" aria-label="Moderate JAIME FERNANDEZ ORTEGA&#39;s comment"></li>
+        <li class="report-abuse-link-wrapper" data-path="/report-abuse?url=https://dev.to/jaimefo1/comment/ni40" aria-label="Report JAIME FERNANDEZ ORTEGA&#39;s comment as abusive or violating our code of conduct and/or terms and conditions"><a href="https://dev.to/report-abuse?url=https://dev.to/jaimefo1/comment/ni40" class="crayons-link crayons-link--block">Report abuse</a></li>
+        <li class="current-user-actions"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+        <div class="
+            comment__body
+            text-styles
+            text-styles--secondary
+            body
+            
+            
+          ">
+          
+
+<p>Hola Jesús, me ha surgido un problema con VS Code, y es que ha dejado de maracar los bloques para colapsar, sólo en php, en js o html funciona, tienes idea de qué puede ser, he reinstalado, pero me coge los mismo settings, no cambia nada, el caso es que cuando lo inicio hay un momento al principio que aparecen las flechas de colapsar, pero se van en seguida, solo para php<br>
+un saludo :)</p>
+
+
+
+        </div>
+
+    </div>
+
+    <footer class="comment__footer print-hidden">
+  <button class="crayons-tooltip__activator crayons-btn crayons-btn--ghost crayons-btn--icon-left crayons-btn--s mr-1 reaction-like inline-flex reaction-button" id="button-for-comment-416520" data-comment-id="416520" aria-label="like" data-tracking-name="comment_heart_button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="avgu4cj1i0zjkqent6fp54p110ixv9o" class="crayons-icon reaction-icon not-reacted"><title id="avgu4cj1i0zjkqent6fp54p110ixv9o">Like comment: </title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a5ipzhq9gc67pizcz8y8k1w41e6stxhs" class="crayons-icon crayons-icon reaction-icon--like reaction-icon reacted"><title id="a5ipzhq9gc67pizcz8y8k1w41e6stxhs">Like comment: </title>
+    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+</svg>
+
+    <span class="reactions-count">2</span><span class="reactions-label hidden m:inline-block">&nbsp;likes</span>
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Like
+    </span>
+  </button>
+
+      <a class="actions crayons-btn crayons-btn--ghost crayons-btn--s crayons-btn--icon-left toggle-reply-form mr-1 inline-flex" href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/new/ni40" data-comment-id="416520" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/ni40" data-tracking-name="comment_reply_button" data-testid="reply-button-416520" rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ap3pqjap7bs7v3qvw0x51x908kj5sysu" class="crayons-icon reaction-icon not-reacted"><title id="ap3pqjap7bs7v3qvw0x51x908kj5sysu">Comment button</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+        <span class="hidden m:inline-block">Reply</span>
+      </a>
+
+</footer>
+
+  </div>
+</div>
+    <details class="comment-wrapper js-comment-wrapper comment-wrapper--deep-1
+                    child
+                    " open="">
+      <summary aria-label="Toggle this comment (and replies)" data-tracking-name="expand_comment_toggle">
+        <span class="mx-0 inline-block align-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="atbngbzhto9axq3a97rpz18zmeqki4rf" class="crayons-icon expanded"><title id="atbngbzhto9axq3a97rpz18zmeqki4rf">Collapse</title>
+    <path d="M12 10.677L8 6.935 9 6l3 2.807L15 6l1 .935-4 3.742zm0 4.517L9 18l-1-.935 4-3.742 4 3.742-1 .934-3-2.805z"></path>
+</svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ar8smxd95xcdlgibbj0uzvg3qbnx6dex" class="crayons-icon collapsed"><title id="ar8smxd95xcdlgibbj0uzvg3qbnx6dex">Expand</title>
+    <path d="M12 18l-4-3.771 1-.943 3 2.829 3-2.829 1 .943L12 18zm0-10.115l-3 2.829-1-.943L12 6l4 3.771-1 .942-3-2.828z"></path>
+</svg>
+
+        </span>
+        <span class="js-collapse-comment-content inline-block align-middle"></span>
+      </summary>
+  <div id="comment-node-418020" class="
+      comment single-comment-node
+      
+      child
+      comment--deep-1
+      
+    " data-comment-id="418020" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/nk9i" data-comment-author-id="197049" data-content-user-id="197049">
+    <a name="comment-nk9i" style="position: absolute; top: -8px;">&nbsp;</a>
+    
+<div class="comment__inner">
+    <a href="https://dev.to/3rchuss" class="shrink-0 crayons-avatar mt-4">
+    <img class="crayons-avatar__image" width="32" height="32" src="./X_debug_VS_Code_files/361a2d71-631a-4d16-8997-3da0880a22b5.jpg" alt="3rchuss profile image" loading="lazy">
+  </a>
+
+
+  <div class="inner-comment comment__details">
+    <div class="comment__content crayons-card">
+        
+
+
+        <div class="comment__header">
+  <a href="https://dev.to/3rchuss" class="crayons-link crayons-link--secondary flex items-center fw-medium m:hidden">
+    <span class="js-comment-username">Jesus Abril</span>
+      <span class="crayons-hover-tooltip inline-block spec-op-author -mr-2" data-tooltip="Author">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" class="crayons-icon">
+    <path d="M12 8.25a6 6 0 110 12 6 6 0 010-12zm0 2.625l-.992 2.01-2.218.322 1.605 1.564-.379 2.21L12 15.937l1.984 1.043-.379-2.209 1.605-1.564-2.218-.323L12 10.875zm.75-6.376l3.75.001v2.25l-1.022.854a7.45 7.45 0 00-2.728-.817V4.5zm-1.5 0v2.288a7.451 7.451 0 00-2.727.816L7.5 6.75V4.5h3.75z"></path>
+</svg>
+
+      </span>
+  </a>
+  <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:block">
+    <button id="comment-profile-preview-trigger-418020" aria-controls="comment-profile-preview-content-418020" class="profile-preview-card__trigger p-1 -my-1 -ml-1 crayons-btn crayons-btn--ghost" aria-label="Jesus Abril profile details" aria-expanded="false" aria-haspopup="true" data-initialized="true">
+      Jesus Abril
+    </button>
+    <div id="comment-profile-preview-content-418020" class="profile-preview-card__content p-4 pt-0 branded-7 crayons-dropdown reverse" style="--card-color: #000000; border-top-color: var(--card-color);" data-testid="profile-preview-card" data-repositioning-dropdown="true">
+    <div class="gap-4 grid">
+        <div class="-mt-4">
+  <a href="https://dev.to/3rchuss" class="flex">
+    <span class="crayons-avatar crayons-avatar--xl  mr-2 shrink-0">
+      <img src="./X_debug_VS_Code_files/361a2d71-631a-4d16-8997-3da0880a22b5(1).jpg" class="crayons-avatar__image" alt="" loading="lazy">
+    </span>
+    <span class="crayons-link crayons-subtitle-2 mt-5">Jesus Abril</span>
+  </a>
+</div>
+
+<div class="print-hidden">
+  <button name="button" type="button" data-info="{&quot;className&quot;:&quot;User&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:197049,&quot;name&quot;:&quot;Jesus Abril&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 follow-user" aria-label="Follow user: Jesus Abril" aria-pressed="false" data-fetched="fetched">Follow</button>
+</div>
+  <div class="color-base-70">
+    Self-taught Full Stack Web Developer. Apasionado por javascript!
+
+  </div>
+
+  <div class="user-metadata-details">
+    <ul class="user-metadata-details-inner">
+        <li>
+          <div class="key">
+            Location
+          </div>
+          <div class="value">
+            Granada
+          </div>
+        </li>
+      <li>
+        <div class="key">
+          Joined
+        </div>
+        <div class="value">
+          <time datetime="2019-07-17T19:32:52Z" class="date" title="Wednesday, July 17, 2019 at 4:32:52 PM">Jul 17, 2019</time>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+    </div>
+</div>
+
+      <span class="crayons-hover-tooltip inline-block spec-op-author -ml-2" data-tooltip="Author">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" class="crayons-icon">
+    <path d="M12 8.25a6 6 0 110 12 6 6 0 010-12zm0 2.625l-.992 2.01-2.218.322 1.605 1.564-.379 2.21L12 15.937l1.984 1.043-.379-2.209 1.605-1.564-2.218-.323L12 10.875zm.75-6.376l3.75.001v2.25l-1.022.854a7.45 7.45 0 00-2.728-.817V4.5zm-1.5 0v2.288a7.451 7.451 0 00-2.727.816L7.5 6.75V4.5h3.75z"></path>
+</svg>
+
+      </span>
+  </div>
+
+  <span class="color-base-30 px-2 m:pl-0" role="presentation">•</span>
+
+<a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-nk9i" class="comment-date crayons-link crayons-link--secondary fs-s">
+  <time datetime="2020-04-13T09:43:09Z" class="date-short-year" title="Monday, April 13, 2020 at 6:43:09 AM">Apr 13 '20</time>
+
+</a>
+
+
+  <div class="comment__dropdown" data-tracking-name="comment_dropdown">
+    <button id="comment-dropdown-trigger-418020" aria-controls="comment-dropdown-418020" aria-expanded="false" class="dropbtn comment__dropdown-trigger crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon " aria-label="Toggle dropdown menu" aria-haspopup="true" data-initialized="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a1l5n888906gqfcf9ad5d7a21ttd8ug3" class="crayons-icon pointer-events-none"><title id="a1l5n888906gqfcf9ad5d7a21ttd8ug3">Dropdown menu</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+    </button>
+    <div id="comment-dropdown-418020" class="crayons-dropdown right-1 s:right-0 s:left-auto fs-base dropdown">
+      <ul class="m-0">
+        <li><a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-nk9i" class="crayons-link crayons-link--block permalink-copybtn" aria-label="Copy link to Jesus Abril&#39;s comment" data-no-instant="">Copy link</a></li>
+        <li class="comment-actions hidden" data-user-id="197049" data-action="settings-button" data-path="https://dev.to/3rchuss/comment/nk9i/settings" aria-label="Go to Jesus Abril&#39;s comment settings"></li>
+        <li class="comment-actions hidden" data-action="hide-button" data-commentable-user-id="197049" data-user-id="197049">
+            <button class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0 hide-comment" data-hide-type="hide" data-comment-id="418020" data-comment-url="https://dev.to/3rchuss/comment/nk9i" aria-label="Hide Jesus Abril&#39;s comment">
+              Hide
+            </button>
+        </li>
+        <li class="mod-actions hidden mod-actions-comment-button" data-path="https://dev.to/3rchuss/comment/nk9i/mod" aria-label="Moderate Jesus Abril&#39;s comment"></li>
+        <li class="report-abuse-link-wrapper" data-path="/report-abuse?url=https://dev.to/3rchuss/comment/nk9i" aria-label="Report Jesus Abril&#39;s comment as abusive or violating our code of conduct and/or terms and conditions"><a href="https://dev.to/report-abuse?url=https://dev.to/3rchuss/comment/nk9i" class="crayons-link crayons-link--block">Report abuse</a></li>
+        <li class="current-user-actions"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+        <div class="
+            comment__body
+            text-styles
+            text-styles--secondary
+            body
+            
+            
+          ">
+          
+
+<p>Hola Profe, pues creo que tienes un conflicto de plugins, prueba a deshabilitar los que no estés utilizando por el momento.</p>
+
+
+
+        </div>
+
+    </div>
+
+    <footer class="comment__footer print-hidden">
+  <button class="crayons-tooltip__activator crayons-btn crayons-btn--ghost crayons-btn--icon-left crayons-btn--s mr-1 reaction-like inline-flex reaction-button" id="button-for-comment-418020" data-comment-id="418020" aria-label="like" data-tracking-name="comment_heart_button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="a8dqvu0rm9nmmdwvxnquykf73zgwxui9" class="crayons-icon reaction-icon not-reacted"><title id="a8dqvu0rm9nmmdwvxnquykf73zgwxui9">Like comment: </title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aphshetjags9ndbkc0bbeydssl02frwg" class="crayons-icon crayons-icon reaction-icon--like reaction-icon reacted"><title id="aphshetjags9ndbkc0bbeydssl02frwg">Like comment: </title>
+    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+</svg>
+
+    <span class="reactions-count">1</span><span class="reactions-label hidden m:inline-block">&nbsp;like</span>
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Like
+    </span>
+  </button>
+
+      <a class="actions crayons-btn crayons-btn--ghost crayons-btn--s crayons-btn--icon-left toggle-reply-form mr-1 inline-flex" href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/new/nk9i" data-comment-id="418020" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/nk9i" data-tracking-name="comment_reply_button" data-testid="reply-button-418020" rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="a6g9xd56cg5dedrp3a18igxm3fbnhm1e" class="crayons-icon reaction-icon not-reacted"><title id="a6g9xd56cg5dedrp3a18igxm3fbnhm1e">Comment button</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+        <span class="hidden m:inline-block">Reply</span>
+      </a>
+
+</footer>
+
+  </div>
+</div>
+
+
+  </div>
+    </details>
+
+
+  </div>
+    </details>
+
+    <details class="comment-wrapper js-comment-wrapper comment-wrapper--deep-0
+                    root
+                    " open="">
+      <summary aria-label="Toggle this comment (and replies)" data-tracking-name="expand_comment_toggle">
+        <span class="m:mx-1 inline-block align-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a9buv55j0mvt945n6vjaro27mcjkdl28" class="crayons-icon expanded"><title id="a9buv55j0mvt945n6vjaro27mcjkdl28">Collapse</title>
+    <path d="M12 10.677L8 6.935 9 6l3 2.807L15 6l1 .935-4 3.742zm0 4.517L9 18l-1-.935 4-3.742 4 3.742-1 .934-3-2.805z"></path>
+</svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aanlge3j3j8r0u0eux4okgxloespb2pg" class="crayons-icon collapsed"><title id="aanlge3j3j8r0u0eux4okgxloespb2pg">Expand</title>
+    <path d="M12 18l-4-3.771 1-.943 3 2.829 3-2.829 1 .943L12 18zm0-10.115l-3 2.829-1-.943L12 6l4 3.771-1 .942-3-2.828z"></path>
+</svg>
+
+        </span>
+        <span class="js-collapse-comment-content inline-block align-middle"></span>
+      </summary>
+  <div id="comment-node-429942" class="
+      comment single-comment-node
+      
+      root
+      comment--deep-0
+      
+    " data-comment-id="429942" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/oc06" data-comment-author-id="377132" data-content-user-id="377132">
+    <a name="comment-oc06" style="position: absolute; top: -8px;">&nbsp;</a>
+    
+<div class="comment__inner">
+    <a href="https://dev.to/amir_gharajedaghi" class="shrink-0 crayons-avatar m:crayons-avatar--l mt-4 m:mt-3">
+    <img class="crayons-avatar__image" width="32" height="32" src="./X_debug_VS_Code_files/9411cff1-6ed3-43d0-b0f6-ffe235738115.jpeg" alt="amir_gharajedaghi profile image" loading="lazy">
+  </a>
+
+
+  <div class="inner-comment comment__details">
+    <div class="comment__content crayons-card">
+        
+
+
+        <div class="comment__header">
+  <a href="https://dev.to/amir_gharajedaghi" class="crayons-link crayons-link--secondary flex items-center fw-medium m:hidden">
+    <span class="js-comment-username">Amir</span>
+  </a>
+  <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:block">
+    <button id="comment-profile-preview-trigger-429942" aria-controls="comment-profile-preview-content-429942" class="profile-preview-card__trigger p-1 -my-1 -ml-1 crayons-btn crayons-btn--ghost" aria-label="Amir profile details" aria-expanded="false" aria-haspopup="true" data-initialized="true">
+      Amir
+    </button>
+    <div id="comment-profile-preview-content-429942" class="profile-preview-card__content p-4 pt-0 branded-7 crayons-dropdown reverse" style="--card-color: #010b1b; border-top-color: var(--card-color);" data-testid="profile-preview-card" data-repositioning-dropdown="true">
+    <div class="gap-4 grid">
+        <div class="-mt-4">
+  <a href="https://dev.to/amir_gharajedaghi" class="flex">
+    <span class="crayons-avatar crayons-avatar--xl  mr-2 shrink-0">
+      <img src="./X_debug_VS_Code_files/9411cff1-6ed3-43d0-b0f6-ffe235738115(1).jpeg" class="crayons-avatar__image" alt="" loading="lazy">
+    </span>
+    <span class="crayons-link crayons-subtitle-2 mt-5">Amir</span>
+  </a>
+</div>
+
+<div class="print-hidden">
+  <button name="button" type="button" data-info="{&quot;className&quot;:&quot;User&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:377132,&quot;name&quot;:&quot;Amir&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 follow-user" aria-label="Follow user: Amir" aria-pressed="false" data-fetched="fetched">Follow</button>
+</div>
+
+  <div class="user-metadata-details">
+    <ul class="user-metadata-details-inner">
+        <li>
+          <div class="key">
+            Location
+          </div>
+          <div class="value">
+            France
+          </div>
+        </li>
+      <li>
+        <div class="key">
+          Joined
+        </div>
+        <div class="value">
+          <time datetime="2020-04-30T22:17:40Z" class="date" title="Thursday, April 30, 2020 at 7:17:40 PM">Apr 30, 2020</time>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+    </div>
+</div>
+
+  </div>
+
+  <span class="color-base-30 px-2 m:pl-0" role="presentation">•</span>
+
+<a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-oc06" class="comment-date crayons-link crayons-link--secondary fs-s">
+  <time datetime="2020-04-30T22:30:53Z" class="date-short-year" title="Thursday, April 30, 2020 at 7:30:53 PM">Apr 30 '20</time>
+
+</a>
+
+
+  <div class="comment__dropdown" data-tracking-name="comment_dropdown">
+    <button id="comment-dropdown-trigger-429942" aria-controls="comment-dropdown-429942" aria-expanded="false" class="dropbtn comment__dropdown-trigger crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon " aria-label="Toggle dropdown menu" aria-haspopup="true" data-initialized="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="albalwi18yn1mqz5urlyrzmxbtldtght" class="crayons-icon pointer-events-none"><title id="albalwi18yn1mqz5urlyrzmxbtldtght">Dropdown menu</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+    </button>
+    <div id="comment-dropdown-429942" class="crayons-dropdown right-1 s:right-0 s:left-auto fs-base dropdown">
+      <ul class="m-0">
+        <li><a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-oc06" class="crayons-link crayons-link--block permalink-copybtn" aria-label="Copy link to Amir&#39;s comment" data-no-instant="">Copy link</a></li>
+        <li class="comment-actions hidden" data-user-id="377132" data-action="settings-button" data-path="https://dev.to/amir_gharajedaghi/comment/oc06/settings" aria-label="Go to Amir&#39;s comment settings"></li>
+        <li class="comment-actions hidden" data-action="hide-button" data-commentable-user-id="197049" data-user-id="377132">
+            <button class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0 hide-comment" data-hide-type="hide" data-comment-id="429942" data-comment-url="https://dev.to/amir_gharajedaghi/comment/oc06" aria-label="Hide Amir&#39;s comment">
+              Hide
+            </button>
+        </li>
+        <li class="mod-actions hidden mod-actions-comment-button" data-path="https://dev.to/amir_gharajedaghi/comment/oc06/mod" aria-label="Moderate Amir&#39;s comment"></li>
+        <li class="report-abuse-link-wrapper" data-path="/report-abuse?url=https://dev.to/amir_gharajedaghi/comment/oc06" aria-label="Report Amir&#39;s comment as abusive or violating our code of conduct and/or terms and conditions"><a href="https://dev.to/report-abuse?url=https://dev.to/amir_gharajedaghi/comment/oc06" class="crayons-link crayons-link--block">Report abuse</a></li>
+        <li class="current-user-actions"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+        <div class="
+            comment__body
+            text-styles
+            text-styles--secondary
+            body
+            
+            
+          ">
+          <p>{<br>
+    // Use IntelliSense to learn about possible attributes.<br>
+    // Hover to view descriptions of existing attributes.<br>
+    // For more information, visit: <a href="https://go.microsoft.com/fwlink/?linkid=830387" rel="nofollow">go.microsoft.com/fwlink/?linkid=83...</a><br>
+    "version": "0.2.0",<br>
+    "configurations": [<br>
+        {<br>
+            "name": "Listen for XDebug",<br>
+            "type": "php",<br>
+            "request": "launch",<br>
+            "port": 80<br>
+        }<br>
+    ]<br>
+}</p>
+
+
+        </div>
+
+    </div>
+
+    <footer class="comment__footer print-hidden">
+  <button class="crayons-tooltip__activator crayons-btn crayons-btn--ghost crayons-btn--icon-left crayons-btn--s mr-1 reaction-like inline-flex reaction-button" id="button-for-comment-429942" data-comment-id="429942" aria-label="like" data-tracking-name="comment_heart_button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="agealxigccob1eim08ggi2kk8623jcve" class="crayons-icon reaction-icon not-reacted"><title id="agealxigccob1eim08ggi2kk8623jcve">Like comment: </title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a6xt5gbczlto1n4yvc2ugqbgzgix03a7" class="crayons-icon crayons-icon reaction-icon--like reaction-icon reacted"><title id="a6xt5gbczlto1n4yvc2ugqbgzgix03a7">Like comment: </title>
+    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+</svg>
+
+    <span class="reactions-count">3</span><span class="reactions-label hidden m:inline-block">&nbsp;likes</span>
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Like
+    </span>
+  </button>
+
+      <a class="actions crayons-btn crayons-btn--ghost crayons-btn--s crayons-btn--icon-left toggle-reply-form mr-1 inline-flex" href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/new/oc06" data-comment-id="429942" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/oc06" data-tracking-name="comment_reply_button" data-testid="reply-button-429942" rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="agwyqum6g9c5jcf76bvqnxmdygz2x57w" class="crayons-icon reaction-icon not-reacted"><title id="agwyqum6g9c5jcf76bvqnxmdygz2x57w">Comment button</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+        <span class="hidden m:inline-block">Reply</span>
+      </a>
+
+</footer>
+
+  </div>
+</div>
+
+
+  </div>
+    </details>
+
+    <details class="comment-wrapper js-comment-wrapper comment-wrapper--deep-0
+                    root
+                    " open="">
+      <summary aria-label="Toggle this comment (and replies)" data-tracking-name="expand_comment_toggle">
+        <span class="m:mx-1 inline-block align-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a777n26qurxkbz1kvi7cr0z5pdmdzlih" class="crayons-icon expanded"><title id="a777n26qurxkbz1kvi7cr0z5pdmdzlih">Collapse</title>
+    <path d="M12 10.677L8 6.935 9 6l3 2.807L15 6l1 .935-4 3.742zm0 4.517L9 18l-1-.935 4-3.742 4 3.742-1 .934-3-2.805z"></path>
+</svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a7k2ustf6sr35bwpb2l45n7fshyznei6" class="crayons-icon collapsed"><title id="a7k2ustf6sr35bwpb2l45n7fshyznei6">Expand</title>
+    <path d="M12 18l-4-3.771 1-.943 3 2.829 3-2.829 1 .943L12 18zm0-10.115l-3 2.829-1-.943L12 6l4 3.771-1 .942-3-2.828z"></path>
+</svg>
+
+        </span>
+        <span class="js-collapse-comment-content inline-block align-middle"></span>
+      </summary>
+  <div id="comment-node-617595" class="
+      comment single-comment-node
+      
+      root
+      comment--deep-0
+      
+    " data-comment-id="617595" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/193fh" data-comment-author-id="538193" data-content-user-id="538193">
+    <a name="comment-193fh" style="position: absolute; top: -8px;">&nbsp;</a>
+    
+<div class="comment__inner">
+    <a href="https://dev.to/ntalamdotcom" class="shrink-0 crayons-avatar m:crayons-avatar--l mt-4 m:mt-3">
+    <img class="crayons-avatar__image" width="32" height="32" src="./X_debug_VS_Code_files/04fbcece-be62-4be3-a896-707f6d7e6cf4.png" alt="ntalamdotcom profile image" loading="lazy">
+  </a>
+
+
+  <div class="inner-comment comment__details">
+    <div class="comment__content crayons-card">
+        
+
+
+        <div class="comment__header">
+  <a href="https://dev.to/ntalamdotcom" class="crayons-link crayons-link--secondary flex items-center fw-medium m:hidden">
+    <span class="js-comment-username">ntalam</span>
+  </a>
+  <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:block">
+    <button id="comment-profile-preview-trigger-617595" aria-controls="comment-profile-preview-content-617595" class="profile-preview-card__trigger p-1 -my-1 -ml-1 crayons-btn crayons-btn--ghost" aria-label="ntalam profile details" aria-expanded="false" aria-haspopup="true" data-initialized="true">
+      ntalam
+    </button>
+    <div id="comment-profile-preview-content-617595" class="profile-preview-card__content p-4 pt-0 branded-7 crayons-dropdown reverse" style="--card-color: #021e2f; border-top-color: var(--card-color);" data-testid="profile-preview-card" data-repositioning-dropdown="true">
+    <div class="gap-4 grid">
+        <div class="-mt-4">
+  <a href="https://dev.to/ntalamdotcom" class="flex">
+    <span class="crayons-avatar crayons-avatar--xl  mr-2 shrink-0">
+      <img src="./X_debug_VS_Code_files/04fbcece-be62-4be3-a896-707f6d7e6cf4(1).png" class="crayons-avatar__image" alt="" loading="lazy">
+    </span>
+    <span class="crayons-link crayons-subtitle-2 mt-5">ntalam</span>
+  </a>
+</div>
+
+<div class="print-hidden">
+  <button name="button" type="button" data-info="{&quot;className&quot;:&quot;User&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:538193,&quot;name&quot;:&quot;ntalam&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 follow-user" aria-label="Follow user: ntalam" aria-pressed="false" data-fetched="fetched">Follow</button>
+</div>
+  <div class="color-base-70">
+    Coding and saying yes, trading boring forms for nice 3D stuff... to survive.
+  </div>
+
+  <div class="user-metadata-details">
+    <ul class="user-metadata-details-inner">
+        <li>
+          <div class="key">
+            Location
+          </div>
+          <div class="value">
+            Brisbane, Australia
+          </div>
+        </li>
+          <li>
+            <div class="key">
+              Work
+            </div>
+            <div class="value">
+              Software Engineer at Chinchilla Reactor
+            </div>
+          </li>
+      <li>
+        <div class="key">
+          Joined
+        </div>
+        <div class="value">
+          <time datetime="2020-12-11T05:06:47Z" class="date" title="Friday, December 11, 2020 at 1:06:47 AM">Dec 11, 2020</time>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+    </div>
+</div>
+
+  </div>
+
+  <span class="color-base-30 px-2 m:pl-0" role="presentation">•</span>
+
+<a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-193fh" class="comment-date crayons-link crayons-link--secondary fs-s">
+  <time datetime="2020-12-11T05:09:03Z" class="date-short-year" title="Friday, December 11, 2020 at 1:09:03 AM">Dec 11 '20</time>
+
+</a>
+
+
+  <div class="comment__dropdown" data-tracking-name="comment_dropdown">
+    <button id="comment-dropdown-trigger-617595" aria-controls="comment-dropdown-617595" aria-expanded="false" class="dropbtn comment__dropdown-trigger crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon " aria-label="Toggle dropdown menu" aria-haspopup="true" data-initialized="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ai05uxlzoxkzdiyswwohpt6qrl3f9bty" class="crayons-icon pointer-events-none"><title id="ai05uxlzoxkzdiyswwohpt6qrl3f9bty">Dropdown menu</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+    </button>
+    <div id="comment-dropdown-617595" class="crayons-dropdown right-1 s:right-0 s:left-auto fs-base dropdown">
+      <ul class="m-0">
+        <li><a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-193fh" class="crayons-link crayons-link--block permalink-copybtn" aria-label="Copy link to ntalam&#39;s comment" data-no-instant="">Copy link</a></li>
+        <li class="comment-actions hidden" data-user-id="538193" data-action="settings-button" data-path="https://dev.to/ntalamdotcom/comment/193fh/settings" aria-label="Go to ntalam&#39;s comment settings"></li>
+        <li class="comment-actions hidden" data-action="hide-button" data-commentable-user-id="197049" data-user-id="538193">
+            <button class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0 hide-comment" data-hide-type="hide" data-comment-id="617595" data-comment-url="https://dev.to/ntalamdotcom/comment/193fh" aria-label="Hide ntalam&#39;s comment">
+              Hide
+            </button>
+        </li>
+        <li class="mod-actions hidden mod-actions-comment-button" data-path="https://dev.to/ntalamdotcom/comment/193fh/mod" aria-label="Moderate ntalam&#39;s comment"></li>
+        <li class="report-abuse-link-wrapper" data-path="/report-abuse?url=https://dev.to/ntalamdotcom/comment/193fh" aria-label="Report ntalam&#39;s comment as abusive or violating our code of conduct and/or terms and conditions"><a href="https://dev.to/report-abuse?url=https://dev.to/ntalamdotcom/comment/193fh" class="crayons-link crayons-link--block">Report abuse</a></li>
+        <li class="current-user-actions"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+        <div class="
+            comment__body
+            text-styles
+            text-styles--secondary
+            body
+            
+            
+          ">
+          <p>it Works... thanks</p>
+
+
+        </div>
+
+    </div>
+
+    <footer class="comment__footer print-hidden">
+  <button class="crayons-tooltip__activator crayons-btn crayons-btn--ghost crayons-btn--icon-left crayons-btn--s mr-1 reaction-like inline-flex reaction-button" id="button-for-comment-617595" data-comment-id="617595" aria-label="like" data-tracking-name="comment_heart_button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="a4xcusrafr6ikebs8jjej03kjy48cu56" class="crayons-icon reaction-icon not-reacted"><title id="a4xcusrafr6ikebs8jjej03kjy48cu56">Like comment: </title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="anhfdd1zhz46gm8kuh6bgb2agio3k1rz" class="crayons-icon crayons-icon reaction-icon--like reaction-icon reacted"><title id="anhfdd1zhz46gm8kuh6bgb2agio3k1rz">Like comment: </title>
+    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+</svg>
+
+    <span class="reactions-count">3</span><span class="reactions-label hidden m:inline-block">&nbsp;likes</span>
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Like
+    </span>
+  </button>
+
+      <a class="actions crayons-btn crayons-btn--ghost crayons-btn--s crayons-btn--icon-left toggle-reply-form mr-1 inline-flex" href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/new/193fh" data-comment-id="617595" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/193fh" data-tracking-name="comment_reply_button" data-testid="reply-button-617595" rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aaymxbzo6adx9p7t770h45ff7vhc6mtl" class="crayons-icon reaction-icon not-reacted"><title id="aaymxbzo6adx9p7t770h45ff7vhc6mtl">Comment button</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+        <span class="hidden m:inline-block">Reply</span>
+      </a>
+
+</footer>
+
+  </div>
+</div>
+
+
+  </div>
+    </details>
+
+    <details class="comment-wrapper js-comment-wrapper comment-wrapper--deep-0
+                    root
+                    " open="">
+      <summary aria-label="Toggle this comment (and replies)" data-tracking-name="expand_comment_toggle">
+        <span class="m:mx-1 inline-block align-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="amovf1gehigo9z7c0lxi182efucc1u3n" class="crayons-icon expanded"><title id="amovf1gehigo9z7c0lxi182efucc1u3n">Collapse</title>
+    <path d="M12 10.677L8 6.935 9 6l3 2.807L15 6l1 .935-4 3.742zm0 4.517L9 18l-1-.935 4-3.742 4 3.742-1 .934-3-2.805z"></path>
+</svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aayn7dfdoc9w3k8c5scpdacilnkvrcq1" class="crayons-icon collapsed"><title id="aayn7dfdoc9w3k8c5scpdacilnkvrcq1">Expand</title>
+    <path d="M12 18l-4-3.771 1-.943 3 2.829 3-2.829 1 .943L12 18zm0-10.115l-3 2.829-1-.943L12 6l4 3.771-1 .942-3-2.828z"></path>
+</svg>
+
+        </span>
+        <span class="js-collapse-comment-content inline-block align-middle"></span>
+      </summary>
+  <div id="comment-node-478555" class="
+      comment single-comment-node
+      
+      root
+      comment--deep-0
+      
+    " data-comment-id="478555" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/115np" data-comment-author-id="396094" data-content-user-id="396094">
+    <a name="comment-115np" style="position: absolute; top: -8px;">&nbsp;</a>
+    
+<div class="comment__inner">
+    <a href="https://dev.to/jreegene" class="shrink-0 crayons-avatar m:crayons-avatar--l mt-4 m:mt-3">
+    <img class="crayons-avatar__image" width="32" height="32" src="./X_debug_VS_Code_files/a42f0738-cb00-4af3-aefd-bf1f613860b5.jpeg" alt="jreegene profile image" loading="lazy">
+  </a>
+
+
+  <div class="inner-comment comment__details">
+    <div class="comment__content crayons-card">
+        
+
+
+        <div class="comment__header">
+  <a href="https://dev.to/jreegene" class="crayons-link crayons-link--secondary flex items-center fw-medium m:hidden">
+    <span class="js-comment-username">Jeremiah</span>
+  </a>
+  <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:block">
+    <button id="comment-profile-preview-trigger-478555" aria-controls="comment-profile-preview-content-478555" class="profile-preview-card__trigger p-1 -my-1 -ml-1 crayons-btn crayons-btn--ghost" aria-label="Jeremiah profile details" aria-expanded="false" aria-haspopup="true" data-initialized="true">
+      Jeremiah
+    </button>
+    <div id="comment-profile-preview-content-478555" class="profile-preview-card__content p-4 pt-0 branded-7 crayons-dropdown reverse" style="--card-color: #131313; border-top-color: var(--card-color);" data-testid="profile-preview-card" data-repositioning-dropdown="true">
+    <div class="gap-4 grid">
+        <div class="-mt-4">
+  <a href="https://dev.to/jreegene" class="flex">
+    <span class="crayons-avatar crayons-avatar--xl  mr-2 shrink-0">
+      <img src="./X_debug_VS_Code_files/a42f0738-cb00-4af3-aefd-bf1f613860b5(1).jpeg" class="crayons-avatar__image" alt="" loading="lazy">
+    </span>
+    <span class="crayons-link crayons-subtitle-2 mt-5">Jeremiah</span>
+  </a>
+</div>
+
+<div class="print-hidden">
+  <button name="button" type="button" data-info="{&quot;className&quot;:&quot;User&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:396094,&quot;name&quot;:&quot;Jeremiah&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 follow-user" aria-label="Follow user: Jeremiah" aria-pressed="false" data-fetched="fetched">Follow</button>
+</div>
+  <div class="color-base-70">
+    Computer enthusiast
+  </div>
+
+  <div class="user-metadata-details">
+    <ul class="user-metadata-details-inner">
+        <li>
+          <div class="key">
+            Location
+          </div>
+          <div class="value">
+            Nairobi, Kenya
+          </div>
+        </li>
+          <li>
+            <div class="key">
+              Work
+            </div>
+            <div class="value">
+              Front-end developer at Enthuse Technologies
+            </div>
+          </li>
+      <li>
+        <div class="key">
+          Joined
+        </div>
+        <div class="value">
+          <time datetime="2020-05-27T01:25:16Z" class="date" title="Tuesday, May 26, 2020 at 10:25:16 PM">May 26, 2020</time>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+    </div>
+</div>
+
+  </div>
+
+  <span class="color-base-30 px-2 m:pl-0" role="presentation">•</span>
+
+<a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-115np" class="comment-date crayons-link crayons-link--secondary fs-s">
+  <time datetime="2020-06-29T12:18:58Z" class="date-short-year" title="Monday, June 29, 2020 at 9:18:58 AM">Jun 29 '20</time>
+
+</a>
+
+
+  <div class="comment__dropdown" data-tracking-name="comment_dropdown">
+    <button id="comment-dropdown-trigger-478555" aria-controls="comment-dropdown-478555" aria-expanded="false" class="dropbtn comment__dropdown-trigger crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon " aria-label="Toggle dropdown menu" aria-haspopup="true" data-initialized="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aj4kgnxm00oxaopz0o6dzmg5h5beil9a" class="crayons-icon pointer-events-none"><title id="aj4kgnxm00oxaopz0o6dzmg5h5beil9a">Dropdown menu</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+    </button>
+    <div id="comment-dropdown-478555" class="crayons-dropdown right-1 s:right-0 s:left-auto fs-base dropdown">
+      <ul class="m-0">
+        <li><a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-115np" class="crayons-link crayons-link--block permalink-copybtn" aria-label="Copy link to Jeremiah&#39;s comment" data-no-instant="">Copy link</a></li>
+        <li class="comment-actions hidden" data-user-id="396094" data-action="settings-button" data-path="https://dev.to/jreegene/comment/115np/settings" aria-label="Go to Jeremiah&#39;s comment settings"></li>
+        <li class="comment-actions hidden" data-action="hide-button" data-commentable-user-id="197049" data-user-id="396094">
+            <button class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0 hide-comment" data-hide-type="hide" data-comment-id="478555" data-comment-url="https://dev.to/jreegene/comment/115np" aria-label="Hide Jeremiah&#39;s comment">
+              Hide
+            </button>
+        </li>
+        <li class="mod-actions hidden mod-actions-comment-button" data-path="https://dev.to/jreegene/comment/115np/mod" aria-label="Moderate Jeremiah&#39;s comment"></li>
+        <li class="report-abuse-link-wrapper" data-path="/report-abuse?url=https://dev.to/jreegene/comment/115np" aria-label="Report Jeremiah&#39;s comment as abusive or violating our code of conduct and/or terms and conditions"><a href="https://dev.to/report-abuse?url=https://dev.to/jreegene/comment/115np" class="crayons-link crayons-link--block">Report abuse</a></li>
+        <li class="current-user-actions"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+        <div class="
+            comment__body
+            text-styles
+            text-styles--secondary
+            body
+            
+            
+          ">
+          <p>ext install PHP Debug does not fetch anything to be installed. Any issues similar</p>
+
+
+        </div>
+
+    </div>
+
+    <footer class="comment__footer print-hidden">
+  <button class="crayons-tooltip__activator crayons-btn crayons-btn--ghost crayons-btn--icon-left crayons-btn--s mr-1 reaction-like inline-flex reaction-button" id="button-for-comment-478555" data-comment-id="478555" aria-label="like" data-tracking-name="comment_heart_button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="am1vw1msd5awit9b3wsrietqx1hfofye" class="crayons-icon reaction-icon not-reacted"><title id="am1vw1msd5awit9b3wsrietqx1hfofye">Like comment: </title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a7i77ohriz2yfpinhgm8yalbgeftiqjw" class="crayons-icon crayons-icon reaction-icon--like reaction-icon reacted"><title id="a7i77ohriz2yfpinhgm8yalbgeftiqjw">Like comment: </title>
+    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+</svg>
+
+    <span class="reactions-count">1</span><span class="reactions-label hidden m:inline-block">&nbsp;like</span>
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Like
+    </span>
+  </button>
+
+      <a class="actions crayons-btn crayons-btn--ghost crayons-btn--s crayons-btn--icon-left toggle-reply-form mr-1 inline-flex" href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/new/115np" data-comment-id="478555" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/115np" data-tracking-name="comment_reply_button" data-testid="reply-button-478555" rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="a44lloylxmtwpaj91x5p4wu3nqb342rl" class="crayons-icon reaction-icon not-reacted"><title id="a44lloylxmtwpaj91x5p4wu3nqb342rl">Comment button</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+        <span class="hidden m:inline-block">Reply</span>
+      </a>
+
+</footer>
+
+  </div>
+</div>
+    <details class="comment-wrapper js-comment-wrapper comment-wrapper--deep-1
+                    child
+                    " open="">
+      <summary aria-label="Toggle this comment (and replies)" data-tracking-name="expand_comment_toggle">
+        <span class="mx-0 inline-block align-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="anprb11pjkmbpvvkali43961853u4i0j" class="crayons-icon expanded"><title id="anprb11pjkmbpvvkali43961853u4i0j">Collapse</title>
+    <path d="M12 10.677L8 6.935 9 6l3 2.807L15 6l1 .935-4 3.742zm0 4.517L9 18l-1-.935 4-3.742 4 3.742-1 .934-3-2.805z"></path>
+</svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="abva7qtwzj72iw69d4qz9zc005sprf6k" class="crayons-icon collapsed"><title id="abva7qtwzj72iw69d4qz9zc005sprf6k">Expand</title>
+    <path d="M12 18l-4-3.771 1-.943 3 2.829 3-2.829 1 .943L12 18zm0-10.115l-3 2.829-1-.943L12 6l4 3.771-1 .942-3-2.828z"></path>
+</svg>
+
+        </span>
+        <span class="js-collapse-comment-content inline-block align-middle"></span>
+      </summary>
+  <div id="comment-node-596414" class="
+      comment single-comment-node
+      
+      child
+      comment--deep-1
+      
+    " data-comment-id="596414" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/17o70" data-comment-author-id="512198" data-content-user-id="512198">
+    <a name="comment-17o70" style="position: absolute; top: -8px;">&nbsp;</a>
+    
+<div class="comment__inner">
+    <a href="https://dev.to/theonlywisdom" class="shrink-0 crayons-avatar mt-4">
+    <img class="crayons-avatar__image" width="32" height="32" src="./X_debug_VS_Code_files/0f43430f-c83d-4358-943f-0a8ce6b0489c.jpeg" alt="theonlywisdom profile image" loading="lazy">
+  </a>
+
+
+  <div class="inner-comment comment__details">
+    <div class="comment__content crayons-card">
+        
+
+
+        <div class="comment__header">
+  <a href="https://dev.to/theonlywisdom" class="crayons-link crayons-link--secondary flex items-center fw-medium m:hidden">
+    <span class="js-comment-username">Wisdom Akwoyere Baah</span>
+  </a>
+  <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:block">
+    <button id="comment-profile-preview-trigger-596414" aria-controls="comment-profile-preview-content-596414" class="profile-preview-card__trigger p-1 -my-1 -ml-1 crayons-btn crayons-btn--ghost" aria-label="Wisdom Akwoyere Baah profile details" aria-expanded="false" aria-haspopup="true" data-initialized="true">
+      Wisdom Akwoyere Baah
+    </button>
+    <div id="comment-profile-preview-content-596414" class="profile-preview-card__content p-4 pt-0 branded-7 crayons-dropdown reverse" style="--card-color: #280331; border-top-color: var(--card-color);" data-testid="profile-preview-card" data-repositioning-dropdown="true">
+    <div class="gap-4 grid">
+        <div class="-mt-4">
+  <a href="https://dev.to/theonlywisdom" class="flex">
+    <span class="crayons-avatar crayons-avatar--xl  mr-2 shrink-0">
+      <img src="./X_debug_VS_Code_files/0f43430f-c83d-4358-943f-0a8ce6b0489c(1).jpeg" class="crayons-avatar__image" alt="" loading="lazy">
+    </span>
+    <span class="crayons-link crayons-subtitle-2 mt-5">Wisdom Akwoyere Baah</span>
+  </a>
+</div>
+
+<div class="print-hidden">
+  <button name="button" type="button" data-info="{&quot;className&quot;:&quot;User&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:512198,&quot;name&quot;:&quot;Wisdom Akwoyere Baah&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 follow-user" aria-label="Follow user: Wisdom Akwoyere Baah" aria-pressed="false" data-fetched="fetched">Follow</button>
+</div>
+  <div class="color-base-70">
+    watch and learn...
+  </div>
+
+  <div class="user-metadata-details">
+    <ul class="user-metadata-details-inner">
+        <li>
+          <div class="key">
+            Location
+          </div>
+          <div class="value">
+            Edinburgh
+          </div>
+        </li>
+          <li>
+            <div class="key">
+              Work
+            </div>
+            <div class="value">
+              Web Developer at Greengauge
+            </div>
+          </li>
+      <li>
+        <div class="key">
+          Joined
+        </div>
+        <div class="value">
+          <time datetime="2020-11-11T09:57:39Z" class="date" title="Wednesday, November 11, 2020 at 5:57:39 AM">Nov 11, 2020</time>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+    </div>
+</div>
+
+  </div>
+
+  <span class="color-base-30 px-2 m:pl-0" role="presentation">•</span>
+
+<a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-17o70" class="comment-date crayons-link crayons-link--secondary fs-s">
+  <time datetime="2020-11-11T10:08:11Z" class="date-short-year" title="Wednesday, November 11, 2020 at 6:08:11 AM">Nov 11 '20</time>
+
+</a>
+
+
+  <div class="comment__dropdown" data-tracking-name="comment_dropdown">
+    <button id="comment-dropdown-trigger-596414" aria-controls="comment-dropdown-596414" aria-expanded="false" class="dropbtn comment__dropdown-trigger crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon " aria-label="Toggle dropdown menu" aria-haspopup="true" data-initialized="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="abp1d2glb8u1a3liux0sru7e5l04spbj" class="crayons-icon pointer-events-none"><title id="abp1d2glb8u1a3liux0sru7e5l04spbj">Dropdown menu</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+    </button>
+    <div id="comment-dropdown-596414" class="crayons-dropdown right-1 s:right-0 s:left-auto fs-base dropdown">
+      <ul class="m-0">
+        <li><a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-17o70" class="crayons-link crayons-link--block permalink-copybtn" aria-label="Copy link to Wisdom Akwoyere Baah&#39;s comment" data-no-instant="">Copy link</a></li>
+        <li class="comment-actions hidden" data-user-id="512198" data-action="settings-button" data-path="https://dev.to/theonlywisdom/comment/17o70/settings" aria-label="Go to Wisdom Akwoyere Baah&#39;s comment settings"></li>
+        <li class="comment-actions hidden" data-action="hide-button" data-commentable-user-id="197049" data-user-id="512198">
+            <button class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0 hide-comment" data-hide-type="hide" data-comment-id="596414" data-comment-url="https://dev.to/theonlywisdom/comment/17o70" aria-label="Hide Wisdom Akwoyere Baah&#39;s comment">
+              Hide
+            </button>
+        </li>
+        <li class="mod-actions hidden mod-actions-comment-button" data-path="https://dev.to/theonlywisdom/comment/17o70/mod" aria-label="Moderate Wisdom Akwoyere Baah&#39;s comment"></li>
+        <li class="report-abuse-link-wrapper" data-path="/report-abuse?url=https://dev.to/theonlywisdom/comment/17o70" aria-label="Report Wisdom Akwoyere Baah&#39;s comment as abusive or violating our code of conduct and/or terms and conditions"><a href="https://dev.to/report-abuse?url=https://dev.to/theonlywisdom/comment/17o70" class="crayons-link crayons-link--block">Report abuse</a></li>
+        <li class="current-user-actions"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+        <div class="
+            comment__body
+            text-styles
+            text-styles--secondary
+            body
+            
+            
+          ">
+          <p>Perhaps you could try installing the PHP Debug extension, then take it from there.</p>
+
+
+        </div>
+
+    </div>
+
+    <footer class="comment__footer print-hidden">
+  <button class="crayons-tooltip__activator crayons-btn crayons-btn--ghost crayons-btn--icon-left crayons-btn--s mr-1 reaction-like inline-flex reaction-button" id="button-for-comment-596414" data-comment-id="596414" aria-label="like" data-tracking-name="comment_heart_button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aa9fecuf6wdvre9q6y4fxnufbf4fbel5" class="crayons-icon reaction-icon not-reacted"><title id="aa9fecuf6wdvre9q6y4fxnufbf4fbel5">Like comment: </title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a5evzyxum09i6wu2oxemwblq31kksimr" class="crayons-icon crayons-icon reaction-icon--like reaction-icon reacted"><title id="a5evzyxum09i6wu2oxemwblq31kksimr">Like comment: </title>
+    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+</svg>
+
+    <span class="reactions-count">2</span><span class="reactions-label hidden m:inline-block">&nbsp;likes</span>
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Like
+    </span>
+  </button>
+
+      <a class="actions crayons-btn crayons-btn--ghost crayons-btn--s crayons-btn--icon-left toggle-reply-form mr-1 inline-flex" href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/new/17o70" data-comment-id="596414" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/17o70" data-tracking-name="comment_reply_button" data-testid="reply-button-596414" rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="a1ijq0afa039ib7rfpnsuijedt55srl" class="crayons-icon reaction-icon not-reacted"><title id="a1ijq0afa039ib7rfpnsuijedt55srl">Comment button</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+        <span class="hidden m:inline-block">Reply</span>
+      </a>
+
+</footer>
+
+  </div>
+</div>
+
+
+  </div>
+    </details>
+    <details class="comment-wrapper js-comment-wrapper comment-wrapper--deep-1
+                    child
+                    " open="">
+      <summary aria-label="Toggle this comment (and replies)" data-tracking-name="expand_comment_toggle">
+        <span class="mx-0 inline-block align-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="acu06v0b4ckrwnxjwgnqunx9059b6yqe" class="crayons-icon expanded"><title id="acu06v0b4ckrwnxjwgnqunx9059b6yqe">Collapse</title>
+    <path d="M12 10.677L8 6.935 9 6l3 2.807L15 6l1 .935-4 3.742zm0 4.517L9 18l-1-.935 4-3.742 4 3.742-1 .934-3-2.805z"></path>
+</svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ag5u5td0dql8eauoiodwq7z7xskf712c" class="crayons-icon collapsed"><title id="ag5u5td0dql8eauoiodwq7z7xskf712c">Expand</title>
+    <path d="M12 18l-4-3.771 1-.943 3 2.829 3-2.829 1 .943L12 18zm0-10.115l-3 2.829-1-.943L12 6l4 3.771-1 .942-3-2.828z"></path>
+</svg>
+
+        </span>
+        <span class="js-collapse-comment-content inline-block align-middle"></span>
+      </summary>
+  <div id="comment-node-482194" class="
+      comment single-comment-node
+      
+      child
+      comment--deep-1
+      
+    " data-comment-id="482194" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/11b7o" data-comment-author-id="197049" data-content-user-id="197049">
+    <a name="comment-11b7o" style="position: absolute; top: -8px;">&nbsp;</a>
+    
+<div class="comment__inner">
+    <a href="https://dev.to/3rchuss" class="shrink-0 crayons-avatar mt-4">
+    <img class="crayons-avatar__image" width="32" height="32" src="./X_debug_VS_Code_files/361a2d71-631a-4d16-8997-3da0880a22b5.jpg" alt="3rchuss profile image" loading="lazy">
+  </a>
+
+
+  <div class="inner-comment comment__details">
+    <div class="comment__content crayons-card">
+        
+
+
+        <div class="comment__header">
+  <a href="https://dev.to/3rchuss" class="crayons-link crayons-link--secondary flex items-center fw-medium m:hidden">
+    <span class="js-comment-username">Jesus Abril</span>
+      <span class="crayons-hover-tooltip inline-block spec-op-author -mr-2" data-tooltip="Author">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" class="crayons-icon">
+    <path d="M12 8.25a6 6 0 110 12 6 6 0 010-12zm0 2.625l-.992 2.01-2.218.322 1.605 1.564-.379 2.21L12 15.937l1.984 1.043-.379-2.209 1.605-1.564-2.218-.323L12 10.875zm.75-6.376l3.75.001v2.25l-1.022.854a7.45 7.45 0 00-2.728-.817V4.5zm-1.5 0v2.288a7.451 7.451 0 00-2.727.816L7.5 6.75V4.5h3.75z"></path>
+</svg>
+
+      </span>
+  </a>
+  <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:block">
+    <button id="comment-profile-preview-trigger-482194" aria-controls="comment-profile-preview-content-482194" class="profile-preview-card__trigger p-1 -my-1 -ml-1 crayons-btn crayons-btn--ghost" aria-label="Jesus Abril profile details" aria-expanded="false" aria-haspopup="true" data-initialized="true">
+      Jesus Abril
+    </button>
+    <div id="comment-profile-preview-content-482194" class="profile-preview-card__content p-4 pt-0 branded-7 crayons-dropdown reverse" style="--card-color: #000000; border-top-color: var(--card-color);" data-testid="profile-preview-card" data-repositioning-dropdown="true">
+    <div class="gap-4 grid">
+        <div class="-mt-4">
+  <a href="https://dev.to/3rchuss" class="flex">
+    <span class="crayons-avatar crayons-avatar--xl  mr-2 shrink-0">
+      <img src="./X_debug_VS_Code_files/361a2d71-631a-4d16-8997-3da0880a22b5(1).jpg" class="crayons-avatar__image" alt="" loading="lazy">
+    </span>
+    <span class="crayons-link crayons-subtitle-2 mt-5">Jesus Abril</span>
+  </a>
+</div>
+
+<div class="print-hidden">
+  <button name="button" type="button" data-info="{&quot;className&quot;:&quot;User&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:197049,&quot;name&quot;:&quot;Jesus Abril&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 follow-user" aria-label="Follow user: Jesus Abril" aria-pressed="false" data-fetched="fetched">Follow</button>
+</div>
+  <div class="color-base-70">
+    Self-taught Full Stack Web Developer. Apasionado por javascript!
+
+  </div>
+
+  <div class="user-metadata-details">
+    <ul class="user-metadata-details-inner">
+        <li>
+          <div class="key">
+            Location
+          </div>
+          <div class="value">
+            Granada
+          </div>
+        </li>
+      <li>
+        <div class="key">
+          Joined
+        </div>
+        <div class="value">
+          <time datetime="2019-07-17T19:32:52Z" class="date" title="Wednesday, July 17, 2019 at 4:32:52 PM">Jul 17, 2019</time>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+    </div>
+</div>
+
+      <span class="crayons-hover-tooltip inline-block spec-op-author -ml-2" data-tooltip="Author">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" class="crayons-icon">
+    <path d="M12 8.25a6 6 0 110 12 6 6 0 010-12zm0 2.625l-.992 2.01-2.218.322 1.605 1.564-.379 2.21L12 15.937l1.984 1.043-.379-2.209 1.605-1.564-2.218-.323L12 10.875zm.75-6.376l3.75.001v2.25l-1.022.854a7.45 7.45 0 00-2.728-.817V4.5zm-1.5 0v2.288a7.451 7.451 0 00-2.727.816L7.5 6.75V4.5h3.75z"></path>
+</svg>
+
+      </span>
+  </div>
+
+  <span class="color-base-30 px-2 m:pl-0" role="presentation">•</span>
+
+<a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-11b7o" class="comment-date crayons-link crayons-link--secondary fs-s">
+  <time datetime="2020-07-03T06:47:08Z" class="date-short-year" title="Friday, July 3, 2020 at 3:47:08 AM">Jul 3 '20</time>
+
+</a>
+
+
+  <div class="comment__dropdown" data-tracking-name="comment_dropdown">
+    <button id="comment-dropdown-trigger-482194" aria-controls="comment-dropdown-482194" aria-expanded="false" class="dropbtn comment__dropdown-trigger crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon " aria-label="Toggle dropdown menu" aria-haspopup="true" data-initialized="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ak2b7bynhm19j1bps16wq2jngbhawcdy" class="crayons-icon pointer-events-none"><title id="ak2b7bynhm19j1bps16wq2jngbhawcdy">Dropdown menu</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+    </button>
+    <div id="comment-dropdown-482194" class="crayons-dropdown right-1 s:right-0 s:left-auto fs-base dropdown">
+      <ul class="m-0">
+        <li><a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-11b7o" class="crayons-link crayons-link--block permalink-copybtn" aria-label="Copy link to Jesus Abril&#39;s comment" data-no-instant="">Copy link</a></li>
+        <li class="comment-actions hidden" data-user-id="197049" data-action="settings-button" data-path="https://dev.to/3rchuss/comment/11b7o/settings" aria-label="Go to Jesus Abril&#39;s comment settings"></li>
+        <li class="comment-actions hidden" data-action="hide-button" data-commentable-user-id="197049" data-user-id="197049">
+            <button class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0 hide-comment" data-hide-type="hide" data-comment-id="482194" data-comment-url="https://dev.to/3rchuss/comment/11b7o" aria-label="Hide Jesus Abril&#39;s comment">
+              Hide
+            </button>
+        </li>
+        <li class="mod-actions hidden mod-actions-comment-button" data-path="https://dev.to/3rchuss/comment/11b7o/mod" aria-label="Moderate Jesus Abril&#39;s comment"></li>
+        <li class="report-abuse-link-wrapper" data-path="/report-abuse?url=https://dev.to/3rchuss/comment/11b7o" aria-label="Report Jesus Abril&#39;s comment as abusive or violating our code of conduct and/or terms and conditions"><a href="https://dev.to/report-abuse?url=https://dev.to/3rchuss/comment/11b7o" class="crayons-link crayons-link--block">Report abuse</a></li>
+        <li class="current-user-actions"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+        <div class="
+            comment__body
+            text-styles
+            text-styles--secondary
+            body
+            
+            
+          ">
+          <p>Maybe incompatibility with other plug-ins.<br>
+Try to install the latest version and deactivate other php plug-ins.</p>
+
+
+        </div>
+
+    </div>
+
+    <footer class="comment__footer print-hidden">
+  <button class="crayons-tooltip__activator crayons-btn crayons-btn--ghost crayons-btn--icon crayons-btn--s mr-1 reaction-like inline-flex reaction-button" id="button-for-comment-482194" data-comment-id="482194" aria-label="like" data-tracking-name="comment_heart_button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ahfba1ex5k8k5gf7347i1dfbgcxi4nn1" class="crayons-icon reaction-icon not-reacted"><title id="ahfba1ex5k8k5gf7347i1dfbgcxi4nn1">Like comment: </title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aoi7w8nu5xcsvdz1rhqrqw4prwt724ms" class="crayons-icon crayons-icon reaction-icon--like reaction-icon reacted"><title id="aoi7w8nu5xcsvdz1rhqrqw4prwt724ms">Like comment: </title>
+    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+</svg>
+
+    <span class="reactions-count"></span><span class="reactions-label hidden m:inline-block"></span>
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Like
+    </span>
+  </button>
+
+      <a class="actions crayons-btn crayons-btn--ghost crayons-btn--s crayons-btn--icon-left toggle-reply-form mr-1 inline-flex" href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/new/11b7o" data-comment-id="482194" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/11b7o" data-tracking-name="comment_reply_button" data-testid="reply-button-482194" rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ahopndz48df0rfad5hxo9494iyg6r4w0" class="crayons-icon reaction-icon not-reacted"><title id="ahopndz48df0rfad5hxo9494iyg6r4w0">Comment button</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+        <span class="hidden m:inline-block">Reply</span>
+      </a>
+
+</footer>
+
+  </div>
+</div>
+
+
+  </div>
+    </details>
+
+
+  </div>
+    </details>
+
+    <details class="comment-wrapper js-comment-wrapper comment-wrapper--deep-0
+                    root
+                    " open="">
+      <summary aria-label="Toggle this comment (and replies)" data-tracking-name="expand_comment_toggle">
+        <span class="m:mx-1 inline-block align-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="adyv8h81ywc7mnrrbrj32u6pkq1kkijc" class="crayons-icon expanded"><title id="adyv8h81ywc7mnrrbrj32u6pkq1kkijc">Collapse</title>
+    <path d="M12 10.677L8 6.935 9 6l3 2.807L15 6l1 .935-4 3.742zm0 4.517L9 18l-1-.935 4-3.742 4 3.742-1 .934-3-2.805z"></path>
+</svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aeh09eaxqyeu4dmkm7decn7e9awh56xy" class="crayons-icon collapsed"><title id="aeh09eaxqyeu4dmkm7decn7e9awh56xy">Expand</title>
+    <path d="M12 18l-4-3.771 1-.943 3 2.829 3-2.829 1 .943L12 18zm0-10.115l-3 2.829-1-.943L12 6l4 3.771-1 .942-3-2.828z"></path>
+</svg>
+
+        </span>
+        <span class="js-collapse-comment-content inline-block align-middle"></span>
+      </summary>
+  <div id="comment-node-509819" class="
+      comment single-comment-node
+      
+      root
+      comment--deep-0
+      
+    " data-comment-id="509819" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/1304b" data-comment-author-id="444293" data-content-user-id="444293">
+    <a name="comment-1304b" style="position: absolute; top: -8px;">&nbsp;</a>
+    
+<div class="comment__inner">
+    <a href="https://dev.to/agbams" class="shrink-0 crayons-avatar m:crayons-avatar--l mt-4 m:mt-3">
+    <img class="crayons-avatar__image" width="32" height="32" src="./X_debug_VS_Code_files/f161253a-545b-4320-9b12-82227fae4889.jpg" alt="agbams profile image" loading="lazy">
+  </a>
+
+
+  <div class="inner-comment comment__details">
+    <div class="comment__content crayons-card">
+        
+
+
+        <div class="comment__header">
+  <a href="https://dev.to/agbams" class="crayons-link crayons-link--secondary flex items-center fw-medium m:hidden">
+    <span class="js-comment-username">Ugochukwu Agbams</span>
+  </a>
+  <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:block">
+    <button id="comment-profile-preview-trigger-509819" aria-controls="comment-profile-preview-content-509819" class="profile-preview-card__trigger p-1 -my-1 -ml-1 crayons-btn crayons-btn--ghost" aria-label="Ugochukwu Agbams profile details" aria-expanded="false" aria-haspopup="true" data-initialized="true">
+      Ugochukwu Agbams
+    </button>
+    <div id="comment-profile-preview-content-509819" class="profile-preview-card__content p-4 pt-0 branded-7 crayons-dropdown reverse" style="--card-color: #021e2f; border-top-color: var(--card-color);" data-testid="profile-preview-card" data-repositioning-dropdown="true">
+    <div class="gap-4 grid">
+        <div class="-mt-4">
+  <a href="https://dev.to/agbams" class="flex">
+    <span class="crayons-avatar crayons-avatar--xl  mr-2 shrink-0">
+      <img src="./X_debug_VS_Code_files/f161253a-545b-4320-9b12-82227fae4889(1).jpg" class="crayons-avatar__image" alt="" loading="lazy">
+    </span>
+    <span class="crayons-link crayons-subtitle-2 mt-5">Ugochukwu Agbams</span>
+  </a>
+</div>
+
+<div class="print-hidden">
+  <button name="button" type="button" data-info="{&quot;className&quot;:&quot;User&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:444293,&quot;name&quot;:&quot;Ugochukwu Agbams&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 follow-user" aria-label="Follow user: Ugochukwu Agbams" aria-pressed="false" data-fetched="fetched">Follow</button>
+</div>
+  <div class="color-base-70">
+    Insurer and real estate agent at day, and a programmer at night.
+  </div>
+
+  <div class="user-metadata-details">
+    <ul class="user-metadata-details-inner">
+        <li>
+          <div class="key">
+            Location
+          </div>
+          <div class="value">
+            Nigeria
+          </div>
+        </li>
+          <li>
+            <div class="key">
+              Work
+            </div>
+            <div class="value">
+              Programmer/sales agent at African Alliance Insurance Plc
+            </div>
+          </li>
+      <li>
+        <div class="key">
+          Joined
+        </div>
+        <div class="value">
+          <time datetime="2020-07-31T09:04:54Z" class="date" title="Friday, July 31, 2020 at 6:04:54 AM">Jul 31, 2020</time>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+    </div>
+</div>
+
+  </div>
+
+  <span class="color-base-30 px-2 m:pl-0" role="presentation">•</span>
+
+<a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-1304b" class="comment-date crayons-link crayons-link--secondary fs-s">
+  <time datetime="2020-07-31T09:16:07Z" class="date-short-year" title="Friday, July 31, 2020 at 6:16:07 AM">Jul 31 '20</time>
+
+</a>
+
+
+  <div class="comment__dropdown" data-tracking-name="comment_dropdown">
+    <button id="comment-dropdown-trigger-509819" aria-controls="comment-dropdown-509819" aria-expanded="false" class="dropbtn comment__dropdown-trigger crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon " aria-label="Toggle dropdown menu" aria-haspopup="true" data-initialized="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ashwigl47rsw22bdau55oup38kkg4ts3" class="crayons-icon pointer-events-none"><title id="ashwigl47rsw22bdau55oup38kkg4ts3">Dropdown menu</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+    </button>
+    <div id="comment-dropdown-509819" class="crayons-dropdown right-1 s:right-0 s:left-auto fs-base dropdown">
+      <ul class="m-0">
+        <li><a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-1304b" class="crayons-link crayons-link--block permalink-copybtn" aria-label="Copy link to Ugochukwu Agbams&#39;s comment" data-no-instant="">Copy link</a></li>
+        <li class="comment-actions hidden" data-user-id="444293" data-action="settings-button" data-path="https://dev.to/agbams/comment/1304b/settings" aria-label="Go to Ugochukwu Agbams&#39;s comment settings"></li>
+        <li class="comment-actions hidden" data-action="hide-button" data-commentable-user-id="197049" data-user-id="444293">
+            <button class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0 hide-comment" data-hide-type="hide" data-comment-id="509819" data-comment-url="https://dev.to/agbams/comment/1304b" aria-label="Hide Ugochukwu Agbams&#39;s comment">
+              Hide
+            </button>
+        </li>
+        <li class="mod-actions hidden mod-actions-comment-button" data-path="https://dev.to/agbams/comment/1304b/mod" aria-label="Moderate Ugochukwu Agbams&#39;s comment"></li>
+        <li class="report-abuse-link-wrapper" data-path="/report-abuse?url=https://dev.to/agbams/comment/1304b" aria-label="Report Ugochukwu Agbams&#39;s comment as abusive or violating our code of conduct and/or terms and conditions"><a href="https://dev.to/report-abuse?url=https://dev.to/agbams/comment/1304b" class="crayons-link crayons-link--block">Report abuse</a></li>
+        <li class="current-user-actions"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+        <div class="
+            comment__body
+            text-styles
+            text-styles--secondary
+            body
+            
+            
+          ">
+          <p>Hey <a class="comment-mentioned-user" href="https://dev.to/3rchuss">@3rchuss</a>
+, thanks for this wonderful piece of work. It really helped me out, and I now have everything up and running with my vs code in connection with xampp.</p>
+
+
+        </div>
+
+    </div>
+
+    <footer class="comment__footer print-hidden">
+  <button class="crayons-tooltip__activator crayons-btn crayons-btn--ghost crayons-btn--icon-left crayons-btn--s mr-1 reaction-like inline-flex reaction-button" id="button-for-comment-509819" data-comment-id="509819" aria-label="like" data-tracking-name="comment_heart_button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ah2viswqt7gebp6apu3mq728ok4ssiql" class="crayons-icon reaction-icon not-reacted"><title id="ah2viswqt7gebp6apu3mq728ok4ssiql">Like comment: </title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a8x4nek1f8y1bzsg0fgfl3o262l94a8q" class="crayons-icon crayons-icon reaction-icon--like reaction-icon reacted"><title id="a8x4nek1f8y1bzsg0fgfl3o262l94a8q">Like comment: </title>
+    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+</svg>
+
+    <span class="reactions-count">2</span><span class="reactions-label hidden m:inline-block">&nbsp;likes</span>
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Like
+    </span>
+  </button>
+
+      <a class="actions crayons-btn crayons-btn--ghost crayons-btn--s crayons-btn--icon-left toggle-reply-form mr-1 inline-flex" href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/new/1304b" data-comment-id="509819" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/1304b" data-tracking-name="comment_reply_button" data-testid="reply-button-509819" rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="a6l96wkis92h2u33u0193y6n1bhyffpl" class="crayons-icon reaction-icon not-reacted"><title id="a6l96wkis92h2u33u0193y6n1bhyffpl">Comment button</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+        <span class="hidden m:inline-block">Reply</span>
+      </a>
+
+</footer>
+
+  </div>
+</div>
+    <details class="comment-wrapper js-comment-wrapper comment-wrapper--deep-1
+                    child
+                    " open="">
+      <summary aria-label="Toggle this comment (and replies)" data-tracking-name="expand_comment_toggle">
+        <span class="mx-0 inline-block align-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a71yz6gecqs5ffbpr1w954x654xord0o" class="crayons-icon expanded"><title id="a71yz6gecqs5ffbpr1w954x654xord0o">Collapse</title>
+    <path d="M12 10.677L8 6.935 9 6l3 2.807L15 6l1 .935-4 3.742zm0 4.517L9 18l-1-.935 4-3.742 4 3.742-1 .934-3-2.805z"></path>
+</svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a7uj4aiffmcavwfmz4vnwymw1cf0u98g" class="crayons-icon collapsed"><title id="a7uj4aiffmcavwfmz4vnwymw1cf0u98g">Expand</title>
+    <path d="M12 18l-4-3.771 1-.943 3 2.829 3-2.829 1 .943L12 18zm0-10.115l-3 2.829-1-.943L12 6l4 3.771-1 .942-3-2.828z"></path>
+</svg>
+
+        </span>
+        <span class="js-collapse-comment-content inline-block align-middle"></span>
+      </summary>
+  <div id="comment-node-510544" class="
+      comment single-comment-node
+      
+      child
+      comment--deep-1
+      
+    " data-comment-id="510544" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/13168" data-comment-author-id="197049" data-content-user-id="197049">
+    <a name="comment-13168" style="position: absolute; top: -8px;">&nbsp;</a>
+    
+<div class="comment__inner">
+    <a href="https://dev.to/3rchuss" class="shrink-0 crayons-avatar mt-4">
+    <img class="crayons-avatar__image" width="32" height="32" src="./X_debug_VS_Code_files/361a2d71-631a-4d16-8997-3da0880a22b5.jpg" alt="3rchuss profile image" loading="lazy">
+  </a>
+
+
+  <div class="inner-comment comment__details">
+    <div class="comment__content crayons-card">
+        
+
+
+        <div class="comment__header">
+  <a href="https://dev.to/3rchuss" class="crayons-link crayons-link--secondary flex items-center fw-medium m:hidden">
+    <span class="js-comment-username">Jesus Abril</span>
+      <span class="crayons-hover-tooltip inline-block spec-op-author -mr-2" data-tooltip="Author">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" class="crayons-icon">
+    <path d="M12 8.25a6 6 0 110 12 6 6 0 010-12zm0 2.625l-.992 2.01-2.218.322 1.605 1.564-.379 2.21L12 15.937l1.984 1.043-.379-2.209 1.605-1.564-2.218-.323L12 10.875zm.75-6.376l3.75.001v2.25l-1.022.854a7.45 7.45 0 00-2.728-.817V4.5zm-1.5 0v2.288a7.451 7.451 0 00-2.727.816L7.5 6.75V4.5h3.75z"></path>
+</svg>
+
+      </span>
+  </a>
+  <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:block">
+    <button id="comment-profile-preview-trigger-510544" aria-controls="comment-profile-preview-content-510544" class="profile-preview-card__trigger p-1 -my-1 -ml-1 crayons-btn crayons-btn--ghost" aria-label="Jesus Abril profile details" aria-expanded="false" aria-haspopup="true" data-initialized="true">
+      Jesus Abril
+    </button>
+    <div id="comment-profile-preview-content-510544" class="profile-preview-card__content p-4 pt-0 branded-7 crayons-dropdown reverse" style="--card-color: #000000; border-top-color: var(--card-color);" data-testid="profile-preview-card" data-repositioning-dropdown="true">
+    <div class="gap-4 grid">
+        <div class="-mt-4">
+  <a href="https://dev.to/3rchuss" class="flex">
+    <span class="crayons-avatar crayons-avatar--xl  mr-2 shrink-0">
+      <img src="./X_debug_VS_Code_files/361a2d71-631a-4d16-8997-3da0880a22b5(1).jpg" class="crayons-avatar__image" alt="" loading="lazy">
+    </span>
+    <span class="crayons-link crayons-subtitle-2 mt-5">Jesus Abril</span>
+  </a>
+</div>
+
+<div class="print-hidden">
+  <button name="button" type="button" data-info="{&quot;className&quot;:&quot;User&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:197049,&quot;name&quot;:&quot;Jesus Abril&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 follow-user" aria-label="Follow user: Jesus Abril" aria-pressed="false" data-fetched="fetched">Follow</button>
+</div>
+  <div class="color-base-70">
+    Self-taught Full Stack Web Developer. Apasionado por javascript!
+
+  </div>
+
+  <div class="user-metadata-details">
+    <ul class="user-metadata-details-inner">
+        <li>
+          <div class="key">
+            Location
+          </div>
+          <div class="value">
+            Granada
+          </div>
+        </li>
+      <li>
+        <div class="key">
+          Joined
+        </div>
+        <div class="value">
+          <time datetime="2019-07-17T19:32:52Z" class="date" title="Wednesday, July 17, 2019 at 4:32:52 PM">Jul 17, 2019</time>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+    </div>
+</div>
+
+      <span class="crayons-hover-tooltip inline-block spec-op-author -ml-2" data-tooltip="Author">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" class="crayons-icon">
+    <path d="M12 8.25a6 6 0 110 12 6 6 0 010-12zm0 2.625l-.992 2.01-2.218.322 1.605 1.564-.379 2.21L12 15.937l1.984 1.043-.379-2.209 1.605-1.564-2.218-.323L12 10.875zm.75-6.376l3.75.001v2.25l-1.022.854a7.45 7.45 0 00-2.728-.817V4.5zm-1.5 0v2.288a7.451 7.451 0 00-2.727.816L7.5 6.75V4.5h3.75z"></path>
+</svg>
+
+      </span>
+  </div>
+
+  <span class="color-base-30 px-2 m:pl-0" role="presentation">•</span>
+
+<a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-13168" class="comment-date crayons-link crayons-link--secondary fs-s">
+  <time datetime="2020-08-01T05:42:59Z" class="date-short-year" title="Saturday, August 1, 2020 at 2:42:59 AM">Aug 1 '20</time>
+
+</a>
+
+
+  <div class="comment__dropdown" data-tracking-name="comment_dropdown">
+    <button id="comment-dropdown-trigger-510544" aria-controls="comment-dropdown-510544" aria-expanded="false" class="dropbtn comment__dropdown-trigger crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon " aria-label="Toggle dropdown menu" aria-haspopup="true" data-initialized="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aob1aa9os40y7otitwydjygrfoygcc22" class="crayons-icon pointer-events-none"><title id="aob1aa9os40y7otitwydjygrfoygcc22">Dropdown menu</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+    </button>
+    <div id="comment-dropdown-510544" class="crayons-dropdown right-1 s:right-0 s:left-auto fs-base dropdown">
+      <ul class="m-0">
+        <li><a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-13168" class="crayons-link crayons-link--block permalink-copybtn" aria-label="Copy link to Jesus Abril&#39;s comment" data-no-instant="">Copy link</a></li>
+        <li class="comment-actions hidden" data-user-id="197049" data-action="settings-button" data-path="https://dev.to/3rchuss/comment/13168/settings" aria-label="Go to Jesus Abril&#39;s comment settings"></li>
+        <li class="comment-actions hidden" data-action="hide-button" data-commentable-user-id="197049" data-user-id="197049">
+            <button class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0 hide-comment" data-hide-type="hide" data-comment-id="510544" data-comment-url="https://dev.to/3rchuss/comment/13168" aria-label="Hide Jesus Abril&#39;s comment">
+              Hide
+            </button>
+        </li>
+        <li class="mod-actions hidden mod-actions-comment-button" data-path="https://dev.to/3rchuss/comment/13168/mod" aria-label="Moderate Jesus Abril&#39;s comment"></li>
+        <li class="report-abuse-link-wrapper" data-path="/report-abuse?url=https://dev.to/3rchuss/comment/13168" aria-label="Report Jesus Abril&#39;s comment as abusive or violating our code of conduct and/or terms and conditions"><a href="https://dev.to/report-abuse?url=https://dev.to/3rchuss/comment/13168" class="crayons-link crayons-link--block">Report abuse</a></li>
+        <li class="current-user-actions"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+        <div class="
+            comment__body
+            text-styles
+            text-styles--secondary
+            body
+            
+            
+          ">
+          <p>Great. Im glad that this helped you out.<br>
+Thank you.</p>
+
+
+        </div>
+
+    </div>
+
+    <footer class="comment__footer print-hidden">
+  <button class="crayons-tooltip__activator crayons-btn crayons-btn--ghost crayons-btn--icon-left crayons-btn--s mr-1 reaction-like inline-flex reaction-button" id="button-for-comment-510544" data-comment-id="510544" aria-label="like" data-tracking-name="comment_heart_button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aln7xg0q7yeolnruh6udu7pxy9kxvfaf" class="crayons-icon reaction-icon not-reacted"><title id="aln7xg0q7yeolnruh6udu7pxy9kxvfaf">Like comment: </title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ads1hbzxngohk66i31wqn07u7h7zb4eo" class="crayons-icon crayons-icon reaction-icon--like reaction-icon reacted"><title id="ads1hbzxngohk66i31wqn07u7h7zb4eo">Like comment: </title>
+    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+</svg>
+
+    <span class="reactions-count">1</span><span class="reactions-label hidden m:inline-block">&nbsp;like</span>
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Like
+    </span>
+  </button>
+
+      <a class="actions crayons-btn crayons-btn--ghost crayons-btn--s crayons-btn--icon-left toggle-reply-form mr-1 inline-flex" href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/new/13168" data-comment-id="510544" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/13168" data-tracking-name="comment_reply_button" data-testid="reply-button-510544" rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ahc65n79bqzwdubf61c3emrf483g8c0q" class="crayons-icon reaction-icon not-reacted"><title id="ahc65n79bqzwdubf61c3emrf483g8c0q">Comment button</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+        <span class="hidden m:inline-block">Reply</span>
+      </a>
+
+</footer>
+
+  </div>
+</div>
+
+
+  </div>
+    </details>
+
+
+  </div>
+    </details>
+
+    <details class="comment-wrapper js-comment-wrapper comment-wrapper--deep-0
+                    root
+                    " open="">
+      <summary aria-label="Toggle this comment (and replies)" data-tracking-name="expand_comment_toggle">
+        <span class="m:mx-1 inline-block align-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a1ad0qgdx2rjg4n5wrt29ijw6t2dt4o4" class="crayons-icon expanded"><title id="a1ad0qgdx2rjg4n5wrt29ijw6t2dt4o4">Collapse</title>
+    <path d="M12 10.677L8 6.935 9 6l3 2.807L15 6l1 .935-4 3.742zm0 4.517L9 18l-1-.935 4-3.742 4 3.742-1 .934-3-2.805z"></path>
+</svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aj4lywleda313srl6lxlfv8eqmtuwc8" class="crayons-icon collapsed"><title id="aj4lywleda313srl6lxlfv8eqmtuwc8">Expand</title>
+    <path d="M12 18l-4-3.771 1-.943 3 2.829 3-2.829 1 .943L12 18zm0-10.115l-3 2.829-1-.943L12 6l4 3.771-1 .942-3-2.828z"></path>
+</svg>
+
+        </span>
+        <span class="js-collapse-comment-content inline-block align-middle"></span>
+      </summary>
+  <div id="comment-node-620147" class="
+      comment single-comment-node
+      
+      root
+      comment--deep-0
+      
+    " data-comment-id="620147" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/1979l" data-comment-author-id="436698" data-content-user-id="436698">
+    <a name="comment-1979l" style="position: absolute; top: -8px;">&nbsp;</a>
+    
+<div class="comment__inner">
+    <a href="https://dev.to/jswizard" class="shrink-0 crayons-avatar m:crayons-avatar--l mt-4 m:mt-3">
+    <img class="crayons-avatar__image" width="32" height="32" src="./X_debug_VS_Code_files/ded2e2b6-22ac-4c90-8bd2-533131c8f622.jpeg" alt="jswizard profile image" loading="lazy">
+  </a>
+
+
+  <div class="inner-comment comment__details">
+    <div class="comment__content crayons-card">
+        
+
+
+        <div class="comment__header">
+  <a href="https://dev.to/jswizard" class="crayons-link crayons-link--secondary flex items-center fw-medium m:hidden">
+    <span class="js-comment-username">Ogbuagu Francis</span>
+  </a>
+  <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:block">
+    <button id="comment-profile-preview-trigger-620147" aria-controls="comment-profile-preview-content-620147" class="profile-preview-card__trigger p-1 -my-1 -ml-1 crayons-btn crayons-btn--ghost" aria-label="Ogbuagu Francis profile details" aria-expanded="false" aria-haspopup="true" data-initialized="true">
+      Ogbuagu Francis
+    </button>
+    <div id="comment-profile-preview-content-620147" class="profile-preview-card__content p-4 pt-0 branded-7 crayons-dropdown reverse" style="--card-color: #280331; border-top-color: var(--card-color);" data-testid="profile-preview-card" data-repositioning-dropdown="true">
+    <div class="gap-4 grid">
+        <div class="-mt-4">
+  <a href="https://dev.to/jswizard" class="flex">
+    <span class="crayons-avatar crayons-avatar--xl  mr-2 shrink-0">
+      <img src="./X_debug_VS_Code_files/ded2e2b6-22ac-4c90-8bd2-533131c8f622(1).jpeg" class="crayons-avatar__image" alt="" loading="lazy">
+    </span>
+    <span class="crayons-link crayons-subtitle-2 mt-5">Ogbuagu Francis</span>
+  </a>
+</div>
+
+<div class="print-hidden">
+  <button name="button" type="button" data-info="{&quot;className&quot;:&quot;User&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:436698,&quot;name&quot;:&quot;Ogbuagu Francis&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 follow-user" aria-label="Follow user: Ogbuagu Francis" aria-pressed="false" data-fetched="fetched">Follow</button>
+</div>
+  <div class="color-base-70">
+    i'm a passionate and creative developer.
+i'm also an Artist
+  </div>
+
+  <div class="user-metadata-details">
+    <ul class="user-metadata-details-inner">
+        <li>
+          <div class="key">
+            Email
+          </div>
+          <div class="value">
+            <a href="mailto:hakerfranck6@gmail.com">hakerfranck6@gmail.com</a>
+          </div>
+        </li>
+        <li>
+          <div class="key">
+            Location
+          </div>
+          <div class="value">
+            Nigeria
+          </div>
+        </li>
+          <li>
+            <div class="key">
+              Work
+            </div>
+            <div class="value">
+              Frontend Developer
+            </div>
+          </li>
+      <li>
+        <div class="key">
+          Joined
+        </div>
+        <div class="value">
+          <time datetime="2020-07-20T23:42:48Z" class="date" title="Monday, July 20, 2020 at 8:42:48 PM">Jul 20, 2020</time>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+    </div>
+</div>
+
+  </div>
+
+  <span class="color-base-30 px-2 m:pl-0" role="presentation">•</span>
+
+<a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-1979l" class="comment-date crayons-link crayons-link--secondary fs-s">
+  <time datetime="2020-12-15T00:42:24Z" class="date-short-year" title="Monday, December 14, 2020 at 8:42:24 PM">Dec 14 '20</time>
+
+</a>
+
+
+  <div class="comment__dropdown" data-tracking-name="comment_dropdown">
+    <button id="comment-dropdown-trigger-620147" aria-controls="comment-dropdown-620147" aria-expanded="false" class="dropbtn comment__dropdown-trigger crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon " aria-label="Toggle dropdown menu" aria-haspopup="true" data-initialized="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="agnnd3wbbpvi4iv4znekkpsvr255pwou" class="crayons-icon pointer-events-none"><title id="agnnd3wbbpvi4iv4znekkpsvr255pwou">Dropdown menu</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+    </button>
+    <div id="comment-dropdown-620147" class="crayons-dropdown right-1 s:right-0 s:left-auto fs-base dropdown">
+      <ul class="m-0">
+        <li><a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-1979l" class="crayons-link crayons-link--block permalink-copybtn" aria-label="Copy link to Ogbuagu Francis&#39;s comment" data-no-instant="">Copy link</a></li>
+        <li class="comment-actions hidden" data-user-id="436698" data-action="settings-button" data-path="https://dev.to/jswizard/comment/1979l/settings" aria-label="Go to Ogbuagu Francis&#39;s comment settings"></li>
+        <li class="comment-actions hidden" data-action="hide-button" data-commentable-user-id="197049" data-user-id="436698">
+            <button class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0 hide-comment" data-hide-type="hide" data-comment-id="620147" data-comment-url="https://dev.to/jswizard/comment/1979l" aria-label="Hide Ogbuagu Francis&#39;s comment">
+              Hide
+            </button>
+        </li>
+        <li class="mod-actions hidden mod-actions-comment-button" data-path="https://dev.to/jswizard/comment/1979l/mod" aria-label="Moderate Ogbuagu Francis&#39;s comment"></li>
+        <li class="report-abuse-link-wrapper" data-path="/report-abuse?url=https://dev.to/jswizard/comment/1979l" aria-label="Report Ogbuagu Francis&#39;s comment as abusive or violating our code of conduct and/or terms and conditions"><a href="https://dev.to/report-abuse?url=https://dev.to/jswizard/comment/1979l" class="crayons-link crayons-link--block">Report abuse</a></li>
+        <li class="current-user-actions"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+        <div class="
+            comment__body
+            text-styles
+            text-styles--secondary
+            body
+            
+            
+          ">
+          <p>very helpful thanks</p>
+
+
+        </div>
+
+    </div>
+
+    <footer class="comment__footer print-hidden">
+  <button class="crayons-tooltip__activator crayons-btn crayons-btn--ghost crayons-btn--icon-left crayons-btn--s mr-1 reaction-like inline-flex reaction-button" id="button-for-comment-620147" data-comment-id="620147" aria-label="like" data-tracking-name="comment_heart_button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="a4eemrqnhdxzhh7zgmh1b8j358n9721p" class="crayons-icon reaction-icon not-reacted"><title id="a4eemrqnhdxzhh7zgmh1b8j358n9721p">Like comment: </title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="afzrybf96vugxtbuwd2g09k2k77b1xjp" class="crayons-icon crayons-icon reaction-icon--like reaction-icon reacted"><title id="afzrybf96vugxtbuwd2g09k2k77b1xjp">Like comment: </title>
+    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+</svg>
+
+    <span class="reactions-count">2</span><span class="reactions-label hidden m:inline-block">&nbsp;likes</span>
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Like
+    </span>
+  </button>
+
+      <a class="actions crayons-btn crayons-btn--ghost crayons-btn--s crayons-btn--icon-left toggle-reply-form mr-1 inline-flex" href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/new/1979l" data-comment-id="620147" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/1979l" data-tracking-name="comment_reply_button" data-testid="reply-button-620147" rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="af2inubyhxg7o27jlczjhqjd3ng305m9" class="crayons-icon reaction-icon not-reacted"><title id="af2inubyhxg7o27jlczjhqjd3ng305m9">Comment button</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+        <span class="hidden m:inline-block">Reply</span>
+      </a>
+
+</footer>
+
+  </div>
+</div>
+
+
+  </div>
+    </details>
+
+    <details class="comment-wrapper js-comment-wrapper comment-wrapper--deep-0
+                    root
+                    " open="">
+      <summary aria-label="Toggle this comment (and replies)" data-tracking-name="expand_comment_toggle">
+        <span class="m:mx-1 inline-block align-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="atjb1p4ugfat5ynjwi8w2tl25hrau8e5" class="crayons-icon expanded"><title id="atjb1p4ugfat5ynjwi8w2tl25hrau8e5">Collapse</title>
+    <path d="M12 10.677L8 6.935 9 6l3 2.807L15 6l1 .935-4 3.742zm0 4.517L9 18l-1-.935 4-3.742 4 3.742-1 .934-3-2.805z"></path>
+</svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a269suy72op895dmuf778oatt0pkciog" class="crayons-icon collapsed"><title id="a269suy72op895dmuf778oatt0pkciog">Expand</title>
+    <path d="M12 18l-4-3.771 1-.943 3 2.829 3-2.829 1 .943L12 18zm0-10.115l-3 2.829-1-.943L12 6l4 3.771-1 .942-3-2.828z"></path>
+</svg>
+
+        </span>
+        <span class="js-collapse-comment-content inline-block align-middle"></span>
+      </summary>
+  <div id="comment-node-575023" class="
+      comment single-comment-node
+      
+      root
+      comment--deep-0
+      
+    " data-comment-id="575023" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/16ig7" data-comment-author-id="486277" data-content-user-id="486277">
+    <a name="comment-16ig7" style="position: absolute; top: -8px;">&nbsp;</a>
+    
+<div class="comment__inner">
+    <a href="https://dev.to/harshitharas" class="shrink-0 crayons-avatar m:crayons-avatar--l mt-4 m:mt-3">
+    <img class="crayons-avatar__image" width="32" height="32" src="./X_debug_VS_Code_files/b120285b-c399-451e-b028-3106f7576468.png" alt="harshitharas profile image" loading="lazy">
+  </a>
+
+
+  <div class="inner-comment comment__details">
+    <div class="comment__content crayons-card">
+        
+
+
+        <div class="comment__header">
+  <a href="https://dev.to/harshitharas" class="crayons-link crayons-link--secondary flex items-center fw-medium m:hidden">
+    <span class="js-comment-username">Harshitha Rasamsetty</span>
+  </a>
+  <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:block">
+    <button id="comment-profile-preview-trigger-575023" aria-controls="comment-profile-preview-content-575023" class="profile-preview-card__trigger p-1 -my-1 -ml-1 crayons-btn crayons-btn--ghost" aria-label="Harshitha Rasamsetty profile details" aria-expanded="false" aria-haspopup="true" data-initialized="true">
+      Harshitha Rasamsetty
+    </button>
+    <div id="comment-profile-preview-content-575023" class="profile-preview-card__content p-4 pt-0 branded-7 crayons-dropdown reverse" style="--card-color: #551029; border-top-color: var(--card-color);" data-testid="profile-preview-card" data-repositioning-dropdown="true">
+    <div class="gap-4 grid">
+        <div class="-mt-4">
+  <a href="https://dev.to/harshitharas" class="flex">
+    <span class="crayons-avatar crayons-avatar--xl  mr-2 shrink-0">
+      <img src="./X_debug_VS_Code_files/b120285b-c399-451e-b028-3106f7576468(1).png" class="crayons-avatar__image" alt="" loading="lazy">
+    </span>
+    <span class="crayons-link crayons-subtitle-2 mt-5">Harshitha Rasamsetty</span>
+  </a>
+</div>
+
+<div class="print-hidden">
+  <button name="button" type="button" data-info="{&quot;className&quot;:&quot;User&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:486277,&quot;name&quot;:&quot;Harshitha Rasamsetty&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 follow-user" aria-label="Follow user: Harshitha Rasamsetty" aria-pressed="false" data-fetched="fetched">Follow</button>
+</div>
+
+  <div class="user-metadata-details">
+    <ul class="user-metadata-details-inner">
+      <li>
+        <div class="key">
+          Joined
+        </div>
+        <div class="value">
+          <time datetime="2020-10-09T15:23:44Z" class="date" title="Friday, October 9, 2020 at 12:23:44 PM">Oct 9, 2020</time>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+    </div>
+</div>
+
+  </div>
+
+  <span class="color-base-30 px-2 m:pl-0" role="presentation">•</span>
+
+<a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-16ig7" class="comment-date crayons-link crayons-link--secondary fs-s">
+  <time datetime="2020-10-09T15:26:17Z" class="date-short-year" title="Friday, October 9, 2020 at 12:26:17 PM">Oct 9 '20</time>
+
+</a>
+
+
+  <div class="comment__dropdown" data-tracking-name="comment_dropdown">
+    <button id="comment-dropdown-trigger-575023" aria-controls="comment-dropdown-575023" aria-expanded="false" class="dropbtn comment__dropdown-trigger crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon " aria-label="Toggle dropdown menu" aria-haspopup="true" data-initialized="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aa9swm0mzmmagbc4ipqohv1pfcnu1pgu" class="crayons-icon pointer-events-none"><title id="aa9swm0mzmmagbc4ipqohv1pfcnu1pgu">Dropdown menu</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+    </button>
+    <div id="comment-dropdown-575023" class="crayons-dropdown right-1 s:right-0 s:left-auto fs-base dropdown">
+      <ul class="m-0">
+        <li><a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-16ig7" class="crayons-link crayons-link--block permalink-copybtn" aria-label="Copy link to Harshitha Rasamsetty&#39;s comment" data-no-instant="">Copy link</a></li>
+        <li class="comment-actions hidden" data-user-id="486277" data-action="settings-button" data-path="https://dev.to/harshitharas/comment/16ig7/settings" aria-label="Go to Harshitha Rasamsetty&#39;s comment settings"></li>
+        <li class="comment-actions hidden" data-action="hide-button" data-commentable-user-id="197049" data-user-id="486277">
+            <button class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0 hide-comment" data-hide-type="hide" data-comment-id="575023" data-comment-url="https://dev.to/harshitharas/comment/16ig7" aria-label="Hide Harshitha Rasamsetty&#39;s comment">
+              Hide
+            </button>
+        </li>
+        <li class="mod-actions hidden mod-actions-comment-button" data-path="https://dev.to/harshitharas/comment/16ig7/mod" aria-label="Moderate Harshitha Rasamsetty&#39;s comment"></li>
+        <li class="report-abuse-link-wrapper" data-path="/report-abuse?url=https://dev.to/harshitharas/comment/16ig7" aria-label="Report Harshitha Rasamsetty&#39;s comment as abusive or violating our code of conduct and/or terms and conditions"><a href="https://dev.to/report-abuse?url=https://dev.to/harshitharas/comment/16ig7" class="crayons-link crayons-link--block">Report abuse</a></li>
+        <li class="current-user-actions"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+        <div class="
+            comment__body
+            text-styles
+            text-styles--secondary
+            body
+            
+            
+          ">
+          <p>What does "set a stop point in VSCode" mean?</p>
+
+
+        </div>
+
+    </div>
+
+    <footer class="comment__footer print-hidden">
+  <button class="crayons-tooltip__activator crayons-btn crayons-btn--ghost crayons-btn--icon-left crayons-btn--s mr-1 reaction-like inline-flex reaction-button" id="button-for-comment-575023" data-comment-id="575023" aria-label="like" data-tracking-name="comment_heart_button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="a6k7b53gi6pf5yti5fvq2p724y35a3hk" class="crayons-icon reaction-icon not-reacted"><title id="a6k7b53gi6pf5yti5fvq2p724y35a3hk">Like comment: </title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a52b0gm6nwkjpmj8ggf76x29pfrmviw5" class="crayons-icon crayons-icon reaction-icon--like reaction-icon reacted"><title id="a52b0gm6nwkjpmj8ggf76x29pfrmviw5">Like comment: </title>
+    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+</svg>
+
+    <span class="reactions-count">1</span><span class="reactions-label hidden m:inline-block">&nbsp;like</span>
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Like
+    </span>
+  </button>
+
+      <a class="actions crayons-btn crayons-btn--ghost crayons-btn--s crayons-btn--icon-left toggle-reply-form mr-1 inline-flex" href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/new/16ig7" data-comment-id="575023" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/16ig7" data-tracking-name="comment_reply_button" data-testid="reply-button-575023" rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="a74j45tgxhzxllmtiz3u98wifi1z6g01" class="crayons-icon reaction-icon not-reacted"><title id="a74j45tgxhzxllmtiz3u98wifi1z6g01">Comment button</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+        <span class="hidden m:inline-block">Reply</span>
+      </a>
+
+</footer>
+
+  </div>
+</div>
+    <details class="comment-wrapper js-comment-wrapper comment-wrapper--deep-1
+                    child
+                    " open="">
+      <summary aria-label="Toggle this comment (and replies)" data-tracking-name="expand_comment_toggle">
+        <span class="mx-0 inline-block align-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ab8guhyz4bgdfccc5s497160qznqa3hp" class="crayons-icon expanded"><title id="ab8guhyz4bgdfccc5s497160qznqa3hp">Collapse</title>
+    <path d="M12 10.677L8 6.935 9 6l3 2.807L15 6l1 .935-4 3.742zm0 4.517L9 18l-1-.935 4-3.742 4 3.742-1 .934-3-2.805z"></path>
+</svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="a7xod46ji8d1w4vw6as5reehn8xwvtck" class="crayons-icon collapsed"><title id="a7xod46ji8d1w4vw6as5reehn8xwvtck">Expand</title>
+    <path d="M12 18l-4-3.771 1-.943 3 2.829 3-2.829 1 .943L12 18zm0-10.115l-3 2.829-1-.943L12 6l4 3.771-1 .942-3-2.828z"></path>
+</svg>
+
+        </span>
+        <span class="js-collapse-comment-content inline-block align-middle"></span>
+      </summary>
+  <div id="comment-node-596402" class="
+      comment single-comment-node
+      
+      child
+      comment--deep-1
+      
+    " data-comment-id="596402" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/17o6e" data-comment-author-id="512198" data-content-user-id="512198">
+    <a name="comment-17o6e" style="position: absolute; top: -8px;">&nbsp;</a>
+    
+<div class="comment__inner">
+    <a href="https://dev.to/theonlywisdom" class="shrink-0 crayons-avatar mt-4">
+    <img class="crayons-avatar__image" width="32" height="32" src="./X_debug_VS_Code_files/0f43430f-c83d-4358-943f-0a8ce6b0489c.jpeg" alt="theonlywisdom profile image" loading="lazy">
+  </a>
+
+
+  <div class="inner-comment comment__details">
+    <div class="comment__content crayons-card">
+        
+
+
+        <div class="comment__header">
+  <a href="https://dev.to/theonlywisdom" class="crayons-link crayons-link--secondary flex items-center fw-medium m:hidden">
+    <span class="js-comment-username">Wisdom Akwoyere Baah</span>
+  </a>
+  <div class="profile-preview-card relative mb-4 s:mb-0 fw-medium hidden m:block">
+    <button id="comment-profile-preview-trigger-596402" aria-controls="comment-profile-preview-content-596402" class="profile-preview-card__trigger p-1 -my-1 -ml-1 crayons-btn crayons-btn--ghost" aria-label="Wisdom Akwoyere Baah profile details" aria-expanded="false" aria-haspopup="true" data-initialized="true">
+      Wisdom Akwoyere Baah
+    </button>
+    <div id="comment-profile-preview-content-596402" class="profile-preview-card__content p-4 pt-0 branded-7 crayons-dropdown reverse" style="--card-color: #280331; border-top-color: var(--card-color);" data-testid="profile-preview-card" data-repositioning-dropdown="true">
+    <div class="gap-4 grid">
+        <div class="-mt-4">
+  <a href="https://dev.to/theonlywisdom" class="flex">
+    <span class="crayons-avatar crayons-avatar--xl  mr-2 shrink-0">
+      <img src="./X_debug_VS_Code_files/0f43430f-c83d-4358-943f-0a8ce6b0489c(1).jpeg" class="crayons-avatar__image" alt="" loading="lazy">
+    </span>
+    <span class="crayons-link crayons-subtitle-2 mt-5">Wisdom Akwoyere Baah</span>
+  </a>
+</div>
+
+<div class="print-hidden">
+  <button name="button" type="button" data-info="{&quot;className&quot;:&quot;User&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:512198,&quot;name&quot;:&quot;Wisdom Akwoyere Baah&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 follow-user" aria-label="Follow user: Wisdom Akwoyere Baah" aria-pressed="false" data-fetched="fetched">Follow</button>
+</div>
+  <div class="color-base-70">
+    watch and learn...
+  </div>
+
+  <div class="user-metadata-details">
+    <ul class="user-metadata-details-inner">
+        <li>
+          <div class="key">
+            Location
+          </div>
+          <div class="value">
+            Edinburgh
+          </div>
+        </li>
+          <li>
+            <div class="key">
+              Work
+            </div>
+            <div class="value">
+              Web Developer at Greengauge
+            </div>
+          </li>
+      <li>
+        <div class="key">
+          Joined
+        </div>
+        <div class="value">
+          <time datetime="2020-11-11T09:57:39Z" class="date" title="Wednesday, November 11, 2020 at 5:57:39 AM">Nov 11, 2020</time>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+    </div>
+</div>
+
+  </div>
+
+  <span class="color-base-30 px-2 m:pl-0" role="presentation">•</span>
+
+<a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-17o6e" class="comment-date crayons-link crayons-link--secondary fs-s">
+  <time datetime="2020-11-11T10:01:06Z" class="date-short-year" title="Wednesday, November 11, 2020 at 6:01:06 AM">Nov 11 '20</time>
+
+</a>
+
+
+  <div class="comment__dropdown" data-tracking-name="comment_dropdown">
+    <button id="comment-dropdown-trigger-596402" aria-controls="comment-dropdown-596402" aria-expanded="false" class="dropbtn comment__dropdown-trigger crayons-btn crayons-btn--s crayons-btn--ghost crayons-btn--icon " aria-label="Toggle dropdown menu" aria-haspopup="true" data-initialized="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="aisdjiy40g004pg40kc0qi8uoshiasg0" class="crayons-icon pointer-events-none"><title id="aisdjiy40g004pg40kc0qi8uoshiasg0">Dropdown menu</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.25 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm3.75 1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+
+    </button>
+    <div id="comment-dropdown-596402" class="crayons-dropdown right-1 s:right-0 s:left-auto fs-base dropdown">
+      <ul class="m-0">
+        <li><a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#comment-17o6e" class="crayons-link crayons-link--block permalink-copybtn" aria-label="Copy link to Wisdom Akwoyere Baah&#39;s comment" data-no-instant="">Copy link</a></li>
+        <li class="comment-actions hidden" data-user-id="512198" data-action="settings-button" data-path="https://dev.to/theonlywisdom/comment/17o6e/settings" aria-label="Go to Wisdom Akwoyere Baah&#39;s comment settings"></li>
+        <li class="comment-actions hidden" data-action="hide-button" data-commentable-user-id="197049" data-user-id="512198">
+            <button class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0 hide-comment" data-hide-type="hide" data-comment-id="596402" data-comment-url="https://dev.to/theonlywisdom/comment/17o6e" aria-label="Hide Wisdom Akwoyere Baah&#39;s comment">
+              Hide
+            </button>
+        </li>
+        <li class="mod-actions hidden mod-actions-comment-button" data-path="https://dev.to/theonlywisdom/comment/17o6e/mod" aria-label="Moderate Wisdom Akwoyere Baah&#39;s comment"></li>
+        <li class="report-abuse-link-wrapper" data-path="/report-abuse?url=https://dev.to/theonlywisdom/comment/17o6e" aria-label="Report Wisdom Akwoyere Baah&#39;s comment as abusive or violating our code of conduct and/or terms and conditions"><a href="https://dev.to/report-abuse?url=https://dev.to/theonlywisdom/comment/17o6e" class="crayons-link crayons-link--block">Report abuse</a></li>
+        <li class="current-user-actions"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+        <div class="
+            comment__body
+            text-styles
+            text-styles--secondary
+            body
+            
+            
+          ">
+          <p>A break point, I guess.</p>
+
+
+        </div>
+
+    </div>
+
+    <footer class="comment__footer print-hidden">
+  <button class="crayons-tooltip__activator crayons-btn crayons-btn--ghost crayons-btn--icon-left crayons-btn--s mr-1 reaction-like inline-flex reaction-button" id="button-for-comment-596402" data-comment-id="596402" aria-label="like" data-tracking-name="comment_heart_button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="adu6fq21skqu4igll8o4c4kbe0506klr" class="crayons-icon reaction-icon not-reacted"><title id="adu6fq21skqu4igll8o4c4kbe0506klr">Like comment: </title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="anwgrrjvps22j3cqxxbf85cojip6v21u" class="crayons-icon crayons-icon reaction-icon--like reaction-icon reacted"><title id="anwgrrjvps22j3cqxxbf85cojip6v21u">Like comment: </title>
+    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+</svg>
+
+    <span class="reactions-count">1</span><span class="reactions-label hidden m:inline-block">&nbsp;like</span>
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Like
+    </span>
+  </button>
+
+      <a class="actions crayons-btn crayons-btn--ghost crayons-btn--s crayons-btn--icon-left toggle-reply-form mr-1 inline-flex" href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/new/17o6e" data-comment-id="596402" data-path="/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag/comments/17o6e" data-tracking-name="comment_reply_button" data-testid="reply-button-596402" rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aqxkg9675zp1vjodurp7twid3f87dqad" class="crayons-icon reaction-icon not-reacted"><title id="aqxkg9675zp1vjodurp7twid3f87dqad">Comment button</title><path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path></svg>
+
+        <span class="hidden m:inline-block">Reply</span>
+      </a>
+
+</footer>
+
+  </div>
+</div>
+
+
+  </div>
+    </details>
+
+
+  </div>
+    </details>
+
+
+        </div>
+      </div>
+
+      <div class="align-center">
+
+
+  <nav class="fs-s align-center block" aria-label="Conduct controls">
+  <a href="https://dev.to/code-of-conduct" class="crayons-link crayons-link--secondary">Code of Conduct</a>
+  <span class="opacity-25 px-2" role="presentation">•</span>
+  <a href="https://dev.to/report-abuse" class="crayons-link crayons-link--secondary">Report abuse</a>
+</nav>
+
+</div>
+
+  </section>
+  <div id="hide-comments-modal" class="hidden">
+  <form id="hide-comments-modal__form" class="hide-comments-modal__form" data-type="json" action="https://dev.to/comments/hide" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓" autocomplete="off"><input type="hidden" name="_method" value="patch" autocomplete="off"><input type="hidden" name="authenticity_token" value="vi2672CgyQGKZ2GY2i5lzicMg5pO4WJfVoo2wjw5gPv9tQctrTP6PSaBBteqaod9TCvCUwV4EPp_mrYvzJVojA" autocomplete="off">
+    <div class="hide-comments-modal__content">
+      <p class="pb-2">
+        Are you sure you want to hide this comment? It will become hidden in your post, but will still be visible via the comment's <a id="hide-comments-modal__comment-permalink" href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#">permalink</a>.
+      </p>
+      <label class="crayons-field crayons-field--checkbox my-2">
+        <input name="hide_children" type="hidden" value="0" autocomplete="off"><input class="hide_children crayons-checkbox" type="checkbox" value="1" name="hide_children" id="hide_children">
+        <p class="crayons-field__label">Hide child comments as well</p>
+      </label>
+      <p class="pb-4 pt-2">
+        <button type="submit" class="crayons-btn">
+          Confirm
+        </button>
+      </p>
+    </div>
+</form>  <p class="fs-s color-base-60">For further actions, you may consider blocking this person and/or <a id="hide-comments-modal__report-link" href="https://dev.to/report-abuse">reporting abuse</a></p>
+</div>
+
+
+
+      </article>
+
+          <div class="crayons-card crayons-card--secondary crayons-sponsorship-article text-styles" data-display-unit="" data-id="226" data-category-click="click" data-category-impression="impression" data-context-type="home">
+            <h2>  <a href="https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag#browsing-with-dark-mode-makes-you-a-better-developer" class="anchor">  </a>  🌚 Browsing with <a href="https://dev.to/settings/customization">dark mode</a> makes you a better developer.</h2><p>It's a scientific fact.</p>
+          </div>
+
+          <section class="crayons-card crayons-card--secondary text-padding mb-4 print-hidden" id="bottom-content-read-next">
+    <h2 class="crayons-subtitle-1">Read next</h2>
+      <a href="https://dev.to/azadkshitij/data-science-setup-visual-studio-code-with-python-1gml" data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--3a3NM53U--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/m498grt75xz3pcr5482v.jpg" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+              <img loading="lazy" alt="azadkshitij profile image" class="crayons-avatar__image" width="100" height="100" src="./X_debug_VS_Code_files/ca0d9b7d-6556-4f3d-9bbd-99882e4075c7.png">
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">Data Science: Setup Visual Studio Code with Python</h3>
+            <p class="opacity-75 pt-1">
+              Azad Kshitij - <time datetime="2022-10-19T03:47:47Z">Oct 19 '22</time>
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="https://dev.to/mkioschi/como-abrir-o-phpstorm-atraves-de-um-diretorio-no-terminal-32i3" data-preload-image="" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+              <img loading="lazy" alt="mkioschi profile image" class="crayons-avatar__image" width="100" height="100" src="./X_debug_VS_Code_files/36386b78-144d-40bc-b8e6-8e82de336261.jpeg">
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">Como abrir o PhpStorm através de um diretório no terminal</h3>
+            <p class="opacity-75 pt-1">
+              Mayko Kioschi - <time datetime="2022-10-18T23:59:40Z">Oct 18 '22</time>
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="https://dev.to/balajidharma/laravel-ldap-authentication-laravel-docker-install-openldap-and-phpldapadmin-4da8" data-preload-image="" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+              <img loading="lazy" alt="balajidharma profile image" class="crayons-avatar__image" width="100" height="100" src="./X_debug_VS_Code_files/5fb729a9-2abf-4b92-9bb1-9acd2a579ee6.png">
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">Laravel LDAP authentication - Laravel Docker install OpenLDAP and phpLDAPadmin</h3>
+            <p class="opacity-75 pt-1">
+              Balaji Dharma - <time datetime="2022-10-13T03:20:24Z">Oct 13 '22</time>
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="https://dev.to/debo2696/save-file-using-file-get-put-contents-laravel9-365h" data-preload-image="" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+              <img loading="lazy" alt="debo2696 profile image" class="crayons-avatar__image" width="100" height="100" src="./X_debug_VS_Code_files/0532443f-e863-4919-8a10-63eb95373b26.png">
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">Save file using file get put contents Laravel9</h3>
+            <p class="opacity-75 pt-1">
+              Debajyoti Das - <time datetime="2022-10-17T06:39:54Z">Oct 17 '22</time>
+            </p>
+          </div>
+        </div>
+      </a>
+  </section>
+
+    </div>
+  </main>
+
+  <aside class="crayons-layout__sidebar-right" aria-label="Author details">
+    <div class="crayons-article-sticky grid gap-4 break-word" id="article-show-primary-sticky-nav">
+  <div class="crayons-card crayons-card--secondary branded-7 p-4 pt-0 gap-4 grid" style="border-top-color: #000000;">
+    <div class="-mt-4">
+  <a href="https://dev.to/3rchuss" class="flex">
+    <span class="crayons-avatar crayons-avatar--xl  mr-2 shrink-0">
+      <img src="./X_debug_VS_Code_files/361a2d71-631a-4d16-8997-3da0880a22b5(1).jpg" class="crayons-avatar__image" alt="" loading="lazy">
+    </span>
+    <span class="crayons-link crayons-subtitle-2 mt-5">Jesus Abril</span>
+  </a>
+</div>
+
+<div class="print-hidden">
+  <button name="button" type="button" data-info="{&quot;className&quot;:&quot;User&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:197049,&quot;name&quot;:&quot;Jesus Abril&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 follow-user" aria-label="Follow user: Jesus Abril" aria-pressed="false" data-fetched="fetched">Follow</button>
+</div>
+  <div class="color-base-70">
+    Self-taught Full Stack Web Developer. Apasionado por javascript!
+
+  </div>
+
+  <div class="user-metadata-details">
+    <ul class="user-metadata-details-inner">
+        <li>
+          <div class="key">
+            Location
+          </div>
+          <div class="value">
+            Granada
+          </div>
+        </li>
+      <li>
+        <div class="key">
+          Joined
+        </div>
+        <div class="value">
+          <time datetime="2019-07-17T19:32:52Z" class="date">Jul 17, 2019</time>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+      <div class="crayons-card crayons-card--secondary">
+        <header class="crayons-card__header">
+          <h3 class="crayons-subtitle-2">
+            More from <a href="https://dev.to/3rchuss">Jesus Abril</a>
+          </h3>
+        </header>
+        <div>
+            <a class="crayons-link crayons-link--contentful" href="https://dev.to/3rchuss/diferentes-formas-de-declarar-variables-en-javascript-5d0f">
+              Diferentes formas de declarar variables en javaScript ⭐
+              <div class="crayons-link__secondary -ml-1">
+                  <span class="mr-1"><span class="opacity-50">#</span>javascript</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>vscode</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>codenewbie</span>
+              </div>
+            </a>
+        </div>
+      </div>
+</div>
+
+
+  </aside>
+</div>
+
+
+<div class="mod-actions-menu print-hidden"></div>
+<div data-testid="unpublish-post-modal-container" class="unpublish-post-modal-container hidden"></div>
+<div id="suspend-modal-content" class="hidden">
+  <p>
+    Once suspended, 3rchuss will not be able to comment or publish posts until their suspension is removed.
+  </p>
+
+  <div class="crayons-field mt-4">
+    <label for="suspend-reason-userid-197049" class="crayons-field__label">
+      Note:
+    </label>
+    <textarea id="suspend-reason-userid-197049" rows="4" cols="70" placeholder="Reason for suspension" class="crayons-textfield" aria-describedby="suspension-reason-error" required=""></textarea>
+    <p id="suspension-reason-error" data-testid="suspension-reason-error" class="suspend-reason-error crayons-field__description" style="color: red;" aria-live="assertive">
+    </p>
+  </div>
+  <div class="mt-4">
+    <button id="submit-user-suspend-btn" class="c-btn c-btn--primary c-btn--destructive" data-btn-action="suspend" data-reason-selector="#suspend-reason-userid-197049" data-user-id="197049" data-username="3rchuss">
+      Submit &amp; Suspend
+    </button>
+  </div>
+</div>
+
+<div id="unsuspend-modal-content" class="hidden">
+  <p>
+    Once unsuspended, 3rchuss will be able to comment and publish posts again.
+  </p>
+
+  <div class="crayons-field mt-4">
+    <label for="unsuspend-reason-userid-197049" class="crayons-field__label">
+      Note:
+    </label>
+    <textarea id="unsuspend-reason-userid-197049" rows="4" cols="70" placeholder="Reason for unsuspension" class="crayons-textfield" aria-describedby="unsuspension-reason-error" required=""></textarea>
+    <p id="unsuspension-reason-error" data-testid="unsuspension-reason-error" class="unsuspend-reason-error crayons-field__description" style="color: red;" aria-live="assertive">
+    </p>
+  </div>
+  <div class="mt-4">
+    <button id="submit-user-unsuspend-btn" class="c-btn c-btn--primary" data-btn-action="unsuspend" data-reason-selector="#unsuspend-reason-userid-197049" data-user-id="197049" data-username="3rchuss">
+      Submit &amp; Unsuspend
+    </button>
+  </div>
+</div>
+
+<div id="unpublish-all-posts" class="hidden">
+  <p>
+    Once unpublished, all posts by 3rchuss will become hidden and only accessible to themselves.
+  </p>
+  <p class="mt-2">
+    If 3rchuss is not suspended, they can still re-publish their posts from their dashboard.
+  </p>
+  <p class="mt-2"><label for="note_content">Note:</label><textarea name="note[content]" id="note_content" class="crayons-textfield note_content" placeholder="Note text"></textarea></p>
+  <div class="mt-4">
+    <button id="unpublish-all-posts-submit-btn" class="c-btn c-btn--destructive c-btn--primary" data-user-id="197049">
+      Unpublish all posts
+    </button>
+  </div>
+</div>
+
+<div id="unpublish-post-modal" class="hidden">
+  <p>
+    Once unpublished, this post will become invisible to the public and only accessible to Jesus Abril.
+  </p>
+  <p>They can still re-publish the post if they are not suspended.</p>
+  <div class="mt-4">
+    <button destructive="" variant="primary" class="c-btn c-btn--primary c-btn--destructive" id="confirm-unpublish-post-action">
+      Unpublish Post
+    </button>
+  </div>
+</div>
+
+<div id="flag-user-modal-content" class="hidden">
+  <p>
+    Thanks for keeping DEV Community 👩‍💻👨‍💻 safe. Here is what you can do to flag 3rchuss:
+  </p>
+
+  <div class="crayons-field crayons-field--radio mt-4">
+    <input type="radio" id="flag-user-radio-input" name="flag-user-radio-input" class="crayons-radio" data-reactable-id="197049" data-category="vomit" data-reactable-type="User">
+    <label for="flag-user-radio-input" class="crayons-field__label">
+      Make all posts by 3rchuss less visible
+      <p class="crayons-field__description">
+        3rchuss consistently posts content that violates DEV Community 👩‍💻👨‍💻's
+        code of conduct because it is harassing, offensive or spammy.
+      </p>
+    </label>
+  </div>
+
+  <div class="mt-4">
+    <a href="javascript:void(0);" id="report-inappropriate-content" data-report-abuse-link="/report-abuse?url=https://dev.to/3rchuss/how-to-set-up-php-executable-path-in-vscode-xampp-user-s-15ag">
+      Report other inappropriate conduct
+    </a>
+  </div>
+
+  <div class="mt-6">
+    <p id="unselected-radio-error" data-testid="unselected-radio-error" class="crayons-field__description mb-4" style="color: red;" aria-live="assertive">
+    </p>
+    <button id="confirm-flag-user-action" class="c-btn c-btn--primary c-btn--destructive" data-category="vomit" data-reactable-type="User" data-user-id="197049" data-username="3rchuss">
+      Confirm Flag
+    </button>
+  </div>
+</div>
+
+<div id="unflag-user-modal-content" class="hidden">
+  <p>
+    Unflagging 3rchuss will restore default visibility to their posts.
+  </p>
+
+  <div class="mt-6">
+    <button id="confirm-unflag-user-action" class="c-btn c-btn--primary" data-category="vomit" data-reactable-type="User" data-user-id="197049" data-username="3rchuss">
+      Confirm Unflag
+    </button>
+  </div>
+</div>
+
+
+<div class="fullscreen-code js-fullscreen-code"></div>
+<script src="./X_debug_VS_Code_files/runtime_followButtons-21ca5b0e2b6aff873fbe.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/6-a1b4925da91d4a35addb.chunk.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/followButtons-7a816a30a7c6038bebe5.chunk.js.download" defer="defer"></script>
+
+  <script>
+    var waitingOnPodcast = setInterval(function() {
+  if (typeof initializePodcastPlayback !== 'undefined') {
+    initializePodcastPlayback();
+    clearInterval(waitingOnPodcast);
+  }
+}, 1);
+
+    if (document.head.querySelector('meta[name="user-signed-in"][content="true"]')) {
+  function displayPollResults(json) {
+    var totalVotes = json.voting_data.votes_count;
+    json.voting_data.votes_distribution.forEach(function(point) {
+      var pollOptionItem = document.getElementById('poll_option_list_item_'+point[0]);
+      var optionText = document.getElementById('poll_option_label_'+point[0]).textContent;
+      if (json.user_vote_poll_option_id === point[0]) {
+        var votedClass = 'optionvotedfor'
+      } else {
+        var votedClass = 'optionnotvotedfor'
+      }
+      if (totalVotes === 0) {
+        var percent = 0;
+      } else {
+        var percent = (point[1]/totalVotes)*100;
+      }
+      var roundedPercent = Math.round( percent * 10 ) / 10
+      var percentFromRight = (100-roundedPercent)
+      var html = '<span><span class="ltag-votepercent ltag-'+votedClass+'" style="right:'+percentFromRight+'%"></span>        <span class="ltag-votepercenttext">'+optionText+' — '+roundedPercent+'%</span></span>';
+      pollOptionItem.innerHTML = html;
+      pollOptionItem.classList.add('already-voted')
+      document.getElementById('showmethemoney-'+json.poll_id).innerHTML = '<span class="ltag-voting-results-count">'+totalVotes+' total votes</span>';
+    })
+  }
+
+  var polls = document.getElementsByClassName('ltag-poll');
+  for (var i = 0; i < polls.length; i += 1) {
+    var poll = polls[i]
+    var pollId = poll.dataset.pollId
+    window.fetch('/poll_votes/'+pollId)
+    .then(function(response){
+      response.json().then(
+        function(json) {
+          if (json.voted) {
+            displayPollResults(json)
+          } else {
+            var els = document.getElementById('poll_'+json.poll_id).getElementsByClassName('ltag-polloption');
+
+            for (i = 0; i < els.length; i += 1) {
+              els[i].addEventListener('click', function(e) {
+                var tokenMeta = document.querySelector("meta[name='csrf-token']")
+                if (!tokenMeta) {
+                  alert('Whoops. There was an error. Your vote was not counted. Try refreshing the page.')
+                  return
+                }
+                var csrfToken = tokenMeta.getAttribute('content')
+                var optionId = e.target.dataset.optionId
+                window.fetch('/poll_votes', {
+                  method: 'POST',
+                  headers: {
+                    'X-CSRF-Token': csrfToken,
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({poll_vote: { poll_option_id: optionId } }),
+                  credentials: 'same-origin',
+                }).then(function(response){
+                  response.json().then(function(j){displayPollResults(j)})
+                })
+              });
+            }
+
+            document.getElementById('showmethemoney-'+json.poll_id).addEventListener('click', function() {
+              pollId = this.dataset.pollId
+              window.fetch('/poll_skips', {
+                method: 'POST',
+                headers: {
+                  'X-CSRF-Token': csrfToken,
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({poll_skip: {poll_id: pollId }}),
+                credentials: 'same-origin',
+              }).then(function(response){
+                response.json().then(function(j){displayPollResults(j)})
+              })
+            });
+          }
+        }
+      )
+    })
+  }
+} else {
+    var els = document.getElementsByClassName('ltag-poll')
+    for (i = 0; i < els.length; i += 1) {
+      els[i].onclick = function(e) {
+        if (typeof showLoginModal !== "undefined") {
+          showLoginModal();
+        }
+      }
+    }
+}
+
+    function activateRunkitTags() {
+  if (!areAnyRunkitTagsPresent())
+    return
+
+  var checkRunkit = setInterval(function() {
+    try {
+      dynamicallyLoadRunkitLibrary()
+
+      if (typeof(RunKit) === 'undefined') {
+        return
+      }
+
+      replaceTagContentsWithRunkitWidget()
+      clearInterval(checkRunkit);
+    } catch(e) {
+      console.error(e);
+      clearInterval(checkRunkit);
+    }
+  }, 200);
+}
+
+function isRunkitTagAlreadyActive(runkitTag) {
+  return runkitTag.querySelector("iframe") !== null;
+};
+
+function areAnyRunkitTagsPresent() {
+  var presentRunkitTags = document.getElementsByClassName("runkit-element");
+
+  return presentRunkitTags.length > 0
+}
+
+function replaceTagContentsWithRunkitWidget() {
+  var targets = document.getElementsByClassName("runkit-element");
+  for (var i = 0; i < targets.length; i++) {
+    if (isRunkitTagAlreadyActive(targets[i])) {
+      continue;
+    }
+
+    var wrapperContent = targets[i].textContent;
+    if (/^(<iframe src)/.test(wrapperContent) === false) {
+      if (targets[i].children.length > 0) {
+        var preamble = targets[i].children[0].textContent;
+        var content = targets[i].children[1].textContent;
+        targets[i].innerHTML = "";
+        var notebook = RunKit.createNotebook({
+          element: targets[i],
+          source: content,
+          preamble: preamble
+        });
+      }
+    }
+  }
+};
+
+function dynamicallyLoadRunkitLibrary() {
+  if (typeof(dynamicallyLoadScript) === "undefined")
+    return
+
+  dynamicallyLoadScript("//embed.runkit.com")
+}
+
+activateRunkitTags();
+
+    var videoPreviews = document.getElementsByClassName("ltag__twitter-tweet__media__video-wrapper");
+[].forEach.call(videoPreviews, function(el) {
+  el.onclick = function(e) {
+    var divHeight = el.offsetHeight;
+    el.style.maxHeight = divHeight + "px";
+    el.getElementsByClassName("ltag__twitter-tweet__media--video-preview")[0].style.display = "none";
+    el.getElementsByClassName("ltag__twitter-tweet__video")[0].style.display = "block";
+    el.getElementsByTagName("video")[0].play();
+  }
+});
+var tweets = document.getElementsByClassName("ltag__twitter-tweet__main");
+[].forEach.call(tweets, function(tweet){
+  tweet.onclick = function(e) {
+    if (e.target.nodeName == "A" || e.target.parentElement.nodeName == "A") {
+      return;
+    }
+    window.open(tweet.dataset.url,"_blank");
+  }
+});
+
+  </script>
+
+    
+  </div>
+</div>
+    
+<footer class="crayons-footer print-hidden">
+  <div id="footer-container" class="crayons-footer__container">
+    <p class="fs-s crayons-footer__description">
+      <a class="c-link c-link--branded fw-medium" aria-label="DEV Community 👩‍💻👨‍💻 Home" href="https://dev.to/">DEV Community 👩‍💻👨‍💻</a> — A constructive and inclusive social network for software developers. With you every step of your journey.
+    </p>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="">
+        <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/">
+      Home
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/listings">
+      Listings
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/pod">
+      Podcasts
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/videos">
+      Videos
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/tags">
+      Tags
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/faq">
+      FAQ
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://shop.forem.com/">
+      Forem Shop
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/sponsorships">
+      Sponsors
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/about">
+      About
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/contact">
+      Contact
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/guides">
+      Guides
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/software-comparisons">
+      Software comparisons
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="">
+        <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/code-of-conduct">
+      Code of Conduct
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/privacy">
+      Privacy Policy
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://dev.to/terms">
+      Terms of use
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <div class="fs-s">
+      <p>Built on <a class="c-link c-link--branded" target="_blank" rel="noopener" href="https://www.forem.com/">Forem</a> — the <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/opensource">open source</a> software that powers <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/">DEV</a> and other inclusive communities.</p>
+      <p>Made with love and <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/rails">Ruby on Rails</a>. DEV Community 👩‍💻👨‍💻 <span title="copyright">©</span> 2016 - 2023.</p>
+    </div>
+  </div>
+</footer>
+<div id="snack-zone"><div class="hidden"></div></div>
+
+    <div id="global-signup-modal" class="authentication-modal hidden">
+  <div class="authentication-modal__container">
+    <figure class="authentication-modal__image-container">
+      <img class="authentication-modal__image" src="./X_debug_VS_Code_files/devlogo-pwa-512(1).png" alt="DEV Community 👩‍💻👨‍💻" loading="lazy">
+    </figure>
+    <div class="authentication-modal__content">
+      <p class="authentication-modal__description">
+          We're a place where coders share, stay up-to-date and grow their careers.
+      </p>
+    </div>
+    <div class="authentication-modal__actions">
+      <a href="https://dev.to/enter" class="crayons-btn" aria-label="Log in" data-no-instant="">
+        Log in
+      </a>
+      <a href="https://dev.to/enter?state=new-user" class="crayons-btn crayons-btn--ghost-brand js-global-signup-modal__create-account" aria-label="Create new account" data-no-instant="">
+        Create account
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="./X_debug_VS_Code_files/runtime_signupModalShortcuts-8a3b5a8c6f385ee015c7.js.download" defer="defer"></script>
+<script src="./X_debug_VS_Code_files/signupModalShortcuts-bc61108f6478a0b92202.chunk.js.download" defer="defer"></script>
+
+  <div id="i18n-translations" data-translations="{&quot;en&quot;:{&quot;core&quot;:{&quot;add_comment&quot;:&quot;Add comment&quot;,&quot;beta&quot;:&quot;beta&quot;,&quot;comment&quot;:&quot;Comment&quot;,&quot;copy_link&quot;:&quot;Copy link&quot;,&quot;edit_profile&quot;:&quot;Edit profile&quot;,&quot;follow&quot;:&quot;Follow&quot;,&quot;follow_back&quot;:&quot;Follow back&quot;,&quot;following&quot;:&quot;Following&quot;,&quot;like&quot;:&quot;Like&quot;,&quot;loading&quot;:&quot;loading...&quot;,&quot;reaction&quot;:&quot;Reaction&quot;,&quot;report_abuse&quot;:&quot;Report abuse&quot;,&quot;search&quot;:&quot;Search&quot;,&quot;success_settings&quot;:&quot;Successfully updated settings.&quot;}}}"></div>
+  
+  
+<div id="teal-job-tracker-root-stable" style="z-index: 2147483647;"><iframe id="teal-job-tracker-iframe-stable" style="background: rgb(255, 255, 255); width: 380px; height: 100vh; position: fixed; inset: 0px -380px auto auto; z-index: 2147483647; border: 0px; box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 16px -3px; transition: right 0.25s ease-in-out 0s; transform: none;" src="./X_debug_VS_Code_files/saved_resource.html"></iframe></div><div></div><div id="teal-job-tracker-companion-root-stable" class="ui-draggable" style="display: block; z-index: 2147483646; bottom: 58px; right: 0px; position: fixed; height: 60px;"></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

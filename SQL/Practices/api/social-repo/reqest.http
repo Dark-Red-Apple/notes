@@ -1,0 +1,32 @@
+# It is for an extension to test api end points
+http://localhost:3005/users
+
+http://localhost:3005/users/1
+
+
+###
+
+POST http://localhost:3005/users HTTP/1.1
+content-type: application/json
+
+{
+    "username": "minty5",
+    "bio": "I am a mint"
+}
+
+### uptade
+
+
+PUT http://localhost:3005/users/1 HTTP/1.1
+content-type: application/json
+
+{
+    "username": "Alyson156",
+    "bio": "I am a alyson"
+
+}
+
+###
+
+DELETE http://localhost:3005/users/1 HTTP/1.1
+content-type: application/json

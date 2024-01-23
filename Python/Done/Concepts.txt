@@ -1,0 +1,146 @@
+*terminal
+	mac=>terminal : brew install python
+	linux=>apt-get install python
+	pip install module_name or pip 2... or pip 3 ...
+	pip install mysql-connector-python
+	pip install pyQt5
+	pip install pyqt5-tools
+	pip install beautifulsoup4
+	sqlite3, os, json, time, re=>is included in the standard library
+
+**************************************************************************
+*General:
+	# // single comment
+	#! // with this command you can execute pythong files without python 
+	#! windows don't see this, it's for unix/linux. this code: #! /usr/bin/python choses interperpreter binary address. 
+	**->power
+	name1,name2='ali','reza'
+	name,score=('ali',20)
+	variable.copy
+	string.lower()
+	range(1,4)=>0,1,2,3
+	boolean(string)=>returnes true 
+	variable scopes: global,
+	type(object)
+	string.strip()
+	str*int_num => repeats str int_num times
+	priority in logical statements=> not > and > or
+	4.5//2=>rounds to floor
+	1j=>complex numbers
+	lambda function 
+	print(r"")=>r ingores escape chars
+	filter(function,list)=>with the help of function checks if certain values are inside list. Returns those values in an iter that should use list() to be usable as a list, list		(filter(fun,iter))
+	map(fun, iter)=> returns a list of the results after applying the given function to each item of a given iterable list(map())
+	def fun(name='')=>optional arg should be defind after other args
+	def fun(*args)=>a list of args 
+	def fun(**reza)=>KWRGS can accept a varible=value(similar to dictionary) when is called
+	format strings(%s%d%x%i)=>print('my name is %s' %name),print('my name is %s %s' %(name,lastname)),print('my %s' %name)
+	keywords:
+		pass
+*****************************************************************************
+*list:
+	list_sample=[value,value1,...]
+	list[index]=>returnes value
+	value in students=> true, false
+	list_sample.index(value)
+	list_sample.pop(index) default 0, it removes the value from the original list and returnes that value
+	list_sample.remove(value)=>Doesn't accept indexes, nothing is returned
+	list_sample.reverse()
+	list_sample.insert(index,value)
+	list_sample.sort()
+	list_sample[1:3]=>1,2
+	list_sample[0:7:2]=>0,2,4,6
+	len(students)
+	list(string)=>Make a list out of astring
+	''.join(students)=>Make a string out of a list
+	set(list_sample)=>removes duplicated values from oringinal list and returns a set not a list
+**************************************************************************
+*dictionary:
+	no indexes
+	no key is duplicated
+	{key:value}
+	student[key]:value=>add to dictionary or update if exists
+	students.keys()=> returnes a type called dict_keys
+	for student in students = for student in students.keys =>Both goes through keys
+	students.get(a key)=> returens value of that key
+	students.popitem() => takes nothing, removes the last key:value, returnes a tuple (key,valtue)
+	students.pop(key) => removes the intended key:value, returnes just the value
+**************************************************************************
+*Escape charaters:\
+	Linux=>\n
+	win=>\r
+	mac=>\r\n=>better to use this format
+	\b=>back space
+	\a=> a beep sound
+**************************************************************************
+*Functions:
+	should be defined before usage
+	def fun(parameters):
+		body
+	fun(args)
+	anonymous functions=>don't have names just args
+	lambda function=>x=lambda arg1,arg2,arg3=expressions,have one line of code and we should put them in a variable or use them or return it
+**************************************************************************
+*File I/O
+	uses hip to store in memory
+	modes=>write, read, append
+	file=open('file name','a(append)or a+(append and create if does not exist) or w(overwrite) or r')=>default r
+	file.write(data)
+	file.close()
+	content=file.read()=>no need to close, close is automated so should be stored in a variable
+	content=file.readlines()=>returns a list of lines you can loop through
+	use of strip()
+**************************************************************************
+*package
+	__init__.py
+	import sayhello(address)
+	from sayhello import *(functions and variables)
+**************************************************************************
+*Error handling
+	try
+	except exception as err
+	else
+	fingally
+
+	better to use when functions are called
+**************************************************************************
+*RegEx:
+	import re
+	?
+	\d
+	\w
+	\s \S
+	[] one of 
+	() groups=> makes a list of tuples of every group seperately
+	.=> Everything but \n
+	.*=>everything as one
+	| for logics like business email
+	[:chars:]=>picks just chars from text
+	asserssions=> ?= ?<= lookahead and lookbehine if something happend first then check the rest
+	/.*/gim=>flags:
+	flags:multi line, incase senseitive, global(just first match), locale, extended, unicode, Verbose(special chars usage)
+	pattern=re.compile(reza,re.IGNORCASE)=>flags in compile
+	pattern=re.compile('\w+')
+	pattern.findall(text)
+	used in .htaccess
+	\w+@(gmail|yahoo)\.\w+
+**************************************************************************
+*os module
+	creating viruse, hangling problems in windows
+	os.getcwd =>current process
+	os.mkdir("seasion-01")=>Delete an empty dir
+	os.listdir('.')=> returns a list of files and folders
+	os.system("ls")=> If arg is a string it gives it to the shell to perfom it
+	os.walk('.')=> Dir and subdirc, Returns type generator
+	os.path.abspath(folder)=>retuns absolute path c:\\...\folder
+**************************************************************************
+*colorama module
+	colorama.init()
+**************************************************************************
+*class
+	Variable set outside __init__ belong to the class. They're shared by all instances.
+	Variables created inside __init__ (and all other method functions) and prefaced with self belong to the object instance.
+
+
+
+

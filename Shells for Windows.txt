@@ -1,0 +1,5 @@
+Cmder: Cmder is an emulator for the Windows console. It provides a more customizable and powerful command-line interface than the native Windows command prompt. Cmder includes many features such as multiple tabs, configurable hotkeys, and support for multiple shells such as cmd.exe, PowerShell, and Bash. https://cmder.app/
+
+Git Bash: Git Bash is a CLI tool that comes bundled with the Git version control system. It is a lightweight emulation layer that provides a Bash shell environment on Windows. Git Bash includes basic Unix commands, such as ls, grep, and cat, and also includes Git-specific commands.
+
+PowerShell

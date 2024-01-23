@@ -1,0 +1,214 @@
+body, html{
+  margin: 0;
+  padding: 0;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.shop-form{
+  
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* font-size: calc(10px + 2vmin); */
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+.header{
+  min-height: 4em;
+  display: flex;
+  background: #ef6f00;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
+.main{
+  min-height: 4em;
+  /* display: flex; */
+  /* background: #f1f1f1; */
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.sidebar{
+  min-height: 4em;
+  /* display: flex; */
+  /* background: #f1f1f1; */
+  width: 20%;
+  align-items: revert;
+  justify-content: center;
+  flex-direction: row;
+  background: #efefef;
+  min-height: 30rem;
+}
+/* .main > div{
+  padding: 20px;
+  width: 50%;
+} */
+/* .main > div>div{
+
+  text-align: center;
+  border: 1px solid green;
+} */
+.footer{
+  min-height: 4em;
+  display: flex;
+  background: #fd9f72;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  /* background: url(https://images.indianexpress.com/2021/12/books_1200_canva.jpg) 0 20%/cover no-repeat border-box rgb(0 0 0); */
+  height: 300px;
+  background: linear-gradient(180deg,rgba(76,23,210,.2) , rgba(0,0,0 , .5) 80%) , linear-gradient(236deg,rgba(26,188,156,.2) , rgba(41,128,185 , .5) 80%) , url(https://images.indianexpress.com/2021/12/books_1200_canva.jpg) fixed 0 40%/cover;
+
+}
+.footer img{
+  min-height: 4em;
+  display: flex;
+  background: #fd9f72;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  /* background: url(https://images.indianexpress.com/2021/12/books_1200_canva.jpg) 0 20%/cover no-repeat border-box rgb(0 0 0); */
+  height: 300px;
+
+}
+
+.product{
+  display: flex;
+  list-style: none;
+  width: 100%;
+  /* background: gray; */
+  flex-wrap: wrap;
+  padding: 0;
+  /* margin: 0 auto; */
+  /* align-items: center; */
+  margin: 0 auto;
+  /* justify-content: space-evenly; */
+  /* margin-top: 50px; */
+  padding: 0 4rem;
+  box-sizing: border-box;
+}
+.product li{
+  flex-basis: 33.3333333333333%;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  min-height: 20rem;
+}
+.product li>div{
+  background: rgb(249 249 249);
+  height: 100%;
+  border: 1px solid #e1e1e1;
+  box-shadow: 1px 1px 5px 0px #e5e5e5;
+}
+.product li img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+.product li .details{
+ display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  box-sizing: border-box;
+  border-top: 1px solid #dddddd;
+}
+.product li .details .detail-title{
+  margin: 4px;
+  color: blue;
+}
+.product li .details span>span{
+  margin: 10px;
+}
+.product li .details .price{
+  color:red;
+  margin: 0
+}
+
+.search-form{
+  display: flex;
+  margin: 2rem auto;
+}
+.search-form input[type=text]{
+    width: 30rem;
+    height: 50px;
+}
+.search-form input[type=submit]{
+    width: 100px;
+    cursor: pointer;
+}
+.userItems{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+.user-item{
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 25%;
+  min-height: 3rem;
+  box-sizing: border-box;
+}
+.user-item img{
+  width: 100%;
+  height: 10rem;
+  object-fit: contain;
+  object-position: center;
+}
+.user-item-cont{
+  background: #ffffff;
+  padding: 1rem;
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-item-cont *{
+  margin-bottom: 0.5rem;
+}

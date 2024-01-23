@@ -1,0 +1,78 @@
+python  is  from C family
+python can run without dependecies and is crossplatform
+python in installed by default in linux family operating systems
+usage:
+hacking WAF web Application Firewall
+Shortcuts and style:
+Python is case sensitive
+Indentation:4
+Shell:ctrl+space
+Notpad++: ctr+d
+notepad++:shift+tab
+jetbrains: ctr+w ->one sentence->another time->all
+In Python, the source is compiled into a much simpler form called bytecode 
+It can be executed line by line
+Notpad++ and sublime(not shell):word wrap
+Wordmap, document map
+In win explorer:Shift+right click
+' "" ' or " '' " or " \"\" "=>One should be single and the other double qoute
+" "" ",' '' '=>This will be interpreted as two seperated strings
+notepad++=>language tab
+in cmd: echo "Hi"> file.text=>replace the content
+in cmd: echo "Hi">> file.text=>add(append) to the content
+csv format:ali, reza, maryam=>data minige usage
+names: no number at first(a-z,A-Z,_)(a-z,A-Z,_,0-9)*
+built in methods=>__name__
+better to use three ''' for defining strings
+when a function is executed in idle it will show the returned values without print
+
+*tools:
+idle(intergrated Development Environment)=>python editor
+sublime
+pycharm
+git bash=>a linux base shell
+process explorer
+environment variable: \tools and \scripts 
+
+
+errors:
+off by one=> in loops
+Business logical flaw=>
+php type juggling
+
+books:
+python oreily
+Learn python the hard way
+Automating the boring stuff
+Nostratch
+Think like a programmer
+realpython.com
+
+sites:
+python.org
+codecademy python
+coursera
+edx
+jadi github
+pypi.org=>instapy module
+infrom bugs=>Fortweb, Hackerone, bug crowd
+first.org/cuss => score bugs
+regex101.com
+regular-expressions.info/refcharclass.html
+
+Debuging with pycharm:
+break point=> program is executed to that point
+step over => next line
+step into=> in function
+on the fly=>change variable value
+
+terms:
+in windows :SEH=> structured Exception Handling 
+PEP => Python Enhancement Proposal, python standard
+cuss => score bugs
+owasp(open web application security project)=>app test standard
+Lorem Ipsum
+
+pycharm:
+ctr+click=>go to the source
+alt + back=> go back

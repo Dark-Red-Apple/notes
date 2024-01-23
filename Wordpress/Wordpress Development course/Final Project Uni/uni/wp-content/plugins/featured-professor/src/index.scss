@@ -1,0 +1,54 @@
+.wp-admin .professor-callout{
+    margin-top: -5px;
+}
+
+.professor-select-container{
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+    background-color: #a1a1a1;
+
+    select {
+        width: 100%
+    }
+}
+
+.professor-callout{
+    margin: 24px 0 24px 0;
+    background-color: #ebebeb;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    box-shadow: 5px 5px 5px rgba(0,0,0, 0.03);
+
+    display: grid;
+    grid-template-columns: 35% auto;
+    grid-template-areas: "pic desc";
+
+    @media screen and (max-width: 640px){
+        grid-template-areas: "pic" "desc";
+        grid-template-columns: 100%;
+        grid-template-rows: 300px auto;
+        
+    }
+
+    &__photo{
+        grid-area: pic;
+        background-size: cover;
+        background-position: center;
+    }
+    &__text{
+        grid-area: desc;
+        padding: 1.3em;
+
+        h5{
+            font-weight: 400;
+        }
+    }
+
+
+}
+
+

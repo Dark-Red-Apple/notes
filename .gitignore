@@ -1,0 +1,25 @@
+*.sql
+*.sqlite
+*.db
+.vscode/
+**/.vscode/
+**/.vscode
+**/venv/
+**/node_modules/
+**/node_modules
+Old proj/
+*.mp4
+*.mp3
+*.zip
+*.rar
+**/neko-slider.
+My Projects/
+**/Practice/
+**/practice/
+**/Brads Example/
+Naringol/
+Source Code Pro/
+Wordpress/Wordpress Development course/university-static
+Wordpress/Wordpress Development course/vagrant-lamp
+Wordpress/Wordpress Development course/Final Project Uni/uni/wp-content/reactpress/apps/wpreact
+Wordpress/Wordpress university/ai1wm-backups/localhost-wreact-20230210-165605-gj21il.wpress

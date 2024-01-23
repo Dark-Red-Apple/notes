@@ -1,0 +1,23 @@
+Redux
+PWA
+GitFlow
+tailwind css
+Webpack, bable
+TypeScript
+Socket.io
+ReactNative
+Vue۳
+Micro Frontend Architecture
+Microservices technologies
+microservices architectures
+OAuth 2.0 and other authentication flows
+DevOps practices, infrastructure as code, configuration management, and automated deployments.
+cloud native technologies
+performance and troubleshoot issues using tools like Prometheus, Grafana, and Splunk.
+build, packaging and continuous integration tools and frameworks: Bitbucket Pipelines(bitbucket), Jenkins(sensitive customer), AWS CodePipeline, CircleCI(github), Azure Pipelines, GitLab, Atlassian Bamboo
+automated unit and integration testing
+Test implemented solutions in advance of User Acceptance Testing
+Scrum Masters
+Agile 
+MongoDB
+JEST

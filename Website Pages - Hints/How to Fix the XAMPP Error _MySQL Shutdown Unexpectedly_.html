@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+.anticon {
+  display: inline-block;
+  color: inherit;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.anticon > * {
+  line-height: 1;
+}
+
+.anticon svg {
+  display: inline-block;
+}
+
+.anticon::before {
+  display: none;
+}
+
+.anticon .anticon-icon {
+  display: block;
+}
+
+.anticon[tabindex] {
+  cursor: pointer;
+}
+
+.anticon-spin::before,
+.anticon-spin {
+  display: inline-block;
+  -webkit-animation: loadingCircle 1s infinite linear;
+  animation: loadingCircle 1s infinite linear;
+}
+
+@-webkit-keyframes loadingCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loadingCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+</style>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#5333ED">
+
+<!--
+<pre>
+                                                ..                   ▄■▀▀▀▀■
+ ▄██████▄                                   –▀▀▀▀▀ ▀▀––            .▀        ▀
+█▀  ▀████ ░  ████ ███▄ ░███▄ █████▄   ▄█████████▄▄███████████▄ ▄██████▄ ▄██▄ ░
+█    ████ ░ ████ ░████ ░█████ ░████ ░████▀▀▀▀██▀ ░  ████ ░   ████▀     ▀████ ░
+ ▀   █▓▓█ ░█▓▓█ ░ █▓▓█ ░█▓▓█ ░ █▓▓█ ░▓▓█▀ ░   ▀     █▓▓█ ░  █▓▓█ ░      █▓▓█ ░
+ . ┌─█▓▓█ █▓▓█ ░──█▒▒█─░█▒▒█─░─█▒▒█─░▀▒▒▒▒▒▒▒█▄──░──█▒▒█─░─█▒▒█ ░ ──────█▒▒█ ░
+   : █░░█ ░█░░█ ░ █░░█ ░█░░█ ░ █░░█ ░  ▀░░░░░░░█ ░  █░░█ ░ █░░█ ░       █░░█ ░
+   . █..█ ░ █..█ ░█..█ ░█..█ ░ █..█ ░     .  █..█ ░ █..█ ░  █..█ ░      █..█ ░
+   | █  █ ░  █  █ █  █ ░█  █ ░ █  █ ░  ▄▀     █  █ ░█  █▄ ░  █  █▄    ▄██  █ ░
+   └ ▀███ ░───████████ ░███▀ ░─████ ░ ██──────████ ░▀███▓▀ ░  ▀██████▀ ▀██▀ ░
+      ░░░░░      ▀███▀  ░░░░░░ ████ ░ ███▄  ▄████ ░   ░░░░      ░░░░░░   ░░
+           ▄                   ▀███ ░  ▀███████▀          .
+   ┌──────▀▀▀▀ ▀▀─────────────── ██ ──────────────────────▀▀▄▄▄  ▄▄▄──────┐
+   : ░                            ▀█▄    ▄                      ▀▀       ░ :
+   |                                ▀––▀                                   |
+   |        We're building a world-class hosting platform at Kinsta.       |
+   |                                                                       |
+   |        🌎 Remote             🧕 Diverse             💪 Kick-ass      |
+   |                                                                       |
+   |                                                                       |
+   |        https://kinsta.com/careers/                     Join us!       |
+   |                                                                       |
+   |                                                                       |
+   | ░                                                                   ░ |
+   └───────▀▀▀▀ ▀▀───────────────────────────────────────────▀▀ ▀▀─────────┘
+</pre>
+-->
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v17.1.2 (Yoast SEO v17.1) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>How to Fix the XAMPP Error "MySQL Shutdown Unexpectedly"</title>
+	<meta name="description" content="Have you encountered the &quot;MySQL Shutdown Unexpectedly&quot; error in XAMPP? This is common when you don’t run the software using administrator privileges.">
+	<link rel="canonical" href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="How to Fix the XAMPP Error &quot;MySQL Shutdown Unexpectedly&quot; (3 Methods)">
+	<meta property="og:description" content="Have you encountered the &quot;MySQL Shutdown Unexpectedly&quot; error in XAMPP? This is common when you don’t run the software using administrator privileges.">
+	<meta property="og:url" content="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/">
+	<meta property="og:site_name" content="Kinsta®">
+	<meta property="article:publisher" content="https://www.facebook.com/kinstahosting">
+	<meta property="article:modified_time" content="2022-12-15T18:12:31+00:00">
+	<meta property="og:image" content="https://kinsta.com/wp-content/uploads/2021/02/how-to-fix-the-xampp-error-mysql-shutdown-unexpectedly.jpg">
+	<meta property="og:image:width" content="1460">
+	<meta property="og:image:height" content="730">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:description" content="Have you encountered the &quot;MySQL Shutdown Unexpectedly&quot; error in XAMPP? This is common when you don’t run the software using administrator privileges.">
+	<meta name="twitter:image" content="https://kinsta.com/wp-content/uploads/2021/02/how-to-fix-the-xampp-error-mysql-shutdown-unexpectedly.jpg">
+	<meta name="twitter:site" content="@kinsta">
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="9 minutes">
+	<script src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/6635519.js.download" type="text/javascript" id="hs-script-loader"></script><script src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/901459863397931" async=""></script><script src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/identity.js.download" async=""></script><script async="" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/fbevents.js.download"></script><script type="text/javascript" async="" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/js"></script><script type="text/javascript" async="" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/analytics.js.download"></script><script type="text/javascript" async="" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/js(1)"></script><script type="text/javascript" async="" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/js(2)"></script><script type="text/javascript" async="" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/js(3)"></script><script type="text/javascript" async="" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/js(4)"></script><script src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/collectedforms.js.download" type="text/javascript" id="CollectedForms-6635519" crossorigin="anonymous" data-leadin-portal-id="6635519" data-leadin-env="prod" data-loader="hs-scriptloader" data-hsjs-portal="6635519" data-hsjs-env="prod" data-hsjs-hublet="na1"></script><script src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/fb.js.download" type="text/javascript" id="hs-ads-pixel-6635519" data-ads-portal-id="6635519" data-ads-env="prod" data-loader="hs-scriptloader" data-hsjs-portal="6635519" data-hsjs-env="prod" data-hsjs-hublet="na1"></script><script src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/conversations-embed.js.download" type="text/javascript" id="hubspot-messages-loader" data-loader="hs-scriptloader" data-hsjs-portal="6635519" data-hsjs-env="prod" data-hsjs-hublet="na1"></script><script src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/6635519.js(1).download" type="text/javascript" id="hs-analytics"></script><script src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/6635519.js(2).download" type="text/javascript" id="cookieBanner-6635519" data-cookieconsent="ignore" data-hs-ignore="true" data-loader="hs-scriptloader" data-hsjs-portal="6635519" data-hsjs-env="prod" data-hsjs-hublet="na1"></script><script async="" defer="" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/uwt.js.download"></script><script src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/bat.js.download" defer=""></script><script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://kinsta.com/#organization","name":"Kinsta","url":"https://kinsta.com/","sameAs":["https://www.facebook.com/kinstahosting","https://www.instagram.com/kinstahosting/","https://www.linkedin.com/company/kinsta/","https://www.youtube.com/c/Kinsta","https://www.pinterest.com/kinstahosting/","https://twitter.com/kinsta"],"logo":{"@type":"ImageObject","@id":"https://kinsta.com/#logo","inLanguage":"en-US","url":"https://kinsta.com/wp-content/uploads/2020/12/kinsta-logo.jpg","contentUrl":"https://kinsta.com/wp-content/uploads/2020/12/kinsta-logo.jpg","width":600,"height":60,"caption":"Kinsta"},"image":{"@id":"https://kinsta.com/#logo"}},{"@type":"WebSite","@id":"https://kinsta.com/#website","url":"https://kinsta.com/","name":"Kinsta\u00ae","description":"Fast, secure, premium hosting solutions","publisher":{"@id":"https://kinsta.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://kinsta.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#primaryimage","inLanguage":"en-US","url":"https://kinsta.com/wp-content/uploads/2021/02/how-to-fix-the-xampp-error-mysql-shutdown-unexpectedly.jpg","contentUrl":"https://kinsta.com/wp-content/uploads/2021/02/how-to-fix-the-xampp-error-mysql-shutdown-unexpectedly.jpg","width":1460,"height":730,"caption":"How to Fix the XAMPP Error \"MySQL Shutdown Unexpectedly\""},{"@type":"WebPage","@id":"https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#webpage","url":"https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/","name":"How to Fix the XAMPP Error \"MySQL Shutdown Unexpectedly\"","isPartOf":{"@id":"https://kinsta.com/#website"},"primaryImageOfPage":{"@id":"https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#primaryimage"},"datePublished":"2021-03-09T13:13:02+00:00","dateModified":"2022-12-15T18:12:31+00:00","description":"Have you encountered the \"MySQL Shutdown Unexpectedly\" error in XAMPP? This is common when you don\u2019t run the software using administrator privileges.","breadcrumb":{"@id":"https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/"]}]},{"@type":"BreadcrumbList","@id":"https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kinsta.com/"},{"@type":"ListItem","position":2,"name":"Resource Center","item":"https://kinsta.com/resources/"},{"@type":"ListItem","position":3,"name":"Knowledge Base","item":"https://kinsta.com/knowledgebase/"},{"@type":"ListItem","position":4,"name":"XAMPP","item":"https://kinsta.com/topic/xampp/"},{"@type":"ListItem","position":5,"name":"How to Fix the XAMPP Error &#8220;MySQL Shutdown Unexpectedly&#8221; (3 Methods)"}]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Kinsta® » Feed" href="https://kinsta.com/feed/">
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #fff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--purple: #5333ed;--wp--preset--color--blue: #150773;--wp--preset--color--dark-blue: #0c022f;--wp--preset--color--turquoise: #2cd4d9;--wp--preset--color--gray: #e1eaf8;--wp--preset--color--offwhite: #fafafa;--wp--preset--color--success: #30b00f;--wp--preset--color--error: #e43c3c;--wp--preset--color--primary: var(--color-primary);--wp--preset--color--secondary: var(--color-secondary);--wp--preset--color--tertiary: var(--color-tertiary);--wp--preset--color--background: var(--color-background);--wp--preset--color--editor-highlight: red;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--hero: linear-gradient( -30deg, rgb(0,0,77) 0%, rgb(83,51,237) 49%, rgb(44,212,217) 100%);--wp--preset--gradient--dark-purple: linear-gradient(94.56deg, #2C1B67 30.9%, #190C47 72.6%, #0C022F 86.84%);--wp--preset--gradient--multi-service: radial-gradient(circle at 80% 100%, #2cd4d9 0%, transparent 50%), radial-gradient(circle at 20% 100%, #ee7a0f 0%, transparent 50%), radial-gradient(circle at 50% 0%, #d824c5 0%, transparent 50%), linear-gradient(#0E0A1B, #0E0A1B);--wp--preset--gradient--wp: radial-gradient(circle at 80% 100%, #2cd4d9 0%, #0E0A1B 50%);--wp--preset--gradient--app: radial-gradient(circle at 80% 100%, #D824C5 0%, #0E0A1B 50%);--wp--preset--gradient--db: radial-gradient(circle at 80% 100%, #1F904C 0%, #0E0A1B 50%);--wp--preset--gradient--wp-light: radial-gradient(circle at 80% 100%, #2cd4d9 0%, #f3f3f6 50%);--wp--preset--gradient--app-light: radial-gradient(circle at 80% 100%, #D824C5 0%, #f3f3f6 50%);--wp--preset--gradient--db-light: radial-gradient(circle at 80% 100%, #1F904C 0%, #f3f3f6 50%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 1rem;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 1.5rem;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--smallest: 0.75rem;--wp--preset--font-size--smaller: 0.875rem;--wp--preset--font-size--normal: 1.125rem;--wp--preset--font-size--larger: 2.125rem;--wp--preset--font-size--largest: 3.5rem;--wp--preset--font-family--body: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;--wp--preset--font-family--heading: 'Brandon Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;--wp--preset--spacing--20: 1rem;--wp--preset--spacing--30: 2rem;--wp--preset--spacing--40: 4.25rem;--wp--preset--spacing--50: 8.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--spacing--10: 0.5rem;}body { margin: 0;--wp--style--global--content-size: 41rem;--wp--style--global--wide-size: 71rem; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}.wp-element-button, .wp-block-button__link{background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-purple-color{color: var(--wp--preset--color--purple) !important;}.has-blue-color{color: var(--wp--preset--color--blue) !important;}.has-dark-blue-color{color: var(--wp--preset--color--dark-blue) !important;}.has-turquoise-color{color: var(--wp--preset--color--turquoise) !important;}.has-gray-color{color: var(--wp--preset--color--gray) !important;}.has-offwhite-color{color: var(--wp--preset--color--offwhite) !important;}.has-success-color{color: var(--wp--preset--color--success) !important;}.has-error-color{color: var(--wp--preset--color--error) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-tertiary-color{color: var(--wp--preset--color--tertiary) !important;}.has-background-color{color: var(--wp--preset--color--background) !important;}.has-editor-highlight-color{color: var(--wp--preset--color--editor-highlight) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-purple-background-color{background-color: var(--wp--preset--color--purple) !important;}.has-blue-background-color{background-color: var(--wp--preset--color--blue) !important;}.has-dark-blue-background-color{background-color: var(--wp--preset--color--dark-blue) !important;}.has-turquoise-background-color{background-color: var(--wp--preset--color--turquoise) !important;}.has-gray-background-color{background-color: var(--wp--preset--color--gray) !important;}.has-offwhite-background-color{background-color: var(--wp--preset--color--offwhite) !important;}.has-success-background-color{background-color: var(--wp--preset--color--success) !important;}.has-error-background-color{background-color: var(--wp--preset--color--error) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-background-color{background-color: var(--wp--preset--color--tertiary) !important;}.has-background-background-color{background-color: var(--wp--preset--color--background) !important;}.has-editor-highlight-background-color{background-color: var(--wp--preset--color--editor-highlight) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-purple-border-color{border-color: var(--wp--preset--color--purple) !important;}.has-blue-border-color{border-color: var(--wp--preset--color--blue) !important;}.has-dark-blue-border-color{border-color: var(--wp--preset--color--dark-blue) !important;}.has-turquoise-border-color{border-color: var(--wp--preset--color--turquoise) !important;}.has-gray-border-color{border-color: var(--wp--preset--color--gray) !important;}.has-offwhite-border-color{border-color: var(--wp--preset--color--offwhite) !important;}.has-success-border-color{border-color: var(--wp--preset--color--success) !important;}.has-error-border-color{border-color: var(--wp--preset--color--error) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-border-color{border-color: var(--wp--preset--color--tertiary) !important;}.has-background-border-color{border-color: var(--wp--preset--color--background) !important;}.has-editor-highlight-border-color{border-color: var(--wp--preset--color--editor-highlight) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-hero-gradient-background{background: var(--wp--preset--gradient--hero) !important;}.has-dark-purple-gradient-background{background: var(--wp--preset--gradient--dark-purple) !important;}.has-multi-service-gradient-background{background: var(--wp--preset--gradient--multi-service) !important;}.has-wp-gradient-background{background: var(--wp--preset--gradient--wp) !important;}.has-app-gradient-background{background: var(--wp--preset--gradient--app) !important;}.has-db-gradient-background{background: var(--wp--preset--gradient--db) !important;}.has-wp-light-gradient-background{background: var(--wp--preset--gradient--wp-light) !important;}.has-app-light-gradient-background{background: var(--wp--preset--gradient--app-light) !important;}.has-db-light-gradient-background{background: var(--wp--preset--gradient--db-light) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-smallest-font-size{font-size: var(--wp--preset--font-size--smallest) !important;}.has-smaller-font-size{font-size: var(--wp--preset--font-size--smaller) !important;}.has-normal-font-size{font-size: var(--wp--preset--font-size--normal) !important;}.has-larger-font-size{font-size: var(--wp--preset--font-size--larger) !important;}.has-largest-font-size{font-size: var(--wp--preset--font-size--largest) !important;}.has-body-font-family{font-family: var(--wp--preset--font-family--body) !important;}.has-heading-font-family{font-family: var(--wp--preset--font-family--heading) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="kinsta-css-style-css" href="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="kinsta-css-templates/post-types/knowledgebase-css" href="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/knowledgebase.css" type="text/css" media="all">
+<link rel="https://api.w.org/" href="https://kinsta.com/wp-json/"><link rel="alternate" type="application/json" href="https://kinsta.com/wp-json/wp/v2/knowledgebase/89981"><link rel="shortlink" href="https://kinsta.com/?p=89981">
+<link rel="alternate" type="application/json+oembed" href="https://kinsta.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkinsta.com%2Fknowledgebase%2Fxampp-mysql-shutdown-unexpectedly%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://kinsta.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkinsta.com%2Fknowledgebase%2Fxampp-mysql-shutdown-unexpectedly%2F&amp;format=xml">
+
+<link rel="alternate" href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/" hreflang="x-default">
+<link rel="alternate" href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/" hreflang="en">
+<link rel="alternate" href="https://kinsta.com/fr/base-de-connaissances/xampp-mysql-shutdown-unexpectedly/" hreflang="fr">
+<link rel="alternate" href="https://kinsta.com/it/knowledgebase/xampp-mysql-shutdown-unexpectedly/" hreflang="it">
+<link rel="alternate" href="https://kinsta.com/es/base-de-conocimiento/xampp-mysql-cierra-inesperadamente/" hreflang="es">
+<link rel="alternate" href="https://kinsta.com/pt/base-de-conhecimento/xampp-mysql-shutdown-unexpectedly/" hreflang="pt">
+<link rel="alternate" href="https://kinsta.com/nl/kennisbank/xampp-mysql-shutdown-unexpectedly/" hreflang="nl">
+<link rel="alternate" href="https://kinsta.com/de/wissensdatenbank/xampp-mysql-shutdown-unexpectedly/" hreflang="de">
+<link rel="alternate" href="https://kinsta.com/se/kunskapsbas/xampp-mysql-shutdown-unexpectedly/" hreflang="sv">
+<script>window.$kinsta = {"env":"production","maintenanceMode":false,"siteURL":"https:\/\/kinsta.com\/","siteCode":"en","languageCode":"en","restBaseURL":"https:\/\/kinsta.com\/wp-json\/","adminAjaxURL":"https:\/\/kinsta.com\/wp-admin\/admin-ajax.php","themeDirURL":"https:\/\/kinsta.com\/wp-content\/themes\/kinsta\/","uploadDirBaseURL":"https:\/\/kinsta.com\/wp-content\/uploads\/","postURL":{"\/legal\/privacy-policy":"https:\/\/kinsta.com\/legal\/privacy-policy\/","\/legal\/terms-service":"https:\/\/kinsta.com\/legal\/terms-service\/","\/plans":"https:\/\/kinsta.com\/plans\/","\/signup":"https:\/\/kinsta.com\/signup\/","\/contact-us":"https:\/\/kinsta.com\/contact-us\/","\/pricing-calculator":"https:\/\/kinsta.com\/pricing-calculator\/"},"stripe":{"publicKey":"pk_live_r16EiSaRITiPDMKQjLeoOviT"},"isSingular":true,"wpPost":{"id":89981,"title":"How to Fix the XAMPP Error &#8220;MySQL Shutdown Unexpectedly&#8221; (3 Methods)","type":"knowledgebase"}}</script>
+            <script type="application/ld+json" id="wl-jsonld">[{"@context":"http:\/\/schema.org","@id":"http:\/\/data.wordlift.io\/wl0150038\/knowledgebase\/how_to_fix_the_xampp_error_mysql_shutdown_unexpectedly_3_methods","@type":["Article","FAQPage"],"mainEntityOfPage":"https:\/\/kinsta.com\/knowledgebase\/xampp-mysql-shutdown-unexpectedly\/","image":[{"@type":"ImageObject","url":"https:\/\/kinsta.com\/wp-content\/uploads\/2021\/02\/how-to-fix-the-xampp-error-mysql-shutdown-unexpectedly-1200x675.jpg","width":1200,"height":675},{"@type":"ImageObject","url":"https:\/\/kinsta.com\/wp-content\/uploads\/2021\/02\/how-to-fix-the-xampp-error-mysql-shutdown-unexpectedly.jpg","width":1460,"height":730}],"headline":"How to Fix the XAMPP Error \"MySQL Shutdown Unexpectedly\" (3 Methods)","datePublished":"2021-03-09T14:13:02+01:00","dateModified":"2022-12-15T19:12:31+01:00","wordCount":1375,"keywords":"local development,web development","commentCount":"22","inLanguage":"en-US","publisher":{"@type":"Organization","@id":"http:\/\/data.wordlift.io\/wl0150038\/entity\/kinsta","name":"Kinsta","sameAs":["https:\/\/www.google.com\/maps?cid=2028540986187945162","https:\/\/opencorporates.com\/companies\/us_de\/7460224.rdf","https:\/\/opencorporates.com\/companies\/gb\/09030972.rdf","https:\/\/g.co\/kg\/g\/11h_cs1m3s","https:\/\/www.linkedin.com\/company\/kinsta\/","https:\/\/profiles.wordpress.org\/kinstahosting\/","https:\/\/www.facebook.com\/kinstahosting","https:\/\/twitter.com\/kinsta","https:\/\/www.instagram.com\/kinstahosting\/","https:\/\/www.youtube.com\/kinsta"],"logo":{"@type":"ImageObject","url":"https:\/\/kinsta.com\/wp-content\/uploads\/2020\/12\/kinsta-logo--publisher-logo.jpg","width":600,"height":60}},"mentions":[{"@id":"http:\/\/data.wordlift.io\/wl0150038\/knowledgebase\/what_is_wordpress__explained_for_beginners"},{"@id":"http:\/\/data.wordlift.io\/wl0150038\/knowledgebase\/what_is_mysql__a_beginner-friendly_explanation"},{"@id":"http:\/\/data.wordlift.io\/wl0150038\/knowledgebase\/what_is_php__how_is_php_used_in_wordpress_"},{"@id":"http:\/\/data.wordlift.io\/wl0150038\/knowledgebase\/what_is_a_content_management_system_cms_"},{"@id":"http:\/\/data.wordlift.io\/wl0150038\/post_tag\/web-development"},{"@id":"http:\/\/data.wordlift.io\/wl0150038\/knowledge_categories\/general-wordpress"},{"@id":"http:\/\/data.wordlift.io\/wl0150038\/term\/topic\/mysql_database"},{"@id":"http:\/\/data.wordlift.io\/wl0150038\/term\/topic\/mysql_error"},{"@id":"http:\/\/data.wordlift.io\/wl0150038\/term\/topic\/xampp"}],"author":{"@id":"http:\/\/data.wordlift.io\/wl0150038\/entity\/brian_li"},"name":"How to Fix the XAMPP Error \"MySQL Shutdown Unexpectedly\" (3 Methods)","mainEntity":[{"acceptedAnswer":{"@type":"Answer","text":"<p>As the name of the error implies, this is the message you\u2019ll see if the MySQL software on your environment shuts down or ceases to function unexpectedly:<\/p>\n<p>We say \u201cunexpectedly\u201d, because you can manually shut down the MySQL database software at any point. That also happens when you restart your server.<\/p>\n<p>However, when the software is shut down, your website won\u2019t be able to\u00a0<a href=\"https:\/\/kinsta.com\/knowledgebase\/wordpress-database\/\">connect to its database<\/a>. In other words, WordPress won\u2019t work.<\/p>\n<p>As you can see in the above image, XAMPP provides you with advice on troubleshooting the \u201cMySQL shutdown unexpectedly error\u201d right within its events log. In the next section, we\u2019ll go into more detail on the various ways you can use to fix this issue.<\/p>\n"},"name":"What Is the XAMPP Error \u201cMySQL Shutdown Unexpectedly\u201d?","@type":"Question"},{"acceptedAnswer":{"@type":"Answer","text":"<p>Typically, fixing the XAMPP error \u201cMySQL shutdown unexpectedly\u201d is quick and easy. Below, we\u2019ll walk you through three fixes, starting with the simplest.<\/p>\n\n<ol class=\"wp-block-kinsta-table-of-contents__list is-style-decimal\">\n<li><a href=\"https:\/\/kinsta.com\/knowledgebase\/xampp-mysql-shutdown-unexpectedly\/#1-run-xampp-using-administrator-privileges\">Run XAMPP Using Administrator Privileges<\/a><\/li>\n<li><a href=\"https:\/\/kinsta.com\/knowledgebase\/xampp-mysql-shutdown-unexpectedly\/#2-restore-your-database-backup\">Restore Your Database Backup<\/a><\/li>\n<li><a href=\"https:\/\/kinsta.com\/knowledgebase\/xampp-mysql-shutdown-unexpectedly\/#3-change-your-mysql-port\">Change Your MySQL Port<\/a><\/li>\n<\/ol>\n\n"},"name":"How to Fix the XAMPP Error \u201cMySQL Shutdown Unexpectedly\u201d (3 Methods)?","@type":"Question"}]},{"@context":"http:\/\/schema.org","@id":"http:\/\/data.wordlift.io\/wl0150038\/knowledgebase\/what_is_wordpress__explained_for_beginners","@type":["Thing"],"mainEntityOfPage":"https:\/\/kinsta.com\/knowledgebase\/what-is-wordpress\/","image":[{"@type":"ImageObject","url":"https:\/\/kinsta.com\/wp-content\/uploads\/2018\/02\/what-is-wordpress-1200x675.jpg","width":1200,"height":675},{"@type":"ImageObject","url":"https:\/\/kinsta.com\/wp-content\/uploads\/2018\/02\/what-is-wordpress.jpg","width":1460,"height":730}],"name":"What Is WordPress? Explained for Beginners","sameAs":["http:\/\/www.wikidata.org\/entity\/Q13166","http:\/\/dbpedia.org\/resource\/WordPress","http:\/\/rdf.freebase.com\/ns\/m.02vtpl"],"url":"https:\/\/kinsta.com\/knowledgebase\/what-is-wordpress\/"},{"@context":"http:\/\/schema.org","@id":"http:\/\/data.wordlift.io\/wl0150038\/knowledgebase\/what_is_mysql__a_beginner-friendly_explanation","@type":"Thing","mainEntityOfPage":"https:\/\/kinsta.com\/knowledgebase\/what-is-mysql\/","image":[{"@type":"ImageObject","url":"https:\/\/kinsta.com\/wp-content\/uploads\/2019\/04\/what-is-mysql-1.png","width":1460,"height":730}],"name":"What Is MySQL? A Beginner-Friendly Explanation","sameAs":["http:\/\/www.wikidata.org\/entity\/Q850","http:\/\/dbpedia.org\/resource\/MySQL","http:\/\/rdf.freebase.com\/ns\/m.04y3k"],"url":"https:\/\/kinsta.com\/knowledgebase\/what-is-mysql\/"},{"@context":"http:\/\/schema.org","@id":"http:\/\/data.wordlift.io\/wl0150038\/knowledgebase\/what_is_php__how_is_php_used_in_wordpress_","@type":"Thing","mainEntityOfPage":"https:\/\/kinsta.com\/knowledgebase\/what-is-php\/","image":[{"@type":"ImageObject","url":"https:\/\/kinsta.com\/wp-content\/uploads\/2018\/05\/what-is-php-3-1.png","width":1460,"height":730}],"name":"What Is PHP? How Is PHP Used in WordPress?","sameAs":["http:\/\/www.wikidata.org\/entity\/Q59","http:\/\/dbpedia.org\/resource\/PHP","http:\/\/rdf.freebase.com\/ns\/m.060kv"],"url":"https:\/\/kinsta.com\/knowledgebase\/what-is-php\/"},{"@context":"http:\/\/schema.org","@id":"http:\/\/data.wordlift.io\/wl0150038\/knowledgebase\/what_is_a_content_management_system_cms_","@type":["Thing"],"mainEntityOfPage":"https:\/\/kinsta.com\/knowledgebase\/content-management-system\/","image":[{"@type":"ImageObject","url":"https:\/\/kinsta.com\/wp-content\/uploads\/2018\/03\/content-management-system-2.png","width":1460,"height":730}],"name":"What Is a Content Management System (CMS)?","sameAs":["http:\/\/www.wikidata.org\/entity\/Q131093","http:\/\/dbpedia.org\/resource\/Content_management_system","http:\/\/rdf.freebase.com\/ns\/m.0k23c"],"url":"https:\/\/kinsta.com\/knowledgebase\/content-management-system\/"},{"@context":"http:\/\/schema.org","@id":"http:\/\/data.wordlift.io\/wl0150038\/entity\/brian_li","@type":"Person","description":"Brian is the Website Content Manager at Kinsta. He focuses on content publishing, website functionality, and SEO. Brian has been a WordPress user for over 10 years, and enjoys sharing his knowledge with the community. In his free time, Brian enjoys playing the piano and exploring Tokyo with his camera. Connect with Brian on his...","name":"Brian Li","sameAs":"https:\/\/twitter.com\/bwhli","url":"https:\/\/brianli.com\/"},{"@context":"http:\/\/schema.org","name":"web development","@type":["Thing"],"@id":"http:\/\/data.wordlift.io\/wl0150038\/post_tag\/web-development","description":"","url":["https:\/\/kinsta.com\/blog\/tag\/web-development\/"],"mainEntityOfPage":"https:\/\/kinsta.com\/blog\/tag\/web-development\/"},{"@context":"http:\/\/schema.org","name":"General WordPress questions","@type":["Thing"],"@id":"http:\/\/data.wordlift.io\/wl0150038\/knowledge_categories\/general-wordpress","description":"Browse our general WordPress related articles covering frequently asked questions to learn more about all things WordPress.","url":["https:\/\/kinsta.com\/knowledge_categories\/general-wordpress\/"],"mainEntityOfPage":"https:\/\/kinsta.com\/knowledge_categories\/general-wordpress\/"},{"@context":"http:\/\/schema.org","name":"MySQL Database","@type":["Thing"],"@id":"http:\/\/data.wordlift.io\/wl0150038\/term\/topic\/mysql_database","description":"","mainEntityOfPage":"https:\/\/kinsta.com\/topic\/mysql-database\/"},{"@context":"http:\/\/schema.org","name":"MySQL Error","@type":["Thing"],"@id":"http:\/\/data.wordlift.io\/wl0150038\/term\/topic\/mysql_error","description":"","mainEntityOfPage":"https:\/\/kinsta.com\/topic\/mysql-error\/"},{"@context":"http:\/\/schema.org","name":"XAMPP","@type":["Thing"],"@id":"http:\/\/data.wordlift.io\/wl0150038\/term\/topic\/xampp","description":"","mainEntityOfPage":"https:\/\/kinsta.com\/topic\/xampp\/"}]</script><link rel="preload" href="https://kinsta.com/wp-content/themes/kinsta/fonts/BrandonText-light.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://kinsta.com/wp-content/themes/kinsta/fonts/BrandonText-Black.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://kinsta.com/wp-content/themes/kinsta/fonts/BrandonText-Medium.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://kinsta.com/wp-content/themes/kinsta/fonts/roboto/Roboto-300.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://kinsta.com/wp-content/themes/kinsta/fonts/roboto/Roboto-regular.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://kinsta.com/wp-content/themes/kinsta/fonts/roboto/Roboto-500.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://kinsta.com/wp-content/themes/kinsta/fonts/roboto/Roboto-700.woff2" as="font" type="font/woff2" crossorigin=""><link rel="icon" href="https://kinsta.com/wp-content/uploads/2020/09/kinsta-favicon-150x150.png" sizes="32x32">
+<link rel="icon" href="https://kinsta.com/wp-content/uploads/2020/09/kinsta-favicon.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://kinsta.com/wp-content/uploads/2020/09/kinsta-favicon.png">
+<meta name="msapplication-TileImage" content="https://kinsta.com/wp-content/uploads/2020/09/kinsta-favicon.png">
+		<style type="text/css" id="wp-custom-css">
+			li code,
+p code,
+.wp-block-code,
+.wp-block-kinsta-notice,
+.wp-block-kinsta-table-of-contents,
+.share-static
+{
+	background-color: #f3f3f6;
+}
+
+.related-posts {
+	background-color: #fafafa;
+}
+
+li code,
+p code {
+	border-color: #f3f3f6;
+}		</style>
+		<link rel="stylesheet" type="text/css" href="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/5378.css"><link rel="stylesheet" type="text/css" href="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/4899.css"><link rel="stylesheet" type="text/css" href="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/7279.css"><style>.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(0.54, 1.5, 0.38, 1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}
+</style><style>a.wl-context-card{outline:none !important;text-decoration:none !important;box-shadow:none !important}a.wl-context-card:hover,a.wl-context-card:visited{color:#000 !important}.wl-context-card{display:block;color:#000;font-size:1em}.wl-context-card__image{background-size:cover;background-position:center}.wl-context-card__description{display:flex;flex-direction:column}.wl-context-card__description__logo{height:60px;background-position:center;background-size:contain;padding:0.4em;box-sizing:border-box;background-repeat:no-repeat}.wl-context-card__description__text{flex:1 0 content;padding:0.3em 0.6em;text-decoration:none;font-size:0.9em;font-style:normal}.wl-context-card__description__fade{min-height:4em;background:linear-gradient(rgba(255,255,255,0) 0%, #fff 100%);position:absolute;display:block;width:100%;left:0;bottom:0}.wl-context-card--horizontal-image{display:flex;flex-direction:column;min-width:350px;min-height:150px;max-width:350px;max-height:400px}.wl-context-card--horizontal-image .wl-context-card__image{width:100%;height:250px}.wl-context-card--vertical-image{display:flex;flex-direction:row-reverse;max-width:500px;max-height:400px}.wl-context-card--vertical-image .wl-context-card__image{width:200px;height:250px;flex:1 0 auto}.wl-product-context-card .card-content{margin:5px 10px;flex:auto}.wl-product-context-card .card-content .title{font-size:1.2rem;margin:0.3rem 0;letter-spacing:inherit;line-height:inherit;text-transform:inherit}.wl-product-context-card .card-footer{margin:5px 10px;border-top:1px solid #e6e6e6;padding-top:5px;display:flex;flex-direction:row;font-size:0.9rem;letter-spacing:inherit;line-height:inherit;text-transform:inherit;overflow:hidden}.wl-product-context-card .card-footer .col-left{text-align:left;flex-grow:0.5}.wl-product-context-card .card-footer .col-left .discount{font-size:0.85em;color:#767676;white-space:nowrap;overflow:hidden}.wl-product-context-card .card-footer .col-left .discount .regular{text-decoration:line-through}.wl-product-context-card .card-footer .col-left .discount .percent{color:#e02020}.wl-product-context-card .card-footer .col-right{text-align:right;flex-grow:0.5}.wl-product-context-card .card-footer .col-right .star-rating{float:right;font-size:1rem}.wl-product-context-card .card-footer .col-right .star-rating span:before{color:#ffc94a}.wl-product-context-card .card-footer .col-right .reviews{clear:both;font-size:0.85em;color:#767676}.tippy-box[data-theme~=wordlift]{color:#26323d;padding:0;box-shadow:0 0 20px 4px rgba(154,161,177,0.15),0 4px 80px -8px rgba(36,40,47,0.25),0 4px 4px -2px rgba(91,94,105,0.15);background-color:#fff;text-align:left}.tippy-box[data-theme~=wordlift] .tippy-content{padding:0}.tippy-box[data-theme~=wordlift][data-placement^=top]>.tippy-arrow:before{border-top-color:#fff}.tippy-box[data-theme~=wordlift][data-placement^=bottom]>.tippy-arrow:before{border-bottom-color:#fff}.tippy-box[data-theme~=wordlift][data-placement^=left]>.tippy-arrow:before{border-left-color:#fff}.tippy-box[data-theme~=wordlift][data-placement^=right]>.tippy-arrow:before{border-right-color:#fff}.tippy-box[data-theme~=wordlift]>.tippy-backdrop{background-color:#fff}.tippy-box[data-theme~=wordlift]>.tippy-svg-arrow{fill:#fff}
+</style><style>.wordlift-cloud-widget{position:relative}.wordlift-cloud-widget .title{font-size:1.2rem;font-weight:400;margin:0.5rem 0}.wordlift-cloud-widget .cards{display:flex}.wordlift-cloud-widget .cards .card{background:white;flex:1 0 300px;box-sizing:border-box;margin:1rem .25em}@media screen and (min-width: 40em){.wordlift-cloud-widget .cards .card{max-width:calc(50% -  0.5em)}}@media screen and (min-width: 60em){.wordlift-cloud-widget .cards .card{max-width:calc(25% - 0.5em)}}.wordlift-cloud-widget .cards .card a{color:black;text-decoration:none;display:flex;flex-direction:column;width:100%}.wordlift-cloud-widget .cards .card a:focus{outline:none}.wordlift-cloud-widget .cards .card .thumbnail{position:relative;padding-bottom:75%}.wordlift-cloud-widget .cards .card .thumbnail img{display:block;border:0;width:100%;height:100%;position:absolute;object-fit:cover}.wordlift-cloud-widget .cards .card .card-content .title{font-size:0.9rem;margin:0.3rem 0;letter-spacing:inherit;line-height:inherit;text-transform:inherit}.wordlift-faceted,.wordlift-products-navigator{margin:0 15px}.wordlift-faceted .cards,.wordlift-products-navigator .cards{overflow-x:scroll;scroll-behavior:smooth}.wordlift-faceted .cards::-webkit-scrollbar,.wordlift-products-navigator .cards::-webkit-scrollbar{display:none}.wordlift-faceted .cards .card,.wordlift-products-navigator .cards .card{border:1px solid #f5f5f5;border-radius:5px;display:flex}.wordlift-faceted .cards .card .thumbnail img,.wordlift-products-navigator .cards .card .thumbnail img{border-radius:5px 5px 0 0}.wordlift-faceted .cards .card .card-content,.wordlift-products-navigator .cards .card .card-content{margin:5px 10px;flex:auto}.wordlift-faceted .cards .card .card-footer,.wordlift-products-navigator .cards .card .card-footer{margin:5px 10px}.wordlift-faceted .nav-link,.wordlift-products-navigator .nav-link{text-decoration:none !important;cursor:pointer;display:inline-block;background-color:#ffffff;color:black;border-radius:50%;border:1px solid #f2f2f2;box-shadow:0 2px 4px 0 rgba(0,0,0,0.07);position:absolute;top:50%;width:30px;height:30px;text-align:center;outline:0;font-size:12px;line-height:30px}.wordlift-faceted .nav-link:hover,.wordlift-products-navigator .nav-link:hover{background-color:#f2f2f2;color:black}.wordlift-faceted .nav-link.previous,.wordlift-products-navigator .nav-link.previous{left:-15px}.wordlift-faceted .nav-link.next,.wordlift-products-navigator .nav-link.next{right:-15px}.wordlift-navigator .cards{flex-wrap:wrap}.wordlift-faceted .chips{overflow-x:scroll;display:flex}.wordlift-faceted .chips::-webkit-scrollbar{display:none}.wordlift-faceted .chips .chip{font-size:0.8rem;background:#fff;border:1px solid #e8e8e8;padding:8px;border-radius:5px;display:inline-block;margin:2px;cursor:pointer;flex:1 0 auto;flex-grow:inherit}.wordlift-faceted .chips .chip.active{background:#5f6369;border-color:#e8e8e8;color:white}.wordlift-faceted .chips .chip.active:hover{background:#5f6369}.wordlift-faceted .chips .chip:hover{background:#e8e8e8}.wordlift-faceted .card .date{font-size:0.8em;color:#a4a4a4}@media screen and (min-width: 60em){.wordlift-products-navigator .cards .card{max-width:calc(33.33% - 0.5em)}}.wordlift-products-navigator .cards .card .card-content{position:relative}.wordlift-products-navigator .cards .card .card-content .add-cart{width:30px;height:30px;box-shadow:0 2px 10px 0 rgba(0,0,0,0.13);border:solid 1px #f2f2f2;background-color:#ffffff;border-radius:50%;position:absolute;right:5px;margin-top:calc(-15px - 0.3rem)}.wordlift-products-navigator .cards .card .card-content .add-cart:hover{background-color:#f2f2f2}.wordlift-products-navigator .cards .card .card-content .add-cart>*{pointer-events:none}.wordlift-products-navigator .cards .card .card-content .add-cart svg{width:100%;height:auto;padding:20%;box-sizing:border-box}.wordlift-products-navigator .cards .card .card-footer{border-top:1px solid #e6e6e6;display:flex;flex-direction:row;font-size:0.9rem;letter-spacing:inherit;line-height:inherit;text-transform:inherit;overflow:hidden}.wordlift-products-navigator .cards .card .card-footer .col-left{text-align:left;flex-grow:0.5}.wordlift-products-navigator .cards .card .card-footer .col-left .discount{font-size:0.7em;color:#767676;white-space:nowrap;overflow:hidden}.wordlift-products-navigator .cards .card .card-footer .col-left .discount .regular{text-decoration:line-through}.wordlift-products-navigator .cards .card .card-footer .col-left .discount .percent{color:#e02020}.wordlift-products-navigator .cards .card .card-footer .col-right{text-align:right;flex-grow:0.5}.wordlift-products-navigator .cards .card .card-footer .col-right .star-rating{float:right;font-size:0.85rem}.wordlift-products-navigator .cards .card .card-footer .col-right .star-rating span:before{color:#ffc94a}.wordlift-products-navigator .cards .card .card-footer .col-right .reviews{clear:both;font-size:0.7em;color:#767676}
+</style><style type="text/css">iframe#teal-job-tracker-iframe-stable {
+        min-width: 380px !important;
+        width: 380px !important;
+        min-height: 100vh !important;
+        height: 100vh !important;
+    }</style><script src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/26014448.js.download" type="text/javascript" async="" data-ueto="ueto_b7bf81b910"></script><style data-emotion="yogurt" data-s=""></style><link rel="stylesheet" type="text/css" href="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/3438.css"><script async="" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/js(5)"></script><meta http-equiv="origin-trial" content="A751Xsk4ZW3DVQ8WZng2Dk5s3YzAyqncTzgv+VaE6wavgTY0QHkDvUTET1o7HanhuJO8lgv1Vvc88Ij78W1FIAAAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A751Xsk4ZW3DVQ8WZng2Dk5s3YzAyqncTzgv+VaE6wavgTY0QHkDvUTET1o7HanhuJO8lgv1Vvc88Ij78W1FIAAAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script type="text/javascript" async="" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/f.txt"></script><script type="text/javascript" async="" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/f(1).txt"></script><script type="text/javascript" async="" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/f(2).txt"></script></head>
+
+<body class="knowledgebase-template-default single single-knowledgebase postid-89981 wp-embed-responsive object-89981" data-new-gr-c-s-check-loaded="14.1097.0" data-gr-ext-installed=""><style type="text/css">html.hs-messages-widget-open.hs-messages-mobile,html.hs-messages-widget-open.hs-messages-mobile body{overflow:hidden!important;position:relative!important}html.hs-messages-widget-open.hs-messages-mobile body{height:100%!important;margin:0!important}#hubspot-messages-iframe-container{display:initial!important;z-index:2147483647;position:fixed!important;bottom:0!important}#hubspot-messages-iframe-container.widget-align-left{left:0!important}#hubspot-messages-iframe-container.widget-align-right{right:0!important}#hubspot-messages-iframe-container.internal{z-index:1016}#hubspot-messages-iframe-container.internal iframe{min-width:108px}#hubspot-messages-iframe-container .shadow-container{display:initial!important;z-index:-1;position:absolute;width:0;height:0;bottom:0;content:""}#hubspot-messages-iframe-container .shadow-container.internal{display:none!important}#hubspot-messages-iframe-container .shadow-container.active{width:400px;height:400px}#hubspot-messages-iframe-container iframe{display:initial!important;width:100%!important;height:100%!important;border:none!important;position:absolute!important;bottom:0!important;right:0!important;background:transparent!important}</style>
+
+<a class="skip-to-content" href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#main">
+  Skip to content</a>
+
+<div id="kinsta-global-banner" class="kinsta-global-banner kinsta-global-banner--link is-theme-default is-sticky has-close">
+            <p>
+            <a href="https://kinsta.com/application-hosting/">
+                Test a deployment on our modern App Hosting. Start your free trial today.            </a>
+        </p>
+    <button class="kinsta-global-banner__close"><span class="screen-reader-text">Dismiss banner</span></button></div>
+
+<script>
+    if (
+        typeof window.localStorage !== "undefined"
+        && window.localStorage.getItem("kinstaGlobalBannerDismissed") === "918e22b60bfd811d37f48695cb3bb1c1"
+    ) {
+        document.getElementById("kinsta-global-banner").remove();
+    }
+</script>
+
+
+<header id="nav" class="site-menu site-menu--theme-default is-scrolled is-transition-enabled">
+    <div class="site-menu__inner">
+        <a href="https://kinsta.com/" class="site-menu__logo" rel="home">
+            <svg class="icon icon--logo" aria-hidden="true" focusable="false" title="Kinsta®"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#logo"></use></svg><span class="screen-reader-text">Kinsta®</span>        </a>
+
+        <a href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#nav" id="nav-toggle" class="site-menu__nav__toggle" aria-label="Hamburger menu" aria-haspopup="true" aria-expanded="false">
+            Navigation        </a>
+
+        <nav class="site-menu__nav" aria-label="Main menu">
+    <div class="megamenu">
+    <ul class="megamenu__level-1">
+                                <li class="megamenu__level-1__li megamenu__level-1__li--has-children">
+                                <button id="megamenu-item-1" class="megamenu__level-1__item megamenu__level-1__item--has-children js-megamenu-toggle-button" data-target="#megamenu-item-1__child" aria-expanded="false">
+                    <span class="megamenu__level-1__item__title">
+                        Hosting Solutions                    </span>
+                </button>
+                                    <div class="megamenu__level-2 megamenu__level-2--has-third-level" id="megamenu-item-1__child" aria-hidden="true" aria-labeledby="megamenu-item-1">
+    <div class="megamenu__level-2__inner">
+        <ul class="megamenu__level-2__ul">
+                                            <li class="megamenu__level-2__li">
+                    <button id="megamenu-tab-1" class="megamenu__level-2__item megamenu__level-2__item--has-children js-megamenu-toggle-button" data-target="#megamenu-tab-1__child" aria-expanded="false" disabled="" data-hs-event-125583243="1">
+                        <img src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/globe.svg" class="megamenu__level-2__item__icon" aria-hidden="true" width="20" height="20" loading="lazy">
+                        <span class="megamenu__level-2__item__title">
+                            Managed WordPress Hosting                        </span>
+                                                                    </button>
+                </li>
+                                            <li class="megamenu__level-2__li">
+                    <button id="megamenu-tab-2" class="megamenu__level-2__item megamenu__level-2__item--has-children js-megamenu-toggle-button" data-target="#megamenu-tab-2__child" aria-expanded="false" disabled="" data-hs-event-91158683="1">
+                        <img src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/platforms.svg" class="megamenu__level-2__item__icon" aria-hidden="true" width="20" height="20" loading="lazy">
+                        <span class="megamenu__level-2__item__title">
+                            Application Hosting                        </span>
+                                                    <span class="megamenu__level-2__item__label">
+                                                                <span class="screen-reader-text">(</span>
+                                new                                <span class="screen-reader-text">)</span>
+                            </span>
+                                                                    </button>
+                </li>
+                                            <li class="megamenu__level-2__li">
+                    <button id="megamenu-tab-3" class="megamenu__level-2__item megamenu__level-2__item--has-children js-megamenu-toggle-button" data-target="#megamenu-tab-3__child" aria-expanded="false" disabled="" data-hs-event-70612881="1">
+                        <img src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/clone.svg" class="megamenu__level-2__item__icon" aria-hidden="true" width="20" height="20" loading="lazy">
+                        <span class="megamenu__level-2__item__title">
+                            Database Hosting                        </span>
+                                                    <span class="megamenu__level-2__item__label">
+                                                                <span class="screen-reader-text">(</span>
+                                new                                <span class="screen-reader-text">)</span>
+                            </span>
+                                                                    </button>
+                </li>
+                    </ul>
+                    <div class="megamenu__level-2__children">
+                <div class="megamenu__level-3" id="megamenu-tab-1__child" aria-hidden="true" aria-labeledby="megamenu-tab-1">
+    <div class="mega-menu__level-3__inner">
+        <ul class="megamenu__level-3__sections">
+                                            <li class="megamenu__level-3__section" style="--megamenu-level-3-section-column-count: 1; --megamenu-level-3-section-row-count: 4;">
+                    <h4 class="megamenu__level-3__section__title">Platform</h4>
+                    <ul class="megamenu__level-3__section__items">
+                                                    <li>
+                                <a href="https://kinsta.com/wordpress-hosting/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Features                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/wordpress-hosting/pricing/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Plans                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/single-site-plans/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Single Site Plans                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/wordpress-hosting-agencies/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Agency Plans                                    </span>
+                                </a>
+                            </li>
+                                            </ul>
+                </li>
+                                            <li class="megamenu__level-3__section" style="--megamenu-level-3-section-column-count: 1; --megamenu-level-3-section-row-count: 4;">
+                    <h4 class="megamenu__level-3__section__title">Solutions</h4>
+                    <ul class="megamenu__level-3__section__items">
+                                                    <li>
+                                <a href="https://kinsta.com/enterprise-wordpress-hosting/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Enterprise                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/wordpress-lms-hosting/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        LMS                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/woocommerce-hosting/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        WooCommerce                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/small-business-hosting/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Small Business                                    </span>
+                                </a>
+                            </li>
+                                            </ul>
+                </li>
+                                            <li class="megamenu__level-3__section" style="--megamenu-level-3-section-column-count: 1; --megamenu-level-3-section-row-count: 4;">
+                    <h4 class="megamenu__level-3__section__title">Benefits</h4>
+                    <ul class="megamenu__level-3__section__items">
+                                                    <li>
+                                <a href="https://kinsta.com/wordpress-migration/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Free Migration                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/cloudflare-integration/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Cloudflare Integration                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/add-ons/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Add-Ons                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/devkinsta/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        DevKinsta                                    </span>
+                                </a>
+                            </li>
+                                            </ul>
+                </li>
+                    </ul>
+            </div>
+    </div>
+
+<div class="megamenu__level-3" id="megamenu-tab-2__child" aria-hidden="true" aria-labeledby="megamenu-tab-2">
+    <div class="mega-menu__level-3__inner">
+        <ul class="megamenu__level-3__sections">
+                                            <li class="megamenu__level-3__section" style="--megamenu-level-3-section-column-count: 1; --megamenu-level-3-section-row-count: 3;">
+                    <h4 class="megamenu__level-3__section__title">Read More</h4>
+                    <ul class="megamenu__level-3__section__items">
+                                                    <li>
+                                <a href="https://kinsta.com/application-hosting/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Features                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/application-hosting/pricing/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Pricing                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/docs/application-hosting/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Documentation                                    </span>
+                                </a>
+                            </li>
+                                            </ul>
+                </li>
+                    </ul>
+            </div>
+            <aside class="megamenu__level-3__cta megamenu__level-3__cta--purple">
+            <img loading="lazy" aria-hidden="true" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/application-hosting.svg" width="240" height="110">
+        <h4>Get $20 off your first month</h4>
+    <a class="megamenu__level-3__cta__button button--ghost" href="https://kinsta.com/signup/?product_type=app-db" tabindex="-1" data-hs-event-4143025="1">
+        Sign up now    </a>
+</aside>
+    </div>
+
+<div class="megamenu__level-3" id="megamenu-tab-3__child" aria-hidden="true" aria-labeledby="megamenu-tab-3">
+    <div class="mega-menu__level-3__inner">
+        <ul class="megamenu__level-3__sections">
+                                            <li class="megamenu__level-3__section" style="--megamenu-level-3-section-column-count: 1; --megamenu-level-3-section-row-count: 3;">
+                    <h4 class="megamenu__level-3__section__title">Read More</h4>
+                    <ul class="megamenu__level-3__section__items">
+                                                    <li>
+                                <a href="https://kinsta.com/database-hosting/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Features                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/database-hosting/pricing/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Pricing                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/docs/database-hosting/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Documentation                                    </span>
+                                </a>
+                            </li>
+                                            </ul>
+                </li>
+                    </ul>
+            </div>
+            <aside class="megamenu__level-3__cta megamenu__level-3__cta--gray">
+            <img loading="lazy" aria-hidden="true" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/database-hosting.svg" width="240" height="110">
+        <h4>Get $20 off your first month</h4>
+    <a class="megamenu__level-3__cta__button button--ghost" href="https://kinsta.com/signup/?product_type=app-db" tabindex="-1" data-hs-event-162886461="1">
+        Sign up now    </a>
+</aside>
+    </div>
+
+            </div>
+            </div>
+</div>
+
+                            </li>
+                                <li class="megamenu__level-1__li megamenu__level-1__li--no-third-level">
+                                <a id="megamenu-link-28" tabindex="0" href="https://kinsta.com/pricing/" class="megamenu__level-1__item">
+                    <span class="megamenu__level-1__item__title">
+                        Pricing                    </span>
+                </a>
+                            </li>
+                                <li class="megamenu__level-1__li megamenu__level-1__li--no-third-level">
+                                <a id="megamenu-link-29" tabindex="0" href="https://kinsta.com/docs/" class="megamenu__level-1__item">
+                    <span class="megamenu__level-1__item__title">
+                        Docs                    </span>
+                </a>
+                            </li>
+                                <li class="megamenu__level-1__li megamenu__level-1__li--no-third-level">
+                                <a id="megamenu-link-30" tabindex="0" href="https://kinsta.com/clients/" class="megamenu__level-1__item">
+                    <span class="megamenu__level-1__item__title">
+                        Clients                    </span>
+                </a>
+                            </li>
+                                <li class="megamenu__level-1__li megamenu__level-1__li--has-children megamenu__level-1__li--no-third-level">
+                                <button id="megamenu-item-5" class="megamenu__level-1__item megamenu__level-1__item--has-children js-megamenu-toggle-button" data-target="#megamenu-item-5__child" aria-expanded="false">
+                    <span class="megamenu__level-1__item__title">
+                        Contact Us                    </span>
+                </button>
+                                    <div class="megamenu__level-2 megamenu__level-2--no-third-level" id="megamenu-item-5__child" aria-hidden="true" aria-labeledby="megamenu-item-5">
+    <div class="megamenu__level-2__inner">
+        <ul class="megamenu__level-2__ul">
+                                            <li class="megamenu__level-2__li">
+                    <a id="megamenu-contact" tabindex="-1" href="tel:+18886102915" class="megamenu__level-2__item">
+                        <img src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/phone.svg" class="megamenu__level-2__item__icon" aria-hidden="true" width="20" height="20" loading="lazy">
+                        <span class="megamenu__level-2__item__title">
+                            Talk to sales                        </span>
+                                                                            <span class="megamenu__level-2__item__description">
+                                Call <b class="kinsta-tel " data-tel-apac="(+61) 1800 952 470" data-tel-emea="+44 808 2583 915">
+    +1 (888) 610-2915</b>
+ and find the hosting plan that’s right for you.                            </span>
+                                            </a>
+                </li>
+                                            <li class="megamenu__level-2__li">
+                    <a id="megamenu-box-31" tabindex="-1" href="https://kinsta.com/schedule-demo/" class="megamenu__level-2__item">
+                        <img src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/calendar.svg" class="megamenu__level-2__item__icon" aria-hidden="true" width="20" height="20" loading="lazy">
+                        <span class="megamenu__level-2__item__title">
+                            Request a live demo                        </span>
+                                                                            <span class="megamenu__level-2__item__description">
+                                Get a personalized demo of our powerful dashboard and hosting features.                            </span>
+                                            </a>
+                </li>
+                                            <li class="megamenu__level-2__li">
+                    <a id="megamenu-box-32" tabindex="-1" href="https://kinsta.com/contact-us/" class="megamenu__level-2__item">
+                        <img src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/chat.svg" class="megamenu__level-2__item__icon" aria-hidden="true" width="20" height="20" loading="lazy">
+                        <span class="megamenu__level-2__item__title">
+                            Ask questions                        </span>
+                                                                            <span class="megamenu__level-2__item__description">
+                                Tell us about your website or project. We'll get back to you in one business day.                            </span>
+                                            </a>
+                </li>
+                                            <li class="megamenu__level-2__li">
+                    <a id="megamenu-box-33" tabindex="-1" href="https://my.kinsta.com/?lang=en" class="megamenu__level-2__item">
+                        <img src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/lightning.svg" class="megamenu__level-2__item__icon" aria-hidden="true" width="20" height="20" loading="lazy">
+                        <span class="megamenu__level-2__item__title">
+                            Get help from our support team                        </span>
+                                                                            <span class="megamenu__level-2__item__description">
+                                Talk with our experts by launching a chat in the MyKinsta dashboard.                            </span>
+                                            </a>
+                </li>
+                    </ul>
+            </div>
+</div>
+
+                            </li>
+                                <li class="megamenu__level-1__li megamenu__level-1__li--has-children">
+                                <button id="megamenu-item-6" class="megamenu__level-1__item megamenu__level-1__item--has-children js-megamenu-toggle-button" data-target="#megamenu-item-6__child" aria-expanded="false">
+                    <span class="megamenu__level-1__item__title">
+                        Resources                    </span>
+                </button>
+                                    <div class="megamenu__level-2 megamenu__level-2--has-third-level" id="megamenu-item-6__child" aria-hidden="true" aria-labeledby="megamenu-item-6">
+    <div class="megamenu__level-2__inner">
+        <ul class="megamenu__level-2__ul">
+                                            <li class="megamenu__level-2__li">
+                    <button id="megamenu-tab-4" class="megamenu__level-2__item megamenu__level-2__item--has-children js-megamenu-toggle-button" data-target="#megamenu-tab-4__child" aria-expanded="false" disabled="">
+                        <img src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/graduation-hat.svg" class="megamenu__level-2__item__icon" aria-hidden="true" width="20" height="20" loading="lazy">
+                        <span class="megamenu__level-2__item__title">
+                            Grow your skills                        </span>
+                                                                    </button>
+                </li>
+                                            <li class="megamenu__level-2__li">
+                    <button id="megamenu-tab-5" class="megamenu__level-2__item megamenu__level-2__item--has-children js-megamenu-toggle-button" data-target="#megamenu-tab-5__child" aria-expanded="false" disabled="">
+                        <img src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/info.svg" class="megamenu__level-2__item__icon" aria-hidden="true" width="20" height="20" loading="lazy">
+                        <span class="megamenu__level-2__item__title">
+                            Blog                        </span>
+                                                                    </button>
+                </li>
+                                            <li class="megamenu__level-2__li">
+                    <button id="megamenu-tab-6" class="megamenu__level-2__item megamenu__level-2__item--has-children js-megamenu-toggle-button" data-target="#megamenu-tab-6__child" aria-expanded="false" disabled="">
+                        <img src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/lightbulb.svg" class="megamenu__level-2__item__icon" aria-hidden="true" width="20" height="20" loading="lazy">
+                        <span class="megamenu__level-2__item__title">
+                            Knowledge Base                        </span>
+                                                                    </button>
+                </li>
+                                            <li class="megamenu__level-2__li">
+                    <button id="megamenu-tab-7" class="megamenu__level-2__item megamenu__level-2__item--has-children js-megamenu-toggle-button" data-target="#megamenu-tab-7__child" aria-expanded="false" disabled="">
+                        <img src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/question.svg" class="megamenu__level-2__item__icon" aria-hidden="true" width="20" height="20" loading="lazy">
+                        <span class="megamenu__level-2__item__title">
+                            Documentation                        </span>
+                                                                    </button>
+                </li>
+                    </ul>
+                    <div class="megamenu__level-2__children">
+                <div class="megamenu__level-3" id="megamenu-tab-4__child" aria-hidden="true" aria-labeledby="megamenu-tab-4">
+    <div class="mega-menu__level-3__inner">
+        <ul class="megamenu__level-3__sections">
+                                            <li class="megamenu__level-3__section" style="--megamenu-level-3-section-column-count: 2; --megamenu-level-3-section-row-count: 4;">
+                    <h4 class="megamenu__level-3__section__title">Resources</h4>
+                    <ul class="megamenu__level-3__section__items">
+                                                    <li>
+                                <a href="https://kinsta.com/academy/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Kinsta Academy                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/web-development/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Web Development                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/local-development/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Local Development                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/wordpress-newsletter/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Newsletters                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/ebooks/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Ebooks                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/learn/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Learn WordPress                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/affiliate-academy/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Affiliate Academy                                    </span>
+                                </a>
+                            </li>
+                                            </ul>
+                </li>
+                    </ul>
+                    <div class="megamenu__level-3__footer">
+    <span class="megamenu__level-3__footer__title">
+        Dive into Kinsta’s learning materials    </span>
+    <a href="https://kinsta.com/resources/" class="megamenu__level-3__footer__link" tabindex="-1">
+        Go to All Resources    </a>
+</div>
+            </div>
+            <aside class="megamenu__level-3__cta megamenu__level-3__cta--offwhite">
+            <img loading="lazy" aria-hidden="true" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/grow-your-skills.png" width="240" height="110">
+        <h4>Learn new skills from our free courses</h4>
+    <a class="megamenu__level-3__cta__button button--ghost" href="https://kinsta.com/academy/" tabindex="-1">
+        Join Kinsta Academy    </a>
+</aside>
+    </div>
+
+<div class="megamenu__level-3" id="megamenu-tab-5__child" aria-hidden="true" aria-labeledby="megamenu-tab-5">
+    <div class="mega-menu__level-3__inner">
+        <ul class="megamenu__level-3__sections">
+                                            <li class="megamenu__level-3__section" style="--megamenu-level-3-section-column-count: 2; --megamenu-level-3-section-row-count: 4;">
+                    <h4 class="megamenu__level-3__section__title">Topics</h4>
+                    <ul class="megamenu__level-3__section__items">
+                                                    <li>
+                                <a href="https://kinsta.com/hosting/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Hosting                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/wordpress/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        WordPress                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/digital-marketing/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Digital Marketing                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/ecommerce/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Ecommerce                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/topic/business-tools/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Business Tools                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/seo/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        SEO                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/website-performance/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Website Performance                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/content-management-systems/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        CMS                                    </span>
+                                </a>
+                            </li>
+                                            </ul>
+                </li>
+                    </ul>
+                    <div class="megamenu__level-3__footer">
+    <span class="megamenu__level-3__footer__title">
+        Find all tutorials and articles    </span>
+    <a href="https://kinsta.com/blog/" class="megamenu__level-3__footer__link" tabindex="-1">
+        Go to Blog    </a>
+</div>
+            </div>
+            <aside class="megamenu__level-3__cta megamenu__level-3__cta--gray">
+            <img loading="lazy" aria-hidden="true" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/blog.svg" width="240" height="110">
+        <h4>Get tailored newsletters for developers, WordPress users, and entrepreneurs</h4>
+    <a class="megamenu__level-3__cta__button button--ghost" href="https://kinsta.com/wordpress-newsletter/" tabindex="-1">
+        Sign up    </a>
+</aside>
+    </div>
+
+<div class="megamenu__level-3" id="megamenu-tab-6__child" aria-hidden="true" aria-labeledby="megamenu-tab-6">
+    <div class="mega-menu__level-3__inner">
+        <ul class="megamenu__level-3__sections">
+                                            <li class="megamenu__level-3__section" style="--megamenu-level-3-section-column-count: 2; --megamenu-level-3-section-row-count: 4;">
+                    <h4 class="megamenu__level-3__section__title">Topics</h4>
+                    <ul class="megamenu__level-3__section__items">
+                                                    <li>
+                                <a href="https://kinsta.com/topic/kinsta-services/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Kinsta Services                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/topic/tech-tips/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Tech Tips                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/website-security/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Website Security                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/topic/domain-name-system/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        DNS                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/database/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Database                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/javascript/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        JavaScript                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/php/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        PHP                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/browsers/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Browsers                                    </span>
+                                </a>
+                            </li>
+                                            </ul>
+                </li>
+                    </ul>
+                    <div class="megamenu__level-3__footer">
+    <span class="megamenu__level-3__footer__title">
+        Browse through FAQs and guides    </span>
+    <a href="https://kinsta.com/knowledgebase/" class="megamenu__level-3__footer__link" tabindex="-1">
+        Go to Knowledge Base    </a>
+</div>
+            </div>
+            <aside class="megamenu__level-3__cta megamenu__level-3__cta--offwhite">
+            <img loading="lazy" aria-hidden="true" width="360" height="180" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/what-is-a-proxy-360x180.jpg" class="megamenu__level-3__cta__post-thumbnail">
+        <h4>What Is a Proxy Server Used For? (And How Does It Work?)</h4>
+    <a class="megamenu__level-3__cta__button button--ghost" href="https://kinsta.com/knowledgebase/what-is-a-proxy/" tabindex="-1">
+        Read latest article    </a>
+</aside>
+    </div>
+
+<div class="megamenu__level-3" id="megamenu-tab-7__child" aria-hidden="true" aria-labeledby="megamenu-tab-7">
+    <div class="mega-menu__level-3__inner">
+        <ul class="megamenu__level-3__sections">
+                                            <li class="megamenu__level-3__section" style="--megamenu-level-3-section-column-count: 2; --megamenu-level-3-section-row-count: 4;">
+                    <h4 class="megamenu__level-3__section__title">Categories</h4>
+                    <ul class="megamenu__level-3__section__items">
+                                                    <li>
+                                <a href="https://kinsta.com/docs/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Common questions                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/docs/account/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Account                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/docs/wordpress-hosting/backups/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Backups                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/docs/wordpress-hosting/cdn/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        CDN                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/docs/application-hosting/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Application Hosting                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/docs/database-hosting/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        Database Hosting                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/docs/wordpress-hosting/dns/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        DNS                                    </span>
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://kinsta.com/docs/wordpress-hosting/mykinsta/" class="megamenu__level-3__item" tabindex="-1">
+                                    <span class="megamenu__level-3__item__title">
+                                        MyKinsta                                    </span>
+                                </a>
+                            </li>
+                                            </ul>
+                </li>
+                    </ul>
+                    <div class="megamenu__level-3__footer">
+    <span class="megamenu__level-3__footer__title">
+        Find answers to all your questions    </span>
+    <a href="https://kinsta.com/docs/" class="megamenu__level-3__footer__link" tabindex="-1">
+        Go to Documentation    </a>
+</div>
+            </div>
+            <aside class="megamenu__level-3__cta megamenu__level-3__cta--gray">
+            <img loading="lazy" aria-hidden="true" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/help-center.svg" width="241" height="110">
+        <h4>Get help from our support team</h4>
+    <a class="megamenu__level-3__cta__button button--ghost" href="https://my.kinsta.com/?lang=en" tabindex="-1">
+        Log in to MyKinsta    </a>
+</aside>
+    </div>
+
+            </div>
+            </div>
+</div>
+
+                            </li>
+            </ul>
+</div>
+
+</nav>
+
+                    <div class="site-menu__search" id="search-form-container">
+                <form class="site-menu__search__form" method="get" action="https://kinsta.com/" data-hs-cf-bound="true">
+                    <label>
+                        <span class="screen-reader-text">Search</span>
+                        <input name="s" type="text" required="required" value="" placeholder="Search all Kinsta resources">                    </label>
+                    <button type="submit" class="site-menu__search__icon">
+                        <span class="screen-reader-text">Submit search</span>
+                        <svg class="icon icon--search" aria-hidden="true" focusable="false"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#search"></use></svg>                    </button>
+                </form>
+            </div>
+        
+                    <div class="site-menu__extras">
+                                                        <a href="https://my.kinsta.com/login/?lang=en" class="site-menu__extras__item site-menu__hidden-small">
+                        Login                    </a>
+                                                        <a href="https://kinsta.com/signup/?product_type=app-db" class="site-menu__extras__item button button--ghost--purple">
+                        Sign Up                    </a>
+                            </div>
+            </div>
+</header>
+
+<div class="site-menu-placeholder" id="site-menu-placeholder"></div>
+
+<main id="main">
+
+
+                                <div class="knowledgebase-single-container container">
+                <div class="container container--narrow pt--40 post-89981 knowledgebase type-knowledgebase status-publish has-post-thumbnail hentry tag-local-development tag-web-development knowledge_categories-general-wordpress topic-mysql-database topic-mysql-error topic-xampp">
+                    
+<div class="article-title container container--narrow">
+            
+    <nav class="breadcrumbs breadcrumbs--only-last" aria-label="Breadcrumbs">
+        <ol>
+                                            <li class="breadcrumbs__li">
+                                            <a href="https://kinsta.com/" class="breadcrumbs__link">
+                            Home                        </a>
+                                    </li>
+                                            <li class="breadcrumbs__li">
+                                            <a href="https://kinsta.com/resources/" class="breadcrumbs__link">
+                            Resource Center                        </a>
+                                    </li>
+                                            <li class="breadcrumbs__li">
+                                            <a href="https://kinsta.com/knowledgebase/" class="breadcrumbs__link">
+                            Knowledge Base                        </a>
+                                    </li>
+                                            <li class="breadcrumbs__li is-parent">
+                                            <a href="https://kinsta.com/topic/xampp/" class="breadcrumbs__link">
+                            XAMPP                        </a>
+                                    </li>
+                                            <li class="breadcrumbs__li is-current">
+                                            <span class="breadcrumbs__link" aria-current="true">
+                            How to Fix the XAMPP Error “MySQL Shutdown Unexpectedly” (3 Methods)                        </span>
+                                    </li>
+                    </ol>
+    </nav>
+    
+            <h1 class="article-title__title">
+            How to Fix the XAMPP Error “MySQL Shutdown Unexpectedly” (3 Methods)        </h1>
+    
+    
+            <div class="article-title__meta">
+                                        <time class="article-title__meta__date" datetime="2022-12-15T19:12:31+01:00">
+                    Last updated: December 15, 2022                </time>
+                    </div>
+    
+    
+            <img width="1024" height="512" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/how-to-fix-the-xampp-error-mysql-shutdown-unexpectedly-1024x512.jpg" class="article-title__featured-image wp-post-image" alt="How to Fix the XAMPP Error &quot;MySQL Shutdown Unexpectedly&quot;" decoding="async" loading="eager" srcset="https://kinsta.com/wp-content/uploads/2021/02/how-to-fix-the-xampp-error-mysql-shutdown-unexpectedly-1024x512.jpg 1024w, https://kinsta.com/wp-content/uploads/2021/02/how-to-fix-the-xampp-error-mysql-shutdown-unexpectedly-300x150.jpg 300w, https://kinsta.com/wp-content/uploads/2021/02/how-to-fix-the-xampp-error-mysql-shutdown-unexpectedly-768x384.jpg 768w, https://kinsta.com/wp-content/uploads/2021/02/how-to-fix-the-xampp-error-mysql-shutdown-unexpectedly-360x180.jpg 360w, https://kinsta.com/wp-content/uploads/2021/02/how-to-fix-the-xampp-error-mysql-shutdown-unexpectedly.jpg 1460w" sizes="(max-width: 1024px) 100vw, 1024px">    </div>
+
+                    <div class="user-content post-content pt--40 pb--60 js-anchor-hashes" id="post-content-89981"><div><div style="height: 0px; overflow: hidden;"><div class="js-slide-toggle" style="overflow: hidden; position: relative;"><iframe style="background: transparent; border: none; height: 100%; left: 0px; position: absolute; top: 0px; width: 100%; z-index: -1;" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/saved_resource.html"></iframe><div class="language-notice"><div class="language-notice__icons"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="45" height="55"><path fill="none" stroke="#5333ED" stroke-width="2" stroke-miterlimit="10" d="M34.6 2.417H10.34c-4.882.037-8.824 3.808-8.84 8.456v28.254c.016 4.663 3.983 8.441 8.88 8.456h16.91l5.21 4.999v-4.999h2.1c4.905-.005 8.883-3.785 8.9-8.456V10.873c-.016-4.67-3.994-8.45-8.9-8.456z"></path><path fill="#5333ED" d="M37.127 24.561c-.482-7.318-6.333-13.168-13.65-13.65v-.032h-1.954v.032c-7.318.482-13.168 6.333-13.65 13.65h-.032v1.954h.032c.482 7.318 6.333 13.168 13.65 13.65v.032h1.954v-.032c7.318-.482 13.168-6.333 13.65-13.65h.032v-1.954h-.032zM17.018 14.074c-.944 1.256-1.73 2.83-2.299 4.623h-2.926a12.76 12.76 0 0 1 5.225-4.623zm-6.249 6.578h3.436a23.329 23.329 0 0 0-.481 3.909H9.832c.105-1.376.429-2.69.937-3.909zm-.937 5.864h3.891c.054 1.362.219 2.674.481 3.909h-3.436a12.676 12.676 0 0 1-.936-3.909zm1.96 5.864h2.926c.569 1.794 1.355 3.367 2.299 4.623a12.773 12.773 0 0 1-5.225-4.623zm9.731 5.735c-2.011-.534-3.739-2.692-4.788-5.735h4.788v5.735zm0-7.69h-5.339a21.946 21.946 0 0 1-.504-3.909h5.844v3.909zm0-5.864h-5.844c.056-1.376.231-2.691.504-3.909h5.339v3.909zm0-5.864h-4.788c1.049-3.043 2.778-5.201 4.788-5.735v5.735zm11.685 0h-2.927c-.569-1.794-1.355-3.367-2.299-4.623a12.77 12.77 0 0 1 5.226 4.623zm-9.731-5.735c2.011.534 3.739 2.692 4.788 5.735h-4.788v-5.735zm0 7.69h5.339c.274 1.219.448 2.533.504 3.909h-5.844v-3.909zm0 5.864h5.844a22.026 22.026 0 0 1-.504 3.909h-5.339v-3.909zm0 11.599V32.38h4.788c-1.049 3.043-2.777 5.201-4.788 5.735zm4.505-1.112c.944-1.256 1.73-2.83 2.299-4.623h2.927a12.77 12.77 0 0 1-5.226 4.623zm6.249-6.578h-3.436c.262-1.236.427-2.547.481-3.909h3.891a12.62 12.62 0 0 1-.936 3.909zm-2.955-5.864a23.329 23.329 0 0 0-.481-3.909h3.436c.508 1.219.832 2.533.937 3.909h-3.892z"></path></svg></div><div class="language-notice__content"><h3 class="language-notice__heading heading--small"></h3><p class="language-notice__body"></p><a class="language-notice__link unslidelink unslidelink--purple"></a></div><button type="button" class="language-notice__dismiss"><span class="screen-reader-text">Close</span><svg class="icon icon--cross" aria-hidden="true" focusable="false"><use href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#cross"></use></svg></button></div></div></div></div>
+                        <p>If you use a <a href="https://kinsta.com/blog/install-wordpress-locally/">local development environment</a>, you may run into problems that are similar to those on a live server. In some cases, your WordPress website may be unable to connect with its database because <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer">MySQL</a>&nbsp;isn’t running or it shut down unexpectedly.</p>
+<p>Depending on which local environment you use, the process of troubleshooting your MySQL database might vary a bit. With <a href="https://www.apachefriends.org/index.html" target="_blank" rel="noopener noreferrer">XAMPP</a>, the process is remarkably straightforward since you get access to a control panel instead of having to rely on the command line only.</p><div class="mb--50 mt--50" data-interface="DownloadPostForm"><div class="yogurt-Paper-root yogurt-lz65hm"><video class="yogurt-1fltawj" src="https://kinsta.com/wp-content/themes/kinsta/images/interface/DownloadPostForm/post-download.mp4" width="224" height="288" loading="lazy" autoplay="true" playsinline="" loop="" disablepictureinpicture="" aria-hidden="true" __idm_id__="4243457"></video><div class="yogurt-Group-root yogurt-1jiod2y" direction="column"><h3 class="yogurt-Text-root yogurt-Title-root yogurt-26b49">In a hurry? Save this article as a PDF.</h3><p class="yogurt-Text-root yogurt-exyt4v">Tired of scrolling? Download a PDF version for easier offline reading and sharing with coworkers.</p><button class="yogurt-6fb0dn" size="md"><div class="yogurt-3xbgk5"><span class="yogurt-qo1k2">Download</span></div></button></div></div></div>
+<p>In this article, we’ll explain what XAMPP is and what the “MySQL shutdown unexpectedly” error means. Then we’ll walk you through three methods you can use to fix it. Let’s get to it!</p>
+<div></div><kinsta-auto-toc heading="Table of Contents" exclude="last" list-style="arrow" selector="h2" count-number="-1"><nav class="wp-block-kinsta-table-of-contents"><h3 class="wp-block-kinsta-table-of-contents__title">Table of Contents</h3><ol class="wp-block-kinsta-table-of-contents__list is-style-arrow"><li><a href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#an-introduction-to-xampp">An Introduction to XAMPP</a></li><li><a href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#what-the-xampp-error-mysql-shutdown-unexpectedly-is">What Is the XAMPP Error “MySQL Shutdown Unexpectedly”?</a></li><li><a href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#how-to-fix-the-xampp-error-mysql-shutdown-unexpectedly-3-methods">How to Fix the XAMPP Error “MySQL Shutdown Unexpectedly” (3 Methods)?</a></li></ol></nav></kinsta-auto-toc>
+<h2 id="an-introduction-to-xampp" class="has-anchor-hash">An Introduction to XAMPP<a class="anchor-hash" href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#an-introduction-to-xampp" aria-hidden="true"><svg class="icon icon--link" aria-hidden="true" focusable="false" viewBox="0 0 32 32"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#link"></use></svg></a></h2>
+<p>XAMPP is a free, PHP development environment that you can use for Windows, macOS, or Linux. It is a collection of software that enables you to <a href="https://kinsta.com/knowledgebase/what-is-localhost/">host websites locally</a>&nbsp;by mimicking the functions of a live server:</p>
+<figure style="width: 1077px" class="wp-caption alignnone"><img decoding="async" loading="lazy" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/xampp-website.png" alt="The XAMPP website." width="1077" height="519"><figcaption class="wp-caption-text">The XAMPP website.</figcaption></figure>
+<p>Using XAMPP, you can install all the software you need to <a href="https://kinsta.com/devkinsta/">run WordPress locally</a> using a single bundle, rather than setting up each element individually. Development environments differ in what software they bundle.</p>
+<p>With XAMPP, the components that you get include:</p><link rel="stylesheet" href="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/cta-mini.css">
+<aside class="sidebar-cta">
+    <div class="sidebar-cta__inner">
+        <div class="cta-mini">
+            <div class="cta-mini__content cta-mini__content--quote">
+    
+<blockquote class="wp-block-kinsta-client-quote is-style-speechbubble">
+    
+    <p class="wp-block-kinsta-client-quote__content">
+        Kinsta spoiled me so bad that I demand that level of service from every provider now. We also try to be at that level with our SaaS tool support.    </p>
+
+    <footer class="wp-block-kinsta-client-quote__footer">
+                    <figure class="wp-block-kinsta-client-quote__avatar">
+                <img width="150" height="150" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/NEW-Suganthan-Mohanadasan-150x150.png" class="avatar--round" alt="" decoding="async" loading="lazy" srcset="https://kinsta.com/wp-content/uploads/2022/07/NEW-Suganthan-Mohanadasan-150x150.png 150w, https://kinsta.com/wp-content/uploads/2022/07/NEW-Suganthan-Mohanadasan-300x300.png 300w, https://kinsta.com/wp-content/uploads/2022/07/NEW-Suganthan-Mohanadasan.png 750w" sizes="(max-width: 150px) 100vw, 150px">            </figure>
+        
+        <cite class="wp-block-kinsta-client-quote__cite">
+                            <span class="wp-block-kinsta-client-quote__person">
+                        Suganthan Mohanadasan                            </span>
+                                                            <span class="wp-block-kinsta-client-quote__company">
+                                <span class="screen-reader-text">from</span>
+                @Suganthanmn                                    </span>
+                                    </cite>
+    </footer>
+</blockquote>
+
+    <a href="https://kinsta.com/plans/" class="button" data-track-ga-category="sidebar-cta" data-track-ga-label="variation_quote">View plans</a>
+</div>
+        <button class="cta-mini__dismiss" title="Close"><svg class="icon icon--cross" aria-hidden="true" focusable="false" viewBox="0 0 32 32"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#cross"></use></svg></button></div>
+    </div>
+</aside>
+
+<ul>
+<li><strong><a href="https://www.apache.org/" target="_blank" rel="noopener noreferrer">Apache</a></strong><strong>: </strong>This is arguably the most popular web server software in the world, and it enables you to host sites.</li>
+<li><strong><a href="https://mariadb.org/" target="_blank" rel="noopener noreferrer">MariaDB</a></strong><strong>: </strong>This open-source database software enables you to manage databases.</li>
+<li><strong><a href="https://www.php.net/" target="_blank" rel="noopener noreferrer">PHP</a></strong><strong>: </strong>WordPress is built on PHP, which means you need a <a href="https://kinsta.com/blog/install-php/">PHP install</a> to run the Content Management System (CMS).</li>
+<li><strong><a href="https://www.perl.org/" target="_blank" rel="noopener noreferrer">Perl</a></strong><strong>: </strong>Although WordPress doesn’t use the Perl programming language, it comes as part of the XAMPP stack by default.</li>
+</ul>
+<p>On top of setting up the software you need to run WordPress, XAMPP provides you with a simple control panel:</p>
+<figure style="width: 935px" class="wp-caption alignnone"><img decoding="async" loading="lazy" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/xampp-control-panel.png" alt="The XAMPP control panel." width="935" height="439"><figcaption class="wp-caption-text">The XAMPP control panel.</figcaption></figure>
+<p>This enables you to access logs for each of XAMPP’s components. It includes an overview log that shows you everything that’s happening in the background of your environment.</p>
+<p>However, using a local development distribution doesn’t mean your server isn’t susceptible to errors. In some cases, the software components may malfunction, such as with the XAMPP error “MySQL shutdown unexpectedly”.</p>
+<aside role="note" class="wp-block-kinsta-notice is-style-important">
+            <h3 id="important" class="has-anchor-hash">Important<a class="anchor-hash" href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#important" aria-hidden="true"><svg class="icon icon--link" aria-hidden="true" focusable="false" viewBox="0 0 32 32"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#link"></use></svg></a></h3>
+        <p>Looking for a free and powerful local WordPress development tool? DevKinsta features quick and easy site creation, email and database management tools, one-click PHP version switching, and full integration with MyKinsta. <a href="https://kinsta.com/devkinsta/">Get started with DevKinsta today</a>, even if you’re not a Kinsta customer.</p>
+</aside>
+
+<h2 id="what-the-xampp-error-mysql-shutdown-unexpectedly-is" class="has-anchor-hash">What Is the XAMPP Error “MySQL Shutdown Unexpectedly”?<a class="anchor-hash" href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#what-the-xampp-error-mysql-shutdown-unexpectedly-is" aria-hidden="true"><svg class="icon icon--link" aria-hidden="true" focusable="false" viewBox="0 0 32 32"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#link"></use></svg></a></h2>
+<p>As the name of the error implies, this is the message you’ll see if the MySQL software on your environment shuts down or ceases to function unexpectedly:</p>
+<figure style="width: 1000px" class="wp-caption alignnone"><img decoding="async" loading="lazy" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/xampp-mysql-shutdown-unexpectedly.png" alt="The XAMPP error “MySQL shutdown unexpectedly”." width="1000" height="208"><figcaption class="wp-caption-text">The XAMPP error “MySQL shutdown unexpectedly”.</figcaption></figure>
+<p>We say “unexpectedly”, because you can manually shut down the MySQL database software at any point. That also happens when you restart your server.</p>
+<p>However, when the software is shut down, your website won’t be able to <a href="https://kinsta.com/knowledgebase/wordpress-database/">connect to its database</a>. In other words, WordPress won’t work.</p>
+<p>As you can see in the above image, XAMPP provides you with advice on troubleshooting the “MySQL shutdown unexpectedly error” right within its events log. In the next section, we’ll go into more detail on the various ways you can use to fix this issue.<br>
+<kinsta-advanced-cta language="en_US" type-int-post="89981" type-int-position="0"><aside class="advanced-cta-wrapper"><div data-id="42" data-post="89981" data-language="en_US" style="background-image: url(&#39;https://kinsta.com/cta/v1/uploads/image/59/CTA.svg&#39;)" class="cta--bg--gray box box--noshadow in-post-container cta--bg--image"> <div class="row ml--0 mr--0 flex-direction-column-reverse"> <div class="mt--xs--20 align-self-center col-xs-12 col-sm-6"> <p class="heading cta-in-article-heading heading--large mb--0 cta--color--dark-blue"> Focus on building your data architecture and leave the rest to us. </p> <div class="pt--6"></div> <div class="pt--6"></div> <div class="pt--6"></div> <p class="text--small cta--color--dark-blue"> Don’t relegate your databases to yesterday’s server infrastructure. Our Database Hosting lets you take advantage of 25 data centers, a premium-tier network, and security powered by Cloudflare and GCP. You’ll be free to focus on leveraging your data, not fidgeting with outdated control panels. </p> <div class="pt--6"></div> <a href="https://kinsta.com/database-hosting/" class="button"> Try for free </a> </div> <div class="align-self-center text--center col-xs-12 col-sm-6"> <img src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/CTA_illustration.svg" loading="lazy" alt="" aria-hidden="true" style="width: 232px"> </div> </div> </div></aside></kinsta-advanced-cta>
+</p>
+<h2 id="how-to-fix-the-xampp-error-mysql-shutdown-unexpectedly-3-methods" class="has-anchor-hash">How to Fix the XAMPP Error “MySQL Shutdown Unexpectedly” (3 Methods)?<a class="anchor-hash" href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#how-to-fix-the-xampp-error-mysql-shutdown-unexpectedly-3-methods" aria-hidden="true"><svg class="icon icon--link" aria-hidden="true" focusable="false" viewBox="0 0 32 32"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#link"></use></svg></a></h2>
+<p>Typically, fixing the XAMPP error “MySQL shutdown unexpectedly” is quick and easy. Below, we’ll walk you through three fixes, starting with the simplest.</p>
+<div></div><kinsta-auto-toc list-style="decimal" selector="h3" count-number="3" sub-toc="true"><nav class="wp-block-kinsta-table-of-contents is-style-sub-toc"><ol class="wp-block-kinsta-table-of-contents__list is-style-decimal"><li><a href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#1-run-xampp-using-administrator-privileges">Run XAMPP Using Administrator Privileges</a></li><li><a href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#2-restore-your-database-backup">Restore Your Database Backup</a></li><li><a href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#3-change-your-mysql-port">Change Your MySQL Port</a></li></ol></nav></kinsta-auto-toc>
+<h3 id="1-run-xampp-using-administrator-privileges" class="has-anchor-hash">1. Run XAMPP Using Administrator Privileges<a class="anchor-hash" href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#1-run-xampp-using-administrator-privileges" aria-hidden="true"><svg class="icon icon--link" aria-hidden="true" focusable="false" viewBox="0 0 32 32"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#link"></use></svg></a></h3>
+<p>Often, XAMPP produces errors when you don’t run the software using administrator privileges. This is because its components may not be able to function or configure properly at lower permission levels.</p>
+<p>If you’re unsure whether that’s the case with your setup, we recommend that you close XAMPP altogether, and then restart the environment as an administrator. To do so in Windows, find the folder where you installed XAMPP and locate the <em>xampp-control</em> file. Next, right-click on that file and select <strong>Run as administrator</strong>:</p><aside class="in-post-container"><link rel="stylesheet" href="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/app-hosting-cta.css"><div class="box box--noshadow box--padding--0 has-offwhite-background-color app-hosting-cta">
+    <div class="app-hosting-cta__content">
+        <h3 class="mt--0">Deploy your application to Kinsta - Start with a <b class="has-purple-color">$20 Credit</b> now.</h3>
+                    <p class="has-small-font-size">Run your Node.js, Python, Go, PHP, Ruby, Java, and Scala apps, (or almost anything else if you use your own custom Dockerfiles), in three, easy steps!</p>
+                <a href="https://kinsta.com/application-hosting/" class="button button--purple app-hosting-cta__button">
+            Deploy now and get $20 off        </a>
+    </div>
+    <img class="app-hosting-cta__image" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/foreground.svg" aria-hidden="true" loading="lazy" width="410" height="583">
+</div>
+</aside>
+<figure style="width: 909px" class="wp-caption alignnone"><img decoding="async" loading="lazy" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/run-administrator.png" alt="Launching XAMPP with administrative privileges." width="909" height="206"><figcaption class="wp-caption-text">Launching XAMPP with administrative privileges.</figcaption></figure>
+<p>If you’re a macOS user, you can right-click on the folder, and then select<strong>&nbsp;Get Info</strong>. In the pop-up window that opens, navigate to the <em>Sharing &amp; Permissions </em>section, click on the <strong>padlock icon</strong>, and enter your administrator password. Change the <em>Read &amp; Write</em>&nbsp;permission settings to <strong>Everyone</strong>.</p>
+<p>Once XAMPP is up and each of its components is running, MySQL should function correctly. That means your database will be accessible.<br>
+<kinsta-advanced-cta language="en_US" type-int-post="89981" type-int-position="1"></kinsta-advanced-cta>
+</p>
+<h3 id="2-restore-your-database-backup" class="has-anchor-hash">2. Restore Your Database Backup<a class="anchor-hash" href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#2-restore-your-database-backup" aria-hidden="true"><svg class="icon icon--link" aria-hidden="true" focusable="false" viewBox="0 0 32 32"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#link"></use></svg></a></h3>
+<p>If restarting XAMPP with administrator privileges doesn’t solve the problem with your database, the next step is to restore its backup. XAMPP automatically creates backups for your environment’s software, which you can access within the folder where you installed it.</p>
+<p>By default, your XAMPP MySQL backup files should be under<strong>&nbsp;Local Disk </strong>&gt;<strong>&nbsp;XAMPP </strong>&gt;<strong>&nbsp;MySQL</strong>. Inside that directory, you’ll see several folders, two of which are called <em>data </em>and <em>backup</em>:</p>
+<figure style="width: 1145px" class="wp-caption alignnone"><img decoding="async" loading="lazy" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/data-backup-folders.png" alt="XAMPP’s MySQL directory." width="1145" height="584"><figcaption class="wp-caption-text">XAMPP’s MySQL directory.</figcaption></figure>
+<p>The <em>data </em>folder includes all of the files that your database uses. The <em>backup </em>folder contains a single recent copy of your MySQL.</p>
+<aside role="note" class="wp-block-kinsta-notice is-style-important">
+            <h3 id="important-1" class="has-anchor-hash">Important<a class="anchor-hash" href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#important-1" aria-hidden="true"><svg class="icon icon--link" aria-hidden="true" focusable="false" viewBox="0 0 32 32"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#link"></use></svg></a></h3>
+        <p>Before you restore the backup files, use your XAMPP control panel to stop the MySQL software.</p>
+</aside>
+
+<p>You can make a backup by clicking on the <strong>Stop </strong>button to the right of the <em>MySQL </em>option on the main menu:</p>
+<figure style="width: 901px" class="wp-caption alignnone"><img decoding="async" loading="lazy" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/stop-mysql.png" alt="Using the XAMPP control panel." width="901" height="441"><figcaption class="wp-caption-text">Using the XAMPP control panel.</figcaption></figure>
+<p>Once you stop MySQL, return to XAMPP’s MySQL folder and follow these steps to restore the MySQL backup:</p><aside class="in-post-container"><div id="simple-promo">
+  <div class="mb--20 mt--0 heading--normal">
+  <p>Looking for a powerful tool for local WordPress development? DevKinsta features one-click site creation, built-in HTTPS, powerful email and database management tools, and more. <a onclick="gtag(&#39;event&#39;, &#39;click&#39;, {&#39;event_category&#39;: &#39;kb-article&#39;, &#39;event_label&#39;: &#39;kb-inarticle-minimaltext&#39;})" href="https://kinsta.com/devkinsta/">Learn more about DevKinsta</a>!</p>  </div>
+</div>
+</aside>
+<ol>
+<li>Make a copy of the <em>data</em> folder.</li>
+<li>Rename this new folder copy to something like <em>data-old</em>. This will be your backup.</li>
+<li>Copy the contents of the <em>backup</em> folder into the <em>data</em> folder.</li>
+</ol>
+<p>That’s it! To play it safe, though, we strongly recommend that you keep the <em>data-old </em>folder around until you make sure everything is working properly.</p>
+<p>At this stage, you can return to the XAMPP control panel to restart MySQL, which should be running correctly now.<br>
+<kinsta-advanced-cta language="en_US" type-int-post="89981" type-int-position="2"></kinsta-advanced-cta>
+</p>
+<h3 id="3-change-your-mysql-port" class="has-anchor-hash">3. Change Your MySQL Port<a class="anchor-hash" href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#3-change-your-mysql-port" aria-hidden="true"><svg class="icon icon--link" aria-hidden="true" focusable="false" viewBox="0 0 32 32"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#link"></use></svg></a></h3>
+<p>One of the most common causes of the XAMPP error “MySQL shutdown unexpectedly” is another software using the port assigned to MySQL. By default, it tends to be 3306. To be certain, you can select the Netstat<em>&nbsp;</em>module from XAMPP’s control panel, right above the <em>Shell </em>tool:</p>
+<figure style="width: 929px" class="wp-caption alignnone"><img decoding="async" loading="lazy" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/xampp-netstat.png" alt="Using XAMPP’s Netstat tool." width="929" height="157"><figcaption class="wp-caption-text">Using XAMPP’s Netstat tool.</figcaption></figure>
+<p>Netstat is a command line tool that can show you active connections on your network, including which ports they’re using. Once you initialize Netstat, you’ll be able to see what port each tool in your stack is using, including MySQL.</p>
+<figure style="width: 1247px" class="wp-caption alignnone"><img decoding="async" loading="lazy" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/netstat-sockets.png" alt="Checking active connections using Netstat." width="1247" height="522"><figcaption class="wp-caption-text">Checking active connections using Netstat.</figcaption></figure>
+<p>If a conflict with that port caused the shutdown, restoring a backup or running MySQL with administrator privileges won’t make a difference. The only way to solve this issue is to change the port that MySQL uses. Thanks to Netstat, you can see what that port is and which other ones are in use.</p>
+<p>To do so, go ahead and stop the service, using the same process we showed you in the last section. Next, click on the <strong>Config </strong>button next to <em>MySQL</em>on XAMPP’s main menu, and then select the <strong>my.ini </strong>option:</p>
+<figure style="width: 901px" class="wp-caption alignnone"><img decoding="async" loading="lazy" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/xampp-config.png" alt="Accessing MySQL’s config file." width="901" height="292"><figcaption class="wp-caption-text">Accessing MySQL’s config file.</figcaption></figure>
+<p>The <em>my.ini </em>file contains the MySQL configuration settings. After you click on it, XAMPP will open the file using your default text editor. Once you’re in, look for the line that reads <em>Port</em>, which specifies the port number that MySQL uses.</p>
+<p>Here, you can change that port number to another option that you know other programs aren’t using. In most cases, we recommend using 3307, which should be available. Save your changes and close the <em>my.ini</em>&nbsp;file.</p>
+<p>You can then use the XAMPP control panel to restart MySQL. Hopefully, your database is now working as it should. If for some reason, XAMPP can’t connect to your database using the new port that you set, it will let you know through the control panel’s log. In that case, you might try using a different port instead.</p>
+<h2 id="summary" class="has-anchor-hash">Summary<a class="anchor-hash" href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#summary" aria-hidden="true"><svg class="icon icon--link" aria-hidden="true" focusable="false" viewBox="0 0 32 32"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#link"></use></svg></a></h2>
+<p>If you use XAMPP to run WordPress locally, you may encounter the occasional error with your server’s configuration. One of the most common issues is MySQL shutting down unexpectedly.</p>
+<p>The good news is that, if this does happen, there are three methods you can use to troubleshoot the issue:</p>
+<ol>
+<li>Run XAMPP using administrator privileges.</li>
+<li>Restore your database backup.</li>
+<li>Change your <a href="https://kinsta.com/knowledgebase/mysql-port/">MySQL port.</a></li>
+</ol>
+<p>If you enjoyed this XAMPP tutorial, be sure to <a href="https://kinsta.com/devkinsta/">check out DevKinsta</a> as well. DevKinsta is our <a href="https://kinsta.com/blog/install-wordpress-locally/">free local development tool</a> that lets you quickly spin up WordPress sites with customizable PHP settings, HTTPS support, built-in email and database management, and more. DevKinsta also features <a href="https://kinsta.com/knowledgebase/devkinsta/pull-a-site-from-kinsta/">full integration with MyKinsta</a>, but you don’t have to be a Kinsta customer to integrate DevKinsta into your workflow.        </p>
+<div class="user-content mt--40 pb--60">
+<hr class="mini-divider">
+<p>
+            Get all your <a data-track-ga-category="kb" data-track-ga-label="kb-bottom-cta" href="https://kinsta.com/application-hosting/">applications</a>, <a data-track-ga-category="kb" data-track-ga-label="kb-bottom-cta" href="https://kinsta.com/database-hosting/">databases</a> and <a data-track-ga-category="kb" data-track-ga-label="kb-bottom-cta" href="https://kinsta.com/wordpress-hosting/">WordPress sites</a> online and under one roof. Our feature-packed, high-performance cloud platform includes:</p>
+<ul>
+<li>Easy setup and management in the MyKinsta dashboard</li>
+<li>24/7 expert support</li>
+<li>The best Google Cloud Platform hardware and network, powered by Kubernetes for maximum scalability</li>
+<li>An enterprise-level Cloudflare integration for speed and security</li>
+<li>Global audience reach with up to 35 data centers and 275 PoPs worldwide</li>
+</ul>
+<p>Test it yourself with $20 off your first month of <a data-track-ga-category="kb" data-track-ga-label="kb-bottom-cta" href="https://kinsta.com/application-hosting/">Application Hosting</a> or <a data-track-ga-category="kb" data-track-ga-label="kb-bottom-cta" href="https://kinsta.com/database-hosting/">Database Hosting</a>. Explore our <a data-track-ga-category="kb" data-track-ga-label="kb-bottom-cta" href="https://kinsta.com/plans/">plans</a> or <a data-track-ga-category="kb" data-track-ga-label="kb-bottom-cta" href="https://kinsta.com/contact-us/">talk to sales</a> to find your best fit.        </p>
+</div>                    </div>
+                </div>
+
+                <kinsta-article-feedback post-id="89981"><div class="container container--narrow pt--40 pb--40 border--top--gray article-feedback"><form class="kinsta-form kinsta-form--whitebg" data-hs-cf-bound="true"><h3 class="article-feedback__title h4 mt--0">Was this article helpful?</h3><div class="button-group"><button class="button button--ghost--gray button--small" type="submit"><svg class="icon icon--check opacity--40" aria-hidden="true" focusable="false"><use href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#check"></use></svg><span>Yes, it was fine!</span></button><button class="button button--ghost--gray button--small" type="button"><svg class="icon icon--cross opacity--40" aria-hidden="true" focusable="false"><use href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#cross"></use></svg><span>No, or there was something off</span></button></div><div class="article-feedback__toggle" style="height: 0px; overflow: hidden;"><div class="js-slide-toggle" style="overflow: hidden; position: relative;"><iframe style="background: transparent; border: none; height: 100%; left: 0px; position: absolute; top: 0px; width: 100%; z-index: -1;" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/saved_resource(1).html"></iframe><label for="article-feedback__message">Please, let us know what you think!<textarea minlength="20" rows="5" name="feedback" id="article-feedback__message" placeholder="Share your feedback here"></textarea></label><button class="button button--ghost--purple mt--20" type="submit">Send Feedback</button></div></div></form></div></kinsta-article-feedback>
+            </div>
+        
+
+        <div class="related-posts">
+        <div class="related-posts__inner container">
+            <h2 class="related-posts__title">
+                Hand-picked related articles            </h2>
+
+            <div class="posts-grid related-posts__list">
+<div class="post-preview post-86865 knowledgebase type-knowledgebase status-publish has-post-thumbnail hentry knowledge_categories-devkinsta topic-devkinsta">
+    <a class="post-preview__thumbnail" aria-hidden="true" href="https://kinsta.com/knowledgebase/devkinsta/">
+            <img width="360" height="180" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/devkinsta-featured-image-360x180.jpg" class="attachment-kinsta-thumbnail size-kinsta-thumbnail wp-post-image" alt="DevKinsta is a free suite of local development tools to build, test, and deploy WordPress sites in minutes." decoding="async" loading="lazy">    </a>
+
+    <div class="post-preview__content">
+        <div class="post-preview__labels" aria-hidden="true">
+                    <span class="post-preview__label has-purple-background-color" aria-hidden="true" href="">
+            Knowledge Base        </span>
+    </div>
+
+
+<div class="post-preview__title-excerpt">
+    <h2 class="post-preview__title">
+                <a class="post-preview__link" href="https://kinsta.com/knowledgebase/devkinsta/">
+            DevKinsta Documentation        </a>
+    </h2>
+
+            <div class="post-preview__excerpt">
+            DevKinsta is a local development suite for WordPress sites, allowing you to build, develop, and test sites. Use your favourite text editor to get s…        </div>
+    </div>
+<dl class="post-preview__meta">
+            <dt><span class="screen-reader-text">Publish date</span></dt>
+        <dd>January 18, 2021</dd>
+            <dt><span class="screen-reader-text">Topic</span></dt>
+        <dd><a class="unslidelink" href="https://kinsta.com/topic/devkinsta/">DevKinsta</a></dd>
+    </dl>
+    </div>
+</div>
+
+<div class="post-preview post-14848 knowledgebase type-knowledgebase status-publish has-post-thumbnail hentry tag-webdev tag-wordpress knowledge_categories-glossary topic-localhost">
+    <a class="post-preview__thumbnail" aria-hidden="true" href="https://kinsta.com/knowledgebase/what-is-localhost/">
+            <img width="360" height="180" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/what-is-localhost.png" class="attachment-kinsta-thumbnail size-kinsta-thumbnail wp-post-image" alt="what is localhost" decoding="async" loading="lazy" srcset="https://kinsta.com/wp-content/uploads/2017/11/what-is-localhost.png 1460w, https://kinsta.com/wp-content/uploads/2017/11/what-is-localhost-300x150.png 300w, https://kinsta.com/wp-content/uploads/2017/11/what-is-localhost-768x384.png 768w, https://kinsta.com/wp-content/uploads/2017/11/what-is-localhost-1024x512.png 1024w" sizes="(max-width: 360px) 100vw, 360px">    </a>
+
+    <div class="post-preview__content">
+        <div class="post-preview__labels" aria-hidden="true">
+                    <span class="post-preview__label has-purple-background-color" aria-hidden="true" href="">
+            Knowledge Base        </span>
+    </div>
+
+
+<div class="post-preview__title-excerpt">
+    <h2 class="post-preview__title">
+                <a class="post-preview__link" href="https://kinsta.com/knowledgebase/what-is-localhost/">
+            What Is Localhost? And How Does It Apply to WordPress?        </a>
+    </h2>
+
+            <div class="post-preview__excerpt">
+            Wondering what localhost means? Localhost generally refers to the actual computer that you're working on. Read this post for more information!        </div>
+    </div>
+<dl class="post-preview__meta">
+            <dt><span class="screen-reader-text">Reading time</span></dt>
+        <dd>4 min read</dd>
+            <dt><span class="screen-reader-text">Publish date</span></dt>
+        <dd>November 21, 2017</dd>
+            <dt><span class="screen-reader-text">Topic</span></dt>
+        <dd><a class="unslidelink" href="https://kinsta.com/topic/localhost/">Localhost</a></dd>
+    </dl>
+    </div>
+</div>
+
+<div class="post-preview post-7665 post type-post status-publish format-standard has-post-thumbnail hentry tag-webdev tag-wordpress topic-devkinsta topic-localhost topic-wordpress-development wl_entity_type-article">
+    <a class="post-preview__thumbnail" aria-hidden="true" href="https://kinsta.com/blog/install-wordpress-locally/">
+            <img width="360" height="180" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/install-wordpress-locally-1-360x180.png" class="attachment-kinsta-thumbnail size-kinsta-thumbnail wp-post-image" alt="install wordpress locally" decoding="async" loading="lazy" srcset="https://kinsta.com/wp-content/uploads/2020/07/install-wordpress-locally-1-360x180.png 360w, https://kinsta.com/wp-content/uploads/2020/07/install-wordpress-locally-1-300x150.png 300w, https://kinsta.com/wp-content/uploads/2020/07/install-wordpress-locally-1-1024x512.png 1024w, https://kinsta.com/wp-content/uploads/2020/07/install-wordpress-locally-1-768x384.png 768w, https://kinsta.com/wp-content/uploads/2020/07/install-wordpress-locally-1.png 1460w" sizes="(max-width: 360px) 100vw, 360px">    </a>
+
+    <div class="post-preview__content">
+        <div class="post-preview__labels" aria-hidden="true">
+                    <span class="post-preview__label has-purple-background-color" aria-hidden="true" href="">
+            Blog        </span>
+    </div>
+
+
+<div class="post-preview__title-excerpt">
+    <h2 class="post-preview__title">
+                <a class="post-preview__link" href="https://kinsta.com/blog/install-wordpress-locally/">
+            How to Install WordPress Locally (Windows, macOS, Linux)        </a>
+    </h2>
+
+            <div class="post-preview__excerpt">
+            Sometimes it can be convenient to work on your own machine. Check out how to install WordPress locally using DevKinsta, XAMPP, WAMP, or MAMP.        </div>
+    </div>
+<dl class="post-preview__meta">
+            <dt><span class="screen-reader-text">Reading time</span></dt>
+        <dd>30 min read</dd>
+            <dt><span class="screen-reader-text">Publish date</span></dt>
+        <dd>July 29, 2020</dd>
+            <dt><span class="screen-reader-text">Topic</span></dt>
+        <dd><a class="unslidelink" href="https://kinsta.com/topic/devkinsta/">DevKinsta</a></dd>
+            <dt><span class="screen-reader-text">Topic</span></dt>
+        <dd><a class="unslidelink" href="https://kinsta.com/topic/localhost/">Localhost</a></dd>
+            <dt><span class="screen-reader-text">Topic</span></dt>
+        <dd><a class="unslidelink" href="https://kinsta.com/topic/wordpress-development/">WordPress Development</a></dd>
+    </dl>
+    </div>
+</div>
+</div>        </div>
+    </div>
+<footer class="site-footer">
+    <div class="site-footer__marketing">
+    <div class="container">
+        <div class="site-footer__newsletter">
+            <a class="featured-g2-badges flex center-xs" href="https://www.g2.com/products/kinsta" rel="noopener noreferrer sponsored" target="_blank" style="flex-wrap: wrap; gap: 2.5%; text-decoration: none;">
+            <img style="max-width: 18%; display: block;" loading="lazy" width="99" height="118" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/top-100-fastest-growing-products.svg" alt="Top 100 fastest growing products G2 award">
+            <img style="max-width: 18%; display: block;" loading="lazy" width="99" height="118" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/europe-leader.svg" alt="Leader Europe G2 award">
+            <img style="max-width: 18%; display: block;" loading="lazy" width="99" height="118" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/users-love-us.svg" alt="Users love us G2 award">
+            <img style="max-width: 18%; display: block;" loading="lazy" width="99" height="118" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/asia-pacific-leader.svg" alt="Leader Asia Pacific G2 award">
+            <img style="max-width: 18%; display: block;" loading="lazy" width="99" height="118" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/leader.svg" alt="Leader G2 award">
+    </a>
+            <h3>Subscribe to our Newsletter</h3>
+            <p>Get premium content from an <a href="https://kinsta.com/kinsta-reviews/">award-winning</a> cloud hosting platform.</p>
+            <a href="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/#newsletter" data-dialog-src="#newsletter" class="button button--ghost" data-hs-event-107427843="1">Subscribe</a>
+        </div>
+        <img class="site-footer__marketing__illustration" aria-hidden="true" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/foreground(1).svg" width="538" height="291" loading="lazy">
+    </div>
+</div>
+<dialog id="newsletter" class="dialog dialog has-dark-blue-background-color email-modal" aria-hidden="true">
+    <div class="dialog__content">
+        <h2 class="heading--large text--center color--white mb--30">
+            Sign Up For the Newsletter        </h2>
+    <kinsta-form show-name="false" show-phone="false" show-website="false" show-company="false" show-disk-space="false" show-monthly-visits="false" show-number-of-websites="false" show-message="false" submit-button-text="Sign Up Now" submit-button-text-sending="Signing Up..." success-title="Thanks for subscribing!" success-message="Keep an eye out for our next newsletter." terms-template="newsletter" hubspot-source="subscribe_to_newsletter" submit-button-text-loading="Signing Up"><form class="kinsta-form kinsta-form--whitebg contact-form__form" style="opacity: 1;" data-hs-cf-bound="true"><div class="input-with-button contact-form__form__full"><input type="email" name="email" autocomplete="email" placeholder="Enter your email" required=""><button class="button button--purple" type="submit">Sign Up Now</button></div><div class="contact-form__form__legal form-control mt--15 terms-checkbox"><div class="control-container"><p class="text--normal">By submitting this form I agree to the <a class="unslidelink--text" target="_blank" href="https://kinsta.com/legal/terms-service/">Terms and Conditions</a> and <a class="unslidelink--text" target="_blank" href="https://kinsta.com/legal/privacy-policy/">Privacy Policy</a>, including the transfer of data to the United States. By sharing your email, you also agree to receive occasional information related to services, events, and promotions from Kinsta. You're free to unsubscribe at any time.</p></div></div></form></kinsta-form>
+    </div>
+</dialog>
+
+    <div class="container">
+        <div class="site-footer__language-bar">
+            <div class="site-footer__language-aside">
+            <p><a href="https://my.kinsta.com/login?lang=en">Log in</a> to MyKinsta. Or, <a href="https://kinsta.com/signup/?product_type=app-db">start your free trial</a> of Application Hosting and Database Hosting.</p>
+        </div>
+    
+            <div class="site-footer__language">
+            <label class="language-select-label"><span class="screen-reader-text">Switch language</span><svg class="icon icon--language" aria-hidden="true" focusable="false"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#language"></use></svg><select class="language-select site-footer__language__options"><option value="https://kinsta.com/de/wissensdatenbank/xampp-mysql-shutdown-unexpectedly/">Deutsch</option><option value="https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/" selected="selected">English</option><option value="https://kinsta.com/es/base-de-conocimiento/xampp-mysql-cierra-inesperadamente/">Español</option><option value="https://kinsta.com/fr/base-de-connaissances/xampp-mysql-shutdown-unexpectedly/">Français</option><option value="https://kinsta.com/it/knowledgebase/xampp-mysql-shutdown-unexpectedly/">Italiano</option><option value="https://kinsta.com/nl/kennisbank/xampp-mysql-shutdown-unexpectedly/">Nederlands</option><option value="https://kinsta.com/pt/base-de-conhecimento/xampp-mysql-shutdown-unexpectedly/">Português</option><option value="https://kinsta.com/se/kunskapsbas/xampp-mysql-shutdown-unexpectedly/">Svenska</option></select><svg class="icon icon--chevron" aria-hidden="true" focusable="false"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#chevron"></use></svg></label>        </div>
+    </div>
+<nav class="site-footer__menu"><ul id="menu-footer-menu" class="menu"><li id="menu-item-95015" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-95015"><h3>Kinsta Hosting</h3>
+<ul class="sub-menu">
+	<li id="menu-item-137354" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-137354"><a href="https://kinsta.com/pricing/">Pricing</a></li>
+	<li id="menu-item-107224" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-107224"><a href="https://kinsta.com/wordpress-hosting/">WordPress Hosting</a></li>
+	<li id="menu-item-136895" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136895"><a href="https://kinsta.com/application-hosting/">Application Hosting</a></li>
+	<li id="menu-item-136782" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136782"><a href="https://kinsta.com/database-hosting/">Database Hosting</a></li>
+	<li id="menu-item-95670" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95670"><a href="https://kinsta.com/wordpress-hosting-agencies/">Agency Hosting</a></li>
+	<li id="menu-item-124120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124120"><a href="https://kinsta.com/single-site-plans/">Single Site Hosting</a></li>
+	<li id="menu-item-112328" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-112328"><a href="https://kinsta.com/woocommerce-hosting/">WooCommerce Hosting</a></li>
+	<li id="menu-item-95023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95023"><a href="https://kinsta.com/enterprise-wordpress-hosting/">Enterprise Hosting</a></li>
+	<li id="menu-item-95041" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95041"><a href="https://kinsta.com/kinsta-support/">Kinsta Support</a></li>
+	<li id="menu-item-95021" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95021"><a href="https://kinsta.com/wordpress-migration/">Free Migration</a></li>
+</ul>
+</li>
+<li id="menu-item-95011" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-95011"><h3>Platform</h3>
+<ul class="sub-menu">
+	<li id="menu-item-118367" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118367"><a href="https://kinsta.com/add-ons/">Add-Ons</a></li>
+	<li id="menu-item-95028" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95028"><a href="https://kinsta.com/apm-tool/">APM Tool</a></li>
+	<li id="menu-item-95029" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95029"><a href="https://kinsta.com/devkinsta/">DevKinsta</a></li>
+	<li id="menu-item-95024" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95024"><a href="https://kinsta.com/cloudflare-integration/">Cloudflare Integration</a></li>
+	<li id="menu-item-95058" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-95058"><a href="https://status.kinsta.com/">System Status</a></li>
+</ul>
+</li>
+<li id="menu-item-95012" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-95012"><h3>Resources</h3>
+<ul class="sub-menu">
+	<li id="menu-item-95030" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95030"><a href="https://kinsta.com/resources/">All Resources</a></li>
+	<li id="menu-item-95034" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-95034"><a href="https://kinsta.com/blog/">Blog</a></li>
+	<li id="menu-item-95031" class="menu-item menu-item-type-post_type_archive menu-item-object-knowledgebase menu-item-95031"><a href="https://kinsta.com/knowledgebase/">Knowledge Base</a></li>
+	<li id="menu-item-109761" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-109761"><a href="https://kinsta.com/docs/">Documentation &amp; Help</a></li>
+	<li id="menu-item-95033" class="menu-item menu-item-type-post_type_archive menu-item-object-feature-updates menu-item-95033"><a href="https://kinsta.com/feature-updates/">Feature Updates</a></li>
+	<li id="menu-item-124842" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124842"><a href="https://kinsta.com/academy/">Kinsta Academy</a></li>
+	<li id="menu-item-95036" class="menu-item menu-item-type-post_type_archive menu-item-object-ebook menu-item-95036"><a href="https://kinsta.com/ebooks/">Ebooks</a></li>
+	<li id="menu-item-136781" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136781"><a href="https://kinsta.com/tools/">Development Tools</a></li>
+	<li id="menu-item-95053" class="menu-item menu-item-type-post_type_archive menu-item-object-affiliate-academy menu-item-95053"><a href="https://kinsta.com/affiliate-academy/">Affiliate Academy</a></li>
+	<li id="menu-item-102055" class="menu-item menu-item-type-post_type_archive menu-item-object-agency menu-item-102055"><a href="https://kinsta.com/agency-directory/">Agency Directory</a></li>
+</ul>
+</li>
+<li id="menu-item-95013" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-95013"><h3>Company</h3>
+<ul class="sub-menu">
+	<li id="menu-item-95043" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95043"><a href="https://kinsta.com/about-us/">About Us</a></li>
+	<li id="menu-item-95046" class="menu-item menu-item-type-post_type_archive menu-item-object-job menu-item-95046"><a href="https://kinsta.com/careers/">Careers</a></li>
+	<li id="menu-item-95040" class="menu-item menu-item-type-post_type_archive menu-item-object-case_studies menu-item-95040"><a href="https://kinsta.com/clients/">Clients &amp; Case Studies</a></li>
+	<li id="menu-item-95049" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95049"><a href="https://kinsta.com/contact-us/">Contact Us</a></li>
+	<li id="menu-item-95042" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-95042"><a href="https://kinsta.com/kinsta-reviews/">Kinsta Reviews</a></li>
+	<li id="menu-item-95048" class="menu-item menu-item-type-post_type_archive menu-item-object-partner menu-item-95048"><a href="https://kinsta.com/partners/">Partners</a></li>
+	<li id="menu-item-95047" class="menu-item menu-item-type-post_type_archive menu-item-object-news menu-item-95047"><a href="https://kinsta.com/press/">Press</a></li>
+	<li id="menu-item-95045" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95045"><a href="https://kinsta.com/why-us/">Why Us</a></li>
+	<li id="menu-item-136896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136896"><a href="https://kinsta.com/affiliates/">Affiliate Program</a></li>
+	<li id="menu-item-95055" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-95055"><a href="https://affiliate.kinsta.com/?lang=en">Affiliate Dashboard</a></li>
+</ul>
+</li>
+<li id="menu-item-95014" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-95014"><h3>Compare Kinsta</h3>
+<ul class="sub-menu">
+	<li id="menu-item-97403" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97403"><a href="https://kinsta.com/wp-engine-alternative/">Kinsta vs WP Engine</a></li>
+	<li id="menu-item-101280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101280"><a href="https://kinsta.com/siteground-alternative/">Kinsta vs SiteGround</a></li>
+	<li id="menu-item-97734" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97734"><a href="https://kinsta.com/flywheel-hosting-alternative/">Kinsta vs Flywheel</a></li>
+	<li id="menu-item-146320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146320"><a href="https://kinsta.com/godaddy-alternative/">Kinsta vs GoDaddy</a></li>
+	<li id="menu-item-99029" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-99029"><a href="https://kinsta.com/kinsta-alternatives/">More Comparisons</a></li>
+</ul>
+</li>
+</ul></nav>
+<div class="site-footer__company">
+    <div class="site-footer__logo">
+        <svg class="icon icon--logo" aria-hidden="true" focusable="false"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#logo"></use></svg>    </div>
+    <nav class="site-footer__social">
+        <ul>
+                                            <li>
+                    <a class="site-footer__social__link" href="https://www.linkedin.com/company/kinsta/" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon icon--linkedin" aria-hidden="true" focusable="false" title="Kinsta on LinkedIn"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#linkedin"></use></svg><span class="screen-reader-text">Kinsta on LinkedIn</span>                    </a>
+                </li>
+                                            <li>
+                    <a class="site-footer__social__link" href="https://www.facebook.com/kinstahosting" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon icon--facebook" aria-hidden="true" focusable="false" title="Kinsta on Facebook"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#facebook"></use></svg><span class="screen-reader-text">Kinsta on Facebook</span>                    </a>
+                </li>
+                                            <li>
+                    <a class="site-footer__social__link" href="https://twitter.com/kinsta" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon icon--twitter" aria-hidden="true" focusable="false" title="Kinsta on Twitter"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#twitter"></use></svg><span class="screen-reader-text">Kinsta on Twitter</span>                    </a>
+                </li>
+                                            <li>
+                    <a class="site-footer__social__link" href="https://www.instagram.com/kinstahosting/" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon icon--instagram" aria-hidden="true" focusable="false" title="Kinsta on Instagram"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#instagram"></use></svg><span class="screen-reader-text">Kinsta on Instagram</span>                    </a>
+                </li>
+                                            <li>
+                    <a class="site-footer__social__link" href="https://www.youtube.com/kinsta" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon icon--youtube" aria-hidden="true" focusable="false" title="Kinsta on YouTube"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#youtube"></use></svg><span class="screen-reader-text">Kinsta on YouTube</span>                    </a>
+                </li>
+                                            <li>
+                    <a class="site-footer__social__link" href="https://dev.to/kinsta" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon icon--dev" aria-hidden="true" focusable="false" title="Kinsta on DEV"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#dev"></use></svg><span class="screen-reader-text">Kinsta on DEV</span>                    </a>
+                </li>
+                                            <li>
+                    <a class="site-footer__social__link" href="https://github.com/kinsta/" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon icon--github" aria-hidden="true" focusable="false" title="Kinsta on GitHub"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#github"></use></svg><span class="screen-reader-text">Kinsta on GitHub</span>                    </a>
+                </li>
+                                            <li>
+                    <a class="site-footer__social__link" href="https://discord.gg/stT5Azcqwp" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon icon--discord" aria-hidden="true" focusable="false" title="Kinsta on Discord"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#discord"></use></svg><span class="screen-reader-text">Kinsta on Discord</span>                    </a>
+                </li>
+                    </ul>
+    </nav>
+    <p class="site-footer__legal">
+        <small>© 2023 Kinsta Inc. All rights reserved.</small>
+        <small>Kinsta® and WordPress® are registered trademarks.</small>
+        <small><a href="https://kinsta.com/legal/">Legal information.</a></small>
+    </p>
+</div>
+    </div>
+</footer>
+<script type="text/javascript" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/jquery.min.js.download" id="jquery-core-js"></script>
+<script type="text/javascript" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/jquery-migrate.min.js.download" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/jquery.form.min.js.download" id="jquery-form-js"></script>
+<script type="text/javascript" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/regenerator-runtime.min.js.download" id="regenerator-runtime-js"></script>
+<script type="text/javascript" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/wp-polyfill.min.js.download" id="wp-polyfill-js"></script>
+<script type="text/javascript" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/hooks.min.js.download" id="wp-hooks-js"></script>
+<script type="text/javascript" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/i18n.min.js.download" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type="text/javascript" id="kinsta-js-main-js-extra">
+/* <![CDATA[ */
+var kinsta = {"ajaxurl":"https:\/\/kinsta.com\/wp-admin\/admin-ajax.php","apiUrl":"https:\/\/kinsta.com\/wp-json\/","kinstanonce":"6f71eeec9f","stripe_public_key":"pk_live_r16EiSaRITiPDMKQjLeoOviT","sentry_key":null,"env":"production","chevronRight":"<svg  class=\"icon icon--chevron color--purple\" aria-hidden=\"true\" focusable=\"false\"><use xlink:href=\"https:\/\/kinsta.com\/wp-content\/themes\/kinsta\/dist\/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#chevron\" \/><\/svg>","chevronLeft":"<svg  class=\"icon icon--chevron color--purple icon--reverse\" aria-hidden=\"true\" focusable=\"false\"><use xlink:href=\"https:\/\/kinsta.com\/wp-content\/themes\/kinsta\/dist\/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#chevron\" \/><\/svg>","check_m":"<svg  class=\"icon icon--check color--purple\" aria-hidden=\"true\" focusable=\"false\"><use xlink:href=\"https:\/\/kinsta.com\/wp-content\/themes\/kinsta\/dist\/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc#check\" \/><\/svg>","translations":{"thanksForSubscribing":"Thanks for subscribing!","validationRequired":"Please fill out this field","validationEmail":"Please provide a valid email address","validationPassword":"Password must contain a min. of 6 characters, at least one lowercase and capital letter, and a number","validationDuplicate":"The two fields do not match","validationVatInvalidCountry":"The country code of your VAT number does not match your selected country","validationVatInvalidFormat":"The entered VAT number is invalid","validationVatInvalidVies":"The entered VAT number could not be verified by the EU VIES system","validationCard":"Your card details are incorrect","validationFreeEmail":"Email already in use"},"svg_sprite":"https:\/\/kinsta.com\/wp-content\/themes\/kinsta\/dist\/sprite.svg?v=b9072f043fc870e8b9961a0d32c379cc","urls":{"api":"https:\/\/kinsta.com\/wp-json\/","ajax":"https:\/\/kinsta.com\/wp-admin\/admin-ajax.php","terms":"https:\/\/kinsta.com\/legal\/terms-service\/","privacy":"https:\/\/kinsta.com\/legal\/privacy-policy\/","home":"https:\/\/kinsta.com\/","theme":"https:\/\/kinsta.com\/wp-content\/themes\/kinsta","cookieSettings":"https:\/\/kinsta.com\/cookie-settings\/"},"contact_terms_html":"<div class=\"form-control mt--15 terms-checkbox\" data-state=\"neutral\">\n  <div class=\"control-container\">\n          <p class=\"text--normal\">By submitting this form: You agree to the processing of the submitted personal data in accordance with Kinsta's <a class=\"unslidelink--text\" target=\"_blank\" href=\"https:\/\/kinsta.com\/legal\/privacy-policy\/\">Privacy Policy<\/a>, including the transfer of data to the United States.<\/p>\n              <label class=\"checkbox-label row nocol js-marketing-optin\">\n        <span class=\"checkbox mr--6\">\n          <input name=\"marketing_opt_in\" type=\"checkbox\" checked \/>\n          <span class=\"indicator\"><\/span>\n        <\/span>\n                  <p class=\"text--normal mb--0\">You also agree to receive information from Kinsta related to our services, events, and promotions. You may unsubscribe at any time by following the instructions in the communications received.<\/p>\n              <\/label>\n      <\/div>\n<\/div>\n","maintenanceMode":"","timeFormat":"g:i a","dateFormat":"F j, Y","defaultPlan":"visits-business1","cookiesBar":{"isOpen":false},"globalBanner":{"text":"Test a deployment on our modern App Hosting. Start your free trial today.","link":"https:\/\/kinsta.com\/application-hosting\/","theme":"default","email":false,"success_message":"Success! Your request has been submitted. Click to learn more about Application and Database hosting at Kinsta. ","hash":"918e22b60bfd811d37f48695cb3bb1c1","isOpen":false}};
+var kinstaVatRates = {"AT":"0.2","BE":"0.21","BG":"0.2","HR":"0.25","CY":"0.19","CZ":"0.21","DK":"0.25","EE":"0.2","FI":"0.24","FR":"0.2","DE":"0.19","GR":"0.24","HU":"0.27","IE":"0.23","IT":"0.22","LV":"0.21","LT":"0.21","LU":"0.17","MT":"0.18","NL":"0.21","PL":"0.23","PT":"0.23","RO":"0.19","SK":"0.2","SI":"0.22","ES":"0.21","SE":"0.25","GB":"0.2"};
+var kinstaFloatingContactText = {"termsHtml":"<div class=\"form-control mt--15 terms-checkbox\" data-state=\"neutral\">\n  <div class=\"control-container\">\n          <p class=\"text--normal\">By submitting this form: You agree to the processing of the submitted personal data in accordance with Kinsta's <a class=\"unslidelink--text\" target=\"_blank\" href=\"https:\/\/kinsta.com\/legal\/privacy-policy\/\">Privacy Policy<\/a>, including the transfer of data to the United States.<\/p>\n              <label class=\"checkbox-label row nocol js-marketing-optin\">\n        <span class=\"checkbox mr--6\">\n          <input name=\"marketing_opt_in\" type=\"checkbox\" checked \/>\n          <span class=\"indicator\"><\/span>\n        <\/span>\n                  <p class=\"text--normal mb--0\">You also agree to receive information from Kinsta related to our services, events, and promotions. You may unsubscribe at any time by following the instructions in the communications received.<\/p>\n              <\/label>\n      <\/div>\n<\/div>\n"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="kinsta-js-main-js-before">
+var singularState = {"postId":89981,"postSlug":"xampp-mysql-shutdown-unexpectedly","postType":"knowledgebase","languages":["it","pt","fr","de","nl","es","se"],"currentLanguage":"en"}
+var kinstaContactFormState = {"userId":89981,"userAge":1676845153,"recentPosts":[{"title":"Flexibility, Give-and-Take, and Digital Nomadism With John O\u2019Donnell","thumbnail":"https:\/\/kinsta.com\/wp-content\/uploads\/2023\/02\/digital-nomadism-john-odonnell-360x180.png","permalink":"https:\/\/kinsta.com\/blog\/digital-nomadism-john-odonnell\/"},{"title":"Create and Customize a Docusaurus Site (With Blog Feature)","thumbnail":"https:\/\/kinsta.com\/wp-content\/uploads\/2023\/02\/docusarus-360x180.jpg","permalink":"https:\/\/kinsta.com\/blog\/docusaurus\/"}],"nonce":"cc30722414","isEnabled":true,"isFloatingEnabled":true,"isContactFormPage":false}
+var siteState = {"adminAjaxUrl":"https:\/\/kinsta.com\/wp-admin\/admin-ajax.php","restBaseUrl":"https:\/\/kinsta.com\/wp-json\/kinsta\/v1","restNonce":"cc30722414","siteEnv":"production"}
+</script>
+<script type="text/javascript" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/main.js.download" id="kinsta-js-main-js"></script>
+<script type="text/javascript" id="wordlift-js-extra">
+/* <![CDATA[ */
+var wlSettings = {"ajaxUrl":"https:\/\/kinsta.com\/wp-admin\/admin-ajax.php","apiUrl":"https:\/\/kinsta.com\/wl-api\/","jsonld_url":"https:\/\/kinsta.com\/wp-json\/wordlift\/v1\/jsonld\/","postId":"89981","jsonld_enabled":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/bundle.js.download" id="wordlift-js"></script>
+<script type="text/javascript" id="wordlift-cloud-js-extra">
+/* <![CDATA[ */
+var _wlCloudSettings = {"selector":"a.wl-entity-page-link","url":"https:\/\/kinsta.com\/wp-json\/wordlift\/v1\/jsonld"};
+/* ]]> */
+</script>
+<script type="text/javascript" defer="defer" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/wordlift-cloud.js.download" id="wordlift-cloud-js"></script>
+
+
+</main><script src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/3344.js.download" async="" defer=""></script><script src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/js(6)" async="" defer=""></script><script src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/optimize.js.download" async="" defer=""></script><script src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/gtm.js.download" async="" defer=""></script><script src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/6635519.js(3).download" async="" defer=""></script><script src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/insight.min.js.download" async="" defer=""></script><script src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/saved_resource" async="" defer=""></script><img src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/adsct" height="1" width="1" style="display: none;"><img src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/adsct(1)" height="1" width="1" style="display: none;"><img src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/adsct(2)" height="1" width="1" style="display: none;"><img src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/adsct(3)" height="1" width="1" style="display: none;"><div id="teal-job-tracker-root-stable" style="z-index: 2147483647;"><iframe id="teal-job-tracker-iframe-stable" style="background: rgb(255, 255, 255); width: 380px; height: 100vh; position: fixed; inset: 0px -380px auto auto; z-index: 2147483647; border: 0px; box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 16px -3px; transition: right 0.25s ease-in-out 0s; transform: none;" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/saved_resource(2).html"></iframe></div><div><div dir="ltr"></div></div><div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon148881264264"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon658150518850" width="0" height="0" alt="" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/0"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon394890086812" width="0" height="0" alt="" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/0(1)"></div><iframe owner="archetype" title="archetype" style="display: none; visibility: hidden;" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/saved_resource(3).html"></iframe><iframe name="__privateStripeMetricsController1680" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="./How to Fix the XAMPP Error _MySQL Shutdown Unexpectedly__files/m-outer-93afeeb17bc37e711759584dbfc50d47.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe><div></div><div id="teal-job-tracker-companion-root-stable" class="ui-draggable" style="display: block; z-index: 2147483646; bottom: 58px; right: 0px; position: fixed; height: 60px;"></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
